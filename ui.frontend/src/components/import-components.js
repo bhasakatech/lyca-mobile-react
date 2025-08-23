@@ -35,6 +35,9 @@ import {
     AccordionV1,AccordionV1IsEmptyFn,
 } from '@adobe/aem-core-components-react-spa';
 
+import Footer from "./Footer/footer"; 
+import SignUp from "./SignUp/SignUp"; 
+import BlobList from "./BlogList/BlogList"; 
 import {
     BreadCrumbV2,BreadCrumbV2IsEmptyFn,
     ButtonV1,ButtonV1IsEmptyFn,
@@ -114,3 +117,6 @@ MapTo('lyca-mobile/components/why-lyca')(WhyLyca);
 MapTo('lyca-mobile/components/download-app')(DownloadApp);
 MapTo('lyca-mobile/components/help')(Help);
 MapTo('lyca-mobile/components/become-retailer')(BecomeRetailer);
+MapTo('lyca-mobile/components/bloglist')(BlobList);
+MapTo('lyca-mobile/components/signUp')(SignUp)
+MapTo('lyca-mobile/components/footer')(Footer);
