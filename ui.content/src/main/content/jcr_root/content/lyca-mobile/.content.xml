@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:allowedTemplates="[/conf/lyca-mobile/settings/wcm/templates/(?!xf-).*]"
+        cq:conf="/conf/lyca-mobile"
+        cq:redirectTarget="/content/lyca-mobile/us/en/home"
+        cq:template="/conf/lyca-mobile/settings/wcm/templates/spa-app-template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Lyca Mobile"
+        sling:configRef="/conf/lyca-mobile"
+        sling:redirect="{Boolean}true"
+        sling:redirectStatus="{Long}302"
+        sling:resourceType="lyca-mobile/components/page">
+        <image jcr:primaryType="nt:unstructured">
+            <file/>
+        </image>
+    </jcr:content>
+    <us/>
+</jcr:root>
