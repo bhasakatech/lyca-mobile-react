@@ -37,7 +37,9 @@ import {
 
 import Footer from "./Footer/footer"; 
 import SignUp from "./SignUp/SignUp"; 
-import BlobList from "./BlogList/BlogList"; 
+import BlobList from "./BlogList/BlogList";
+import InternationalCalls from "./CountryCarousel/CountryCarousel";
+
 import {
     BreadCrumbV2,BreadCrumbV2IsEmptyFn,
     ButtonV1,ButtonV1IsEmptyFn,
@@ -106,17 +108,7 @@ const TextEditConfig = {
 };
 
 MapTo('lyca-mobile/components/text')(LazyTextComponent, TextEditConfig);
-MapTo("lyca-mobile/components/header")(Header);
-MapTo('lyca-mobile/components/announcement-bar')(AnnouncementBar);
-MapTo('lyca-mobile/components/lyca-carousel')(Carousel);
-MapTo('lyca-mobile/components/join-lyca')(JoinLyca);
-MapTo('lyca-mobile/components/already-with-lyca')(AlreadyWithLyca);
-MapTo('lyca-mobile/components/choose-a-plan')(ChooseAPlan);
-MapTo('lyca-mobile/components/view-rates')(ViewRatesNow);
-MapTo('lyca-mobile/components/why-lyca')(WhyLyca);
-MapTo('lyca-mobile/components/download-app')(DownloadApp);
-MapTo('lyca-mobile/components/help')(Help);
-MapTo('lyca-mobile/components/become-retailer')(BecomeRetailer);
+MapTo('/apps/lyca-mobile/components/country-carousel')(CountryCarousel);
 MapTo('lyca-mobile/components/bloglist')(BlobList);
 MapTo('lyca-mobile/components/signUp')(SignUp)
 MapTo('lyca-mobile/components/footer')(Footer);

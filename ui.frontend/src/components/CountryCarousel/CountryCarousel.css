@@ -1,0 +1,23 @@
+.international-calls {
+        padding: 8px 0;
+    }
+
+    .international-calls-heading {
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 23.2656px 0px 27.1562px;
+
+    }
+
+    .international-calls-heading>h3 {
+        font-size: 16.38px;
+        text-align: left;
+    }
+
+    .international-calls-heading>img {
+        display: block;
+    }
+
+    .international-calls-icon-container {
+        display: none;
+    }
