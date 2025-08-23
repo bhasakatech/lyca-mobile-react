@@ -9,13 +9,13 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 import java.util.List;
 
 @Model(adaptables = Resource.class,
-       adapters = HeaderModel.class,
-       resourceType = HeaderModel.RESOURCE_TYPE,
-       defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
+        adapters = HeaderModel.class,
+        resourceType = HeaderModel.RESOURCE_TYPE,
+        defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 @Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME, extensions = ExporterConstants.SLING_MODEL_EXTENSION)
 public class HeaderModel {
 
-    static final String RESOURCE_TYPE = "yourproject/components/header";
+    static final String RESOURCE_TYPE = "lyca-mobile/components/header";
 
     @ValueMapValue
     private String logoImage;
@@ -80,4 +80,3 @@ public class HeaderModel {
         public String getUrl() { return url; }
     }
 }
-

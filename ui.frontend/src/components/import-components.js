@@ -51,6 +51,17 @@ import {
     SeparatorV1,SeparatorV1IsEmptyFn,
     ListV2,ListV2IsEmptyFn
 } from '@adobe/aem-core-components-react-base';
+import Header from "./Header/Header";
+import AnnouncementBar from "./AnnouncementBar/AnnouncementBar";
+import Carousel from "./Carousel/Carousel";
+import JoinLyca from "./JoinLyca/JoinLyca";
+import AlreadyWithLyca from "./AlreadyWithLyca/AlreadyWithLyca";
+import ChooseAPlan from "./ChooseAPlan/ChooseAPlan";
+import ViewRatesNow from "./ViewRates/ViewRates";
+import WhyLyca from "./WhyLyca/WhyLyca";
+import DownloadApp from "./DownloadApp/DownloadApp";
+import Help from "./Help/Help";
+import BecomeRetailer from "./BecomeRetailer/BecomeRetailer";
 
 //lazyload / code splitting example of an internal component
 const LazyTextComponent = withAsyncImport(() => import(`./Text/Text`));
