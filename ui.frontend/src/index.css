@@ -41,3 +41,72 @@ p,
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
   color: #000000;
 }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 2px solid black; */
+    font-family: 'GTEestiLCDisplayRegular';
+}
+
+@font-face {
+    font-family: "GTEestiLCDisplayLight";
+    src: url(./fonts/GT-Eesti/GT-Eesti-Display-Light-Trial.otf);
+}
+
+@font-face {
+    font-family: "GTEestiLCDisplayRegular";
+    src: url(./fonts/GT-Eesti/GT-Eesti-Display-Regular-Trial.otf);
+}
+
+@font-face {
+    font-family: "GTEestiLCDisplayThin";
+    src: url(./fonts/GT-Eesti/GT-Eesti-Display-Thin-Trial.otf);
+}
+
+@font-face {
+    font-family: "GTEestiLCDisplayUltraBold";
+    src: url(./fonts/GT-Eesti/GT-Eesti-Display-UltraBold-Trial.otf);
+}
+
+@font-face {
+    font-family: "GTEestiLCDisplayMedium";
+    src: url(./fonts/GT-Eesti/GT-Eesti-Display-Medium-Trial.otf);
+}
+
+@font-face {
+    font-family: "GTEestiLCDisplayBold";
+    src: url(./fonts/GT-Eesti/GT-Eesti-Display-Bold-Trial.otf);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "GTEestiLCDisplayBold";
+}
+
+a {
+    text-decoration: none;
+    color: #344054;
+}
+
+li {
+    list-style-type: none;
+}
+
+#lyca-logo-mobile,
+#menu-mobile,
+.mobile-img {
+    display: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
