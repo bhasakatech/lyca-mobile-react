@@ -35,6 +35,9 @@ import {
     AccordionV1,AccordionV1IsEmptyFn,
 } from '@adobe/aem-core-components-react-spa';
 
+import Footer from "./Footer/footer"; 
+import SignUp from "./SignUp/SignUp"; 
+import BlobList from "./BlogList/BlogList"; 
 import {
     BreadCrumbV2,BreadCrumbV2IsEmptyFn,
     ButtonV1,ButtonV1IsEmptyFn,
@@ -92,3 +95,6 @@ const TextEditConfig = {
 };
 
 MapTo('lyca-mobile/components/text')(LazyTextComponent, TextEditConfig);
+MapTo('lyca-mobile/components/bloglist')(BlobList);
+MapTo('lyca-mobile/components/signUp')(SignUp)
+MapTo('lyca-mobile/components/footer')(Footer);
