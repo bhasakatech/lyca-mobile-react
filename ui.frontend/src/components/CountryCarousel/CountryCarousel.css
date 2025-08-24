@@ -1,4 +1,4 @@
-/* international calls  */
+international calls 
 
 
 .international-calls {
@@ -172,4 +172,13 @@
     padding-left: 37px;
     padding-right: 37px;
 }
+}
+.international-calls-slider-container{
+    display: flex;
+    justify-content: center;
+}
+.slick-slider{
+    display:flex !important;
+    align-items: center;
+    width:90%;
 }
