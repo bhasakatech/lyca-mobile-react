@@ -37,7 +37,7 @@ import {
 
 import Footer from "./Footer/footer"; 
 import SignUp from "./SignUp/SignUp"; 
-import BlobList from "./BlogList/BlogList"; 
+import BlogList from "./BlogList/BlogList"; 
 import {
     BreadCrumbV2,BreadCrumbV2IsEmptyFn,
     ButtonV1,ButtonV1IsEmptyFn,
@@ -60,6 +60,7 @@ import WhyLyca from "./WhyLyca/WhyLyca";
 import DownloadApp from "./DownloadApp/DownloadApp";
 import Help from "./Help/Help";
 import BecomeRetailer from "./BecomeRetailer/BecomeRetailer";
+import InternationalCalls from "./CountryCarousel/CountryCarousel";
 
 //lazyload / code splitting example of an internal component
 const LazyTextComponent = withAsyncImport(() => import(`./Text/Text`));
@@ -117,6 +118,7 @@ MapTo('lyca-mobile/components/why-lyca')(WhyLyca);
 MapTo('lyca-mobile/components/download-app')(DownloadApp);
 MapTo('lyca-mobile/components/help')(Help);
 MapTo('lyca-mobile/components/become-retailer')(BecomeRetailer);
-MapTo('lyca-mobile/components/bloglist')(BlobList);
+MapTo('lyca-mobile/components/country-carousel')(InternationalCalls);
+MapTo('lyca-mobile/components/blog-list')(BlogList);
 MapTo('lyca-mobile/components/signUp')(SignUp)
 MapTo('lyca-mobile/components/footer')(Footer);
