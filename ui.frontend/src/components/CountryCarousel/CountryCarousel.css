@@ -110,7 +110,9 @@
 
     .international-calls-heading>h3 {
         font-size: 16.38px;
-        text-align: left;
+        text-align:center;
+        line-height: 25px;
+        color: #667085;
     }
 
     .international-calls-heading>img {
@@ -139,8 +141,10 @@
 
     .international-calls-heading>h3 {
         font-size: 16.38px;
-        text-align: left;
-                padding: 0 44px;
+        text-align: center;
+        padding: 0 44px;
+        line-height: 25px;
+        color: #667085;
 
     }
 

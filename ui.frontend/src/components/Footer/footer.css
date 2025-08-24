@@ -302,3 +302,32 @@ footer hr {
         font-size: 14px;
     }
 }
+/* Go To Top Button*/
+.go-to-top-button {
+    position: fixed;
+    right: 23px;
+    bottom: 135px;
+    padding-top: 0;
+    padding-bottom: 0;
+    max-height: 50px;
+    border-radius: 100%;
+    outline: none;
+    border: none;
+    z-index: 10;
+}
+
+.go-to-top-button a,
+.go-to-top-button img {
+    height: 50px;
+    width: 50px;
+    color: transparent;
+    border-radius: 100%;
+}
+
+@media (max-width:768px){
+    .go-to-top-button a,
+    .go-to-top-button img {
+        width: 32px;
+        max-height: 32px;
+    }
+}

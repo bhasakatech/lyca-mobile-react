@@ -110,7 +110,7 @@ const Footer = () => {
         <div className="footer-signature">
           <div className="footer-signature-container">
             <div>
-              <img src="/content/dam/lyca-mobile/assets/footer-logo.jpg" alt="" />
+              <img src="/content/dam/lyca-mobile/assets/lyca-mobile-logo.jpg" alt="" />
               <br />
             </div>
             <div>© 2025 Lycamobile USA Inc. All rights reserved.</div>
@@ -126,7 +126,7 @@ const Footer = () => {
       {/* Go to Top Button */}
       <button className="go-to-top-button">
         <a href="#">
-          <img src="" alt="" loading="lazy" />
+          <img src="/content/dam/lyca-mobile/assets/goToTopHomeIcon.4eba1f71.svg" alt="" loading="lazy" />
         </a>
       </button>
     </>

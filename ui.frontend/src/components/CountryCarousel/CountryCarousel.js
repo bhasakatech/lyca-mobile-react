@@ -15,7 +15,7 @@ export default function InternationalCalls() {
         {/* Heading */}
         <div className="international-calls-heading">
           <h3>Cheap international calls for everyone</h3>
-          <img src="" alt="arrow-down" />
+          <img src="/content/dam/lyca-mobile/assets/arrow-down-circle.e8d1ba6f.svg" alt="arrow-down" />
         </div>
 
         {/* Icon + Countries */}
