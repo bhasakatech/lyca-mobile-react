@@ -232,7 +232,6 @@ footer hr {
 
     .footer-content {
         padding: none;
-        flex-direction: column;
     }
 
     .footer-content:nth-child(1)>ul,
@@ -302,6 +301,13 @@ footer hr {
         font-size: 14px;
     }
 }
+
+@media (max-width:480px){
+    .footer-content {
+        flex-direction: column;
+    }
+
+}
 /* Go To Top Button*/
 .go-to-top-button {
     position: fixed;
@@ -329,5 +335,49 @@ footer hr {
     .go-to-top-button img {
         width: 32px;
         max-height: 32px;
+        display: block;
+    }
+}
+
+/* access container */
+.access-container {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index:999;
+}
+
+.access-container button {
+    outline: none;
+    background-color: #146ff8;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+svg {
+    width: 22.27px;
+    height: 29.25px;
+    color: white;
+}
+
+.access-container button:hover {
+    transform: scale(1.15);
+}
+
+@media (max-width:768px){
+      .access-container button{
+        width:30px;
+        height:30px;
+    }
+
+    svg{
+        width:14.7px;
+        height:19.5px;
     }
 }

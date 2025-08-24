@@ -16,11 +16,20 @@
     /* align-items: center; */
     font-size: 38px;
     font-weight: 700;
-    color: #344054;
+    color:#344054;
     line-height: 40px;
     letter-spacing: -0.5px;
     padding-top: 44px;
     padding-bottom: 44px;
+}
+
+.international-calls-heading h3{
+    text-align: center;
+        font-size: 38px;
+    font-weight: 700;
+    color:#34405F;
+    line-height: 40px;
+    letter-spacing: -0.5px;
 }
 
 .international-calls-heading>img {

@@ -299,3 +299,9 @@
         margin-top: 4px;
     }
 }
+
+@media screen and (max-width:375px){
+    .best-value-card{
+        background-position-x: 30%;
+    }
+}

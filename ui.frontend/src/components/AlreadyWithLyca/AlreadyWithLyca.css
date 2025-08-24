@@ -12,6 +12,7 @@
     height: 0;
     align-items: center;
     justify-content: center;
+    z-index:11;
 }
 
 .already-with-lyca {
@@ -25,7 +26,7 @@
     top: -180px;
     width: 80%;
     max-width: 1078px;
-    z-index: 10;
+    z-index: 12;
     background-color: #fff;
     background-size: 100%;
     background-image: url(../../fonts/GT-Eesti/already-with-lyca.svg);
