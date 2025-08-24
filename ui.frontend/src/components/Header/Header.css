@@ -384,7 +384,3 @@
         height: 32px;
     }
 }
-
-.container{
-    max-width:unset !important;
-}
