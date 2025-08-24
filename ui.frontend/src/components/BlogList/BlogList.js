@@ -1,5 +1,5 @@
 import React from "react";
-import './bloglist.css';
+
 
 const BlogSection = () => {
   return (

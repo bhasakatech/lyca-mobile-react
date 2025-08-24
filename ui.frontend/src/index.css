@@ -99,11 +99,6 @@ li {
     list-style-type: none;
 }
 
-#lyca-logo-mobile,
-#menu-mobile,
-.mobile-img {
-    display: none;
-}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

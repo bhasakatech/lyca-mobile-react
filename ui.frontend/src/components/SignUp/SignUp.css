@@ -22,3 +22,62 @@
         width: 100%;
         height: 50%;
     }
+
+    @media screen and (max-width:480px){
+          /* sign up */
+
+    .signup {
+        padding: 24px;
+    }
+
+    .signup>h1 {
+        font-size: 20px;
+        width: auto;
+        text-align: center;
+    }
+
+    .signup-input {
+        /* border: 1px solid; */
+        flex-wrap: wrap;
+
+    }
+
+    .signup-input+div>p {
+        font-size: 14px;
+    }
+
+    .signup-input>button {
+        width: 100%;
+        height: 50%;
+    }
+    } 
+
+       @media (min-width:480px) and (max-width:768px) {
+         /* sign up */
+
+    .signup {
+        padding: 24px;
+    }
+
+    .signup>h1 {
+        font-size: 20px;
+        width: auto;
+        text-align: center;
+    }
+
+    .signup-input {
+        /* border: 1px solid; */
+        flex-wrap: wrap;
+
+    }
+
+    .signup-input+div>p {
+        font-size: 14px;
+    }
+
+    .signup-input>button {
+        width: 100%;
+        height: 50%;
+    }
+
+}

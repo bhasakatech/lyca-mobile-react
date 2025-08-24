@@ -258,3 +258,181 @@ input::placeholder{
     height: 14px;
     margin: 4px 0 0 5px;
 }
+@media (max-width:480px) {
+.already-with-lyca {
+        background-image: url(../../fonts/GT-Eesti/mobile-already-main-section-bg-img.svg);
+        box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .1);
+        padding: 0 10px;
+        background-position: top;
+        background-size: auto;
+        top: -60px;
+        background-origin: content-box;
+        padding-top: 23px;
+        width: 90%;
+    }
+
+    #already-top-header h1 {
+        margin: 21.58px 0 11.2px 0;
+        padding: 30px 0 0 0;
+        font-size: 26px;
+    }
+
+    #already-top-header p {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    .recharge-tabs-container {
+        gap: 4px;
+        /* overflow: auto; */
+        flex-wrap: wrap;
+    }
+
+    #recahrge,
+    #renew {
+        height: 34px;
+        min-width: 80px;
+        text-align: center;
+        line-height: 16.416px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+    }
+
+    #recahrge a {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .enter-lyca-number {
+        width: 100%;
+        height: auto;
+    }
+
+    .input-section input {
+        font-size: 13px;
+    }
+
+    .input-section input::placeholder {
+        font-size: 10px;
+    }
+
+    .cms-content {
+        padding: 20px 0;
+        height: 8.95px;
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    .cms-content p {
+        margin: 11.70px 0 11.70px 10px;
+
+    }
+
+    #download-mobile {
+        min-width: 29px;
+        height: 40px;
+    }
+
+
+    .cms-content span {
+        font-size: 11px;
+    }
+
+    .cms-content a {
+        white-space: nowrap;
+        font-size: 11px;
+        margin-left: 2px;
+    }
+}
+
+@media (min-width:480px) and (max-width:768px) {
+
+    .already-with-lyca {
+        background-image: url(../../fonts/GT-Eesti/mobile-already-main-section-bg-img.svg);
+        box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .1);
+        padding: 0 10px;
+        background-position: top;
+        background-size: auto;
+        top: -45px;
+        background-origin: content-box;
+        padding-top: 23px;
+        width: 90%;
+    }
+
+    #already-top-header h1 {
+        margin: 21.58px 0 11.2px 0;
+        padding: 30px 0 0 0;
+        font-size: 26px;
+    }
+
+    #already-top-header p {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    .recharge-tabs-container {
+        gap: 4px;
+        /* overflow: auto; */
+        flex-wrap: wrap;
+    }
+
+    #recahrge,
+    #renew {
+        height: 34px;
+        min-width: 80px;
+        text-align: center;
+        line-height: 16.416px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+    }
+
+    #recahrge a {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .enter-lyca-number {
+        width: 100%;
+        height: auto;
+    }
+
+    .input-section input {
+        font-size: 13px;
+    }
+
+    .input-section input::placeholder {
+        font-size: 10px;
+    }
+
+    .cms-content {
+        padding: 20px 0;
+        height: 8.95px;
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    .cms-content p {
+        margin: 11.70px 0 11.70px 10px;
+
+    }
+
+    #download-mobile {
+        min-width: 29px;
+        height: 40px;
+    }
+
+
+    .cms-content span {
+        font-size: 11px;
+    }
+
+    .cms-content a {
+        white-space: nowrap;
+        font-size: 11px;
+        margin-left: 2px;
+    }
+}

@@ -170,3 +170,132 @@
     margin-top: 4px;
     aspect-ratio: auto 26 / 16;
 }
+
+@media (max-width:480px) {
+.choose-a-plan {
+        padding: 230px 10px 33px 16px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .choose-a-plan h2 {
+        font-size: 1.5rem;
+        line-height: 27.84px;
+        text-align: center;
+    }
+
+    .choose-a-plan p {
+        font-size: .875rem;
+        text-align: center;
+        line-height: 16.24px;
+    }
+
+    .choose-a-plan-cards {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .best-value-card {
+        width: 100%;
+        height: auto;
+        background-position-x: 50%;
+        background-position-y: 50%;
+        /* min-height: 25.188rem; */
+        padding: 6px 8px;
+        background-size: cover;
+        /* background-position: 100%; */
+    }
+
+    .long-term-card {
+        height: 202px;
+        padding: 8px 8px;
+    }
+
+    .internation-plans-card {
+        height: 200px;
+        padding: 8px 8px;
+    }
+
+    .block-text-container h2 a {
+        font-size: 22px;
+    }
+
+    .block-text-container p a:nth-of-type(1) {
+        font-size: 14px;
+    }
+
+    .block-text-container p a:nth-of-type(3) img {
+        width: 1.5rem;
+        height: 14px;
+        margin-left: 16px;
+        margin-top: 4px;
+    }
+}
+
+@media (min-width:480px) and (max-width:768px) {
+
+  .choose-a-plan {
+        padding: 230px 10px 33px 16px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .choose-a-plan h2 {
+        font-size: 1.5rem;
+        line-height: 27.84px;
+        text-align: center;
+    }
+
+    .choose-a-plan p {
+        font-size: .875rem;
+        text-align: center;
+        line-height: 16.24px;
+    }
+
+    .choose-a-plan-cards {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .best-value-card {
+        width: 100%;
+        height: auto;
+        background-position-x: 50%;
+        background-position-y: 50%;
+        /* min-height: 25.188rem; */
+        padding: 6px 8px;
+        background-size: cover;
+        /* background-position: 100%; */
+    }
+
+    .long-term-card {
+        height: 202px;
+        padding: 8px 8px;
+    }
+
+    .internation-plans-card {
+        height: 200px;
+        padding: 8px 8px;
+    }
+
+    .block-text-container h2 a {
+        font-size: 22px;
+    }
+
+    .block-text-container p a:nth-of-type(1) {
+        font-size: 14px;
+    }
+
+    .block-text-container p a:nth-of-type(3) img {
+        width: 1.5rem;
+        height: 14px;
+        margin-left: 16px;
+        margin-top: 4px;
+    }
+}

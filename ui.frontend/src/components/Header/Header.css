@@ -1,8 +1,17 @@
 
 
+/* @media (min-width:600px) and (max-width:2600px) { */
+   
+#lyca-logo-mobile,
+#menu-mobile,
+.mobile-img {
+    display: none;
+}
+
+/* } */
 .header {
     box-shadow: none;
-   
+    width:100%;
     left: auto;
     right: 0px;
     min-height: fit-content;
@@ -220,4 +229,158 @@
     width: 18px;
     height: 18px;
     margin: 0 5px 0 0;
+}
+
+@media (max-width:480px) {
+
+    /* header-section */
+
+    #lyca-logo,
+    #menu,
+    #tab-container,
+    #country,
+    #left-arrow,
+    #right-arrow {
+        display: none;
+    }
+
+    .go-to-top-button img{
+        width:32px;
+        max-height:32px;
+    }
+
+    .access-container button{
+        width:30px;
+        height:30px;
+    }
+
+    svg{
+        width:14.7px;
+        height:19.5px;
+    }
+
+    .nav-bar {
+        padding: 0 16px;
+    }
+
+    .nav-bar nav {
+        padding: 0 0 0 16px;
+        margin: 0px;
+        justify-content: space-between;
+        width: 100%;
+        min-height:100%;
+    }
+
+    #lyca-logo-mobile {
+        display: block;
+        padding: 12px;
+        margin-left: -12px;
+        border: none;
+        outline: none;
+        background: transparent;
+        margin-right: 5px;
+    }
+
+    #lyca-logo-mobile a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+    }
+
+    #lyca-logo-mobile img {
+        width: 100%;
+        height: 100%;
+    }
+
+    #right-container {
+        overflow: scroll;
+    }
+
+    #menu-mobile {
+        display: block;
+        padding: 12px;
+        margin: 0 0 0 -12px;
+    }
+
+    #menu-mobile img {
+        width: 20px;
+        height: 16px;
+    }
+
+    #quick-recharge{
+        max-width:92px;
+        width: fit-content;
+    }
+
+    #quick-recharge p a {
+        font-size: 12px;
+    }
+
+    #profile>img:first-child,
+    #cart img {
+        min-width: 28px;
+        height: 28px;
+    }
+}
+
+
+@media (min-width:480px) and (max-width:768px) {
+
+    /* header-section */
+
+    #lyca-logo-mobile,
+    #tab-container,
+     #menu-mobile,
+    #left-arrow,
+    #right-arrow {
+        display: none;
+    }
+
+    .go-to-top-button img {
+        width: 32px;
+        max-height: 32px;
+    }
+
+    .access-container button {
+        width: 30px;
+        height: 30px;
+    }
+
+    svg {
+        width: 14.7px;
+        height: 19.5px;
+    }
+
+    .nav-bar {
+        padding: 0 24px;
+    }
+
+    .nav-bar nav {
+        padding: 0 0 0 24px;
+        margin: 0 14.4px 0 30px;
+        justify-content: space-between;
+        width: 100%;
+        min-height:100%;
+    }
+
+    #right-container {
+        overflow: scroll;
+    }
+
+    #quick-recharge{
+        max-width:92px;
+        width: fit-content;
+    }
+
+    #quick-recharge p a {
+        font-size: 12px;
+    }
+
+    #profile>img:first-child,
+    #cart img {
+        min-width: 32px;
+        height: 32px;
+    }
 }

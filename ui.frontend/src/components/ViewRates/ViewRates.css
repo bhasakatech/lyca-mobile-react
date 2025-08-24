@@ -46,3 +46,49 @@
     height: 14px;
     margin-left: 9px;
 }
+@media (max-width:480px) {
+ .view-rates-now {
+        padding: 0 15px;
+
+        height: 66px;
+    }
+
+    .view-rates-now p {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #sim-icon {
+        height: auto;
+        width: 41px;
+    }
+
+    .view-rates-now p a {
+        font-size: 14px;
+    }
+
+}
+
+@media (min-width:480px) and (max-width:768px) {
+      .view-rates-now {
+        padding: 0 15px;
+
+        height: 66px;
+    }
+
+    .view-rates-now p {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #sim-icon {
+        height: auto;
+        width: 41px;
+    }
+
+    .view-rates-now p a {
+        font-size: 14px;
+    }
+}
