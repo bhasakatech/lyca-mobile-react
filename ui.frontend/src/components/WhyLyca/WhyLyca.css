@@ -101,7 +101,7 @@
         display: flex;
         flex-direction: column;
         max-width: 100%;
-
+         margin-top: 0;
     }
 
     .why-lyca-child-content-cards p:nth-of-type(1) img {
@@ -140,12 +140,14 @@
     .why-lyca-child-content {
         display: flex;
         flex-wrap: wrap;
+         row-gap: 0.5rem;
         align-items: center;
     }
 
     .why-lyca-child-content-cards {
         display: flex;
         flex-direction: column;
+        margin-top: 0;
         /* max-width: 100%; */
     }
 

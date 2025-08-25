@@ -9,9 +9,9 @@
     width: 100%;
     max-width: 1400px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 191px;
+    /* gap: 191px; */
     margin: 0 auto;
 }
 
