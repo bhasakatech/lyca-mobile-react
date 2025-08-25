@@ -38,7 +38,7 @@ footer {
     gap: 16px;
     list-style: none;
     padding-bottom: 16px;
-    /* padding-left: 24px; */
+    padding-left: 0;
 
 
 }
