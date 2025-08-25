@@ -3,7 +3,7 @@
     width: 100%;
     display: flex;
     position: relative;
-    /* z-index: -10; */
+    z-index: 11;
     justify-content: center;
     align-items: flex-start;
     min-height: 30.68rem;
@@ -88,4 +88,94 @@
     color: #fff;
     font-family: "GTEestiLCDisplayRegular";
     font-weight: 400;
+}
+
+@media (max-width:480px) {
+.join-lyca-container {
+        height: auto;
+        width: 100%;
+        padding: 30px 15px;
+        min-height: 21.875rem; 
+    }
+
+    #top-header h1 {
+        margin: 16.08px 0 4px 0;
+        font-size: 24px;
+    }
+
+    #top-header p {
+        margin-bottom: 19.2px;
+        font-size: 14px;
+    }
+
+    .join-image-section {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: space-around;
+    }
+
+    .lyca-card {
+        width: fit-content;
+        min-width: 107px;
+    }
+
+    .lyca-card img {
+        max-width: 67px;
+        height: 67px;
+    }
+
+    .lyca-card p {
+        margin: 16px 0 30px 0;
+        padding: 0px;
+    }
+
+    .lyca-card p a {
+        font-size: 14px;
+    }
+}
+
+@media (min-width:480px) and (max-width:768px) {
+
+     .join-lyca-container {
+        height: auto;
+        width: 100%;
+        padding: 30px 15px;
+        min-height: 21.875rem; 
+    }
+
+    #top-header h1 {
+        margin: 16.08px 0 4px 0;
+        font-size: 24px;
+    }
+
+    #top-header p {
+        margin-bottom: 19.2px;
+        font-size: 14px;
+    }
+
+    .join-image-section {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: space-around;
+    }
+
+    .lyca-card {
+        width: fit-content;
+        min-width: 107px;
+    }
+
+    .lyca-card img {
+        max-width: 67px;
+        height: 67px;
+    }
+
+    .lyca-card p {
+        margin: 16px 0 30px 0;
+        padding: 0px;
+    }
+
+    .lyca-card p a {
+        font-size: 14px;
+    }
+
 }

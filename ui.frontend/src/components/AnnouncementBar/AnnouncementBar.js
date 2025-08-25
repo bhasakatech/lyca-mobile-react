@@ -11,7 +11,7 @@ export default function AnnouncementBar() {
           </div>
           <div>
             <a href="#">
-              <img src="/content/dam/lyca-mobile/assets/subnav-img.svg" alt="sub nav" />
+              <img loading="lazy" src="/content/dam/lyca-mobile/assets/subnav-img.svg" alt="sub nav" />
             </a>
           </div>
         </div>

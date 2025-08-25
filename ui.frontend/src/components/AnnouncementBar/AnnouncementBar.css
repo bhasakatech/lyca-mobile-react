@@ -1,7 +1,7 @@
 /* announcement-bar styles */
 
 .announcement-bar {
-    /* position: relative; */
+    position: relative;
     background-color: #ffeeb2;
     display: flex;
     align-items: center;
@@ -9,6 +9,7 @@
     height: 40px;
     box-sizing: border-box;
     width: 100%;
+    z-index: 11;
 }
 
 #bar-container {
@@ -57,4 +58,59 @@
     width: 24px;
     height: 24px;
     aspect-ratio: auto 24/24;
+}
+@media (max-width:480px) {
+
+/* announcement-bar section */
+
+    .announcement-bar {
+        height: auto;
+    }
+
+    #bar-container {
+        margin: 0px;
+        padding: 0px 16px;
+    }
+
+    #text-box {
+        align-self: center;
+        justify-content: center;
+    }
+
+    #text-box>div:first-child {
+        text-align: left;
+        font-size: 14px;
+    }
+
+    #text-box>div:last-child {
+        align-self: center;
+    }
+}
+
+@media (min-width:480px) and (max-width:768px) {
+    
+    /* announcement-bar section */
+
+    .announcement-bar {
+        height: auto;
+    }
+
+    #bar-container {
+        margin: 0px;
+        padding: 0px 16px;
+    }
+
+    #text-box {
+        align-self: center;
+        justify-content: center;
+    }
+
+    #text-box>div:first-child {
+        text-align: left;
+        font-size: 14px;
+    }
+
+    #text-box>div:last-child {
+        align-self: center;
+    }
 }

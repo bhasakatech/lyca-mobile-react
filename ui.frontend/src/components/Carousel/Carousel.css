@@ -138,3 +138,69 @@
     font-family: "GTEestiLCDisplayRegular";
     font-weight: 400;
 }
+@media (max-width:480px) {
+/* carousel section */
+
+    .carousel {
+        height: auto;
+    }
+
+    #carousel-img {
+        /* min-height:256px; */
+        height: auto;
+        width: 100%;
+    }
+
+    #carousel-img img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (min-width:480px) and (max-width:768px) {
+     /* carousel section */
+
+    .carousel {
+        height: auto;
+    }
+
+    #carousel-img {
+        /* min-height:256px; */
+        height: auto;
+        width: 100%;
+    }
+
+    #carousel-img img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.carousel-control-prev{
+    padding-left: 20px !important;
+    display: flex !important;
+    justify-content: start !important;
+    align-items: center !important;
+}
+.carousel-control-next{
+    padding-right: 20px !important;
+    display: flex !important;
+    justify-content: end !important;
+    align-items: center !important;
+}
+.carousel-control-prev-icon{
+    height: 2.75rem !important;
+    width: 2.75rem !important;
+    background-image: url("../../fonts/GT-Eesti/slider_left_arrow.e49.svg") !important;
+    background-color: rgba(5, 5, 5, 0.61) !important;
+    border-radius: 50px;
+    background-size: cover;
+}
+.carousel-control-next-icon{
+    background-image: url("../../fonts/GT-Eesti/slider_right_arrow.0d76d2f7.svg") !important;
+    height: 2.75rem !important;
+    width: 2.75rem !important;
+    background-color: rgba(5, 5, 5, 0.61) !important;
+    border-radius: 50px;
+    background-size: cover;
+}

@@ -14,7 +14,7 @@ export default function Help() {
             <p className="help-container-card-icon-container">
               <a href="#">
                 {/* URL-encoded spaces and & */}
-                <img src="/content/dam/lyca-mobile/assets/PayG-PayM.jpg" alt="Prepaid plans" />
+                <img loading="lazy" src="/content/dam/lyca-mobile/assets/PayG-PayM.jpg" alt="Prepaid plans" />
               </a>
               <br />
             </p>
@@ -28,7 +28,7 @@ export default function Help() {
           <div className="help-container-card">
             <p className="help-container-card-icon-container">
               <a href="#">
-                <img src="/content/dam/lyca-mobile/assets/Switch_0.jpg" alt="Switch to Lyca" />
+                <img loading="lazy"  src="/content/dam/lyca-mobile/assets/Switch_0.jpg" alt="Switch to Lyca" />
               </a>
               <br />
             </p>
@@ -42,7 +42,7 @@ export default function Help() {
           <div className="help-container-card">
             <p className="help-container-card-icon-container">
               <a href="#">
-                <img src="/content/dam/lyca-mobile/assets/MYA.jpg" alt="Manage your account" />
+                <img loading="lazy" src="/content/dam/lyca-mobile/assets/MYA.jpg" alt="Manage your account" />
               </a>
               <br />
             </p>
@@ -57,7 +57,7 @@ export default function Help() {
             <p className="help-container-card-icon-container">
               <a href="#">
                 {/* URL-encoded space */}
-                <img src="/content/dam/lyca-mobile/assets/Lia%20chat.jpg" alt="Chat with LIA" />
+                <img loading="lazy" src="/content/dam/lyca-mobile/assets/Lia%20chat.jpg" alt="Chat with LIA" />
               </a>
               <br />
             </p>

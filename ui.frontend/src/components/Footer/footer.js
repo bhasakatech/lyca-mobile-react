@@ -11,7 +11,7 @@ const Footer = () => {
             <div>
               <div className="footer-ul-header">
                 <h2>Join Lyca mobile</h2>
-                <img src="/content/dam/lyca-mobile/assets/arrow-down-circle.e8d1ba6f.svg" alt="" />
+                <img loading="lazy" src="/content/dam/lyca-mobile/assets/arrow-down-circle.e8d1ba6f.svg" alt="" />
               </div>
               <ul>
                 <li><a href="#">prepaid plans</a></li>
@@ -28,7 +28,7 @@ const Footer = () => {
             <div>
               <div className="footer-ul-header">
                 <h2>Quick links</h2>
-                <img src="/content/dam/lyca-mobile/assets/arrow-down-circle.e8d1ba6f.svg" alt="" />
+                <img loading="lazy" src="/content/dam/lyca-mobile/assets/arrow-down-circle.e8d1ba6f.svg" alt="" />
               </div>
               <ul>
                 <li><a href="#">Rates</a></li>
@@ -45,7 +45,7 @@ const Footer = () => {
             <div>
               <div className="footer-ul-header">
                 <h2>Help & support</h2>
-                <img src="/content/dam/lyca-mobile/assets/arrow-down-circle.e8d1ba6f.svg" alt="" />
+                <img  loading="lazy" src="/content/dam/lyca-mobile/assets/arrow-down-circle.e8d1ba6f.svg" alt="" />
               </div>
               <ul>
                 <li><a href="#">Contact us</a></li>
@@ -61,7 +61,7 @@ const Footer = () => {
             <div>
               <div className="footer-ul-header">
                 <h2>Lyca Mobile US</h2>
-                <img src="/content/dam/lyca-mobile/assets/arrow-down-circle.e8d1ba6f.svg" alt="" />
+                <img loading="lazy" src="/content/dam/lyca-mobile/assets/arrow-down-circle.e8d1ba6f.svg" alt="" />
               </div>
               <ul>
                 <li><a href="#">About us</a></li>
@@ -85,17 +85,17 @@ const Footer = () => {
               <ul>
                 <li>
                   <a href="#">
-                    <img src="/content/dam/lyca-mobile/assets/Gpay.jpg" alt="" />
+                    <img loading="lazy" src="/content/dam/lyca-mobile/assets/Gpay.jpg" alt="" />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="/content/dam/lyca-mobile/assets/AppStore.jpg" alt="" />
+                    <img loading="lazy" src="/content/dam/lyca-mobile/assets/AppStore.jpg" alt="" />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="/content/dam/lyca-mobile/assets/StoreLocator.jpg" alt="" />
+                    <img loading="lazy" src="/content/dam/lyca-mobile/assets/StoreLocator.jpg" alt="" />
                   </a>
                 </li>
               </ul>
@@ -110,14 +110,14 @@ const Footer = () => {
         <div className="footer-signature">
           <div className="footer-signature-container">
             <div>
-              <img src="/content/dam/lyca-mobile/assets/footer-logo.jpg" alt="" />
+              <img loading="lazy" src="/content/dam/lyca-mobile/assets/lyca-mobile-logo.jpg" alt="" />
               <br />
             </div>
             <div>© 2025 Lycamobile USA Inc. All rights reserved.</div>
             <div>
-              <a href="#"><img src="/content/dam/lyca-mobile/assets/fb.jpg" alt="" /></a>
-              <a href="#"><img src="/content/dam/lyca-mobile/assets/twitter.jpg" alt="" /></a>
-              <a href="#"><img src="/content/dam/lyca-mobile/assets/Insta.jpg" alt="" /></a>
+              <a href="#"><img  loading="lazy" src="/content/dam/lyca-mobile/assets/fb.jpg" alt="" /></a>
+              <a href="#"><img loading="lazy" src="/content/dam/lyca-mobile/assets/twitter.jpg" alt="" /></a>
+              <a href="#"><img loading="lazy" src="/content/dam/lyca-mobile/assets/Insta.jpg" alt="" /></a>
             </div>
           </div>
         </div>
@@ -126,9 +126,20 @@ const Footer = () => {
       {/* Go to Top Button */}
       <button className="go-to-top-button">
         <a href="#">
-          <img src="" alt="" loading="lazy" />
+          <img  src="/content/dam/lyca-mobile/assets/goToTopHomeIcon.4eba1f71.svg" alt="" loading="lazy" />
         </a>
       </button>
+
+      {/* access container*/}
+      <section className="access-container">
+    <button>
+      <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 131.3"
+  part="acsb-trigger-icon-svg" data-testid="base-icon-svg" style={{ display: 'inline-flex' }}>
+  <path d="M71.6 131.3c1 0 2.1-.3 3.1-.8 3.9-1.8 5.5-6.2 3.6-10.1 0 0-14.3-32.7-16.9-44.7-1-4.2-1.6-15.3-1.8-20.5 0-1.8 1-3.4 2.6-3.9l32-9.6c3.9-1 6.2-5.5 5.2-9.4-1-3.9-5.5-6.2-9.4-5.2 0 0-29.6 9.6-40.3 9.6-10.4 0-39.8-9.4-39.8-9.4-3.9-1-8.3.8-9.6 4.7-1.3 4.2 1 8.6 5.2 9.6l32 9.6c1.6.5 2.9 2.1 2.6 3.9-.3 5.2-.8 16.4-1.8 20.5-2.6 12-16.9 44.7-16.9 44.7-1.8 3.9 0 8.3 3.6 10.1 1 .5 2.1.8 3.1.8 2.9 0 5.7-1.6 6.8-4.4l15.3-31.2L64.8 127c1.3 2.7 3.9 4.3 6.8 4.3z"/>
+</svg>
+
+    </button>
+  </section>
     </>
   );
 };
