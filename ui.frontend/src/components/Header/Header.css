@@ -393,3 +393,6 @@
 .carousel-inner img{
     width:100vw;
 }
+#quick-recharge p{
+    margin-bottom:0 !important;
+}

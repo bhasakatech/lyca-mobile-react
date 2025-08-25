@@ -11,7 +11,7 @@ const Footer = () => {
             <div>
               <div className="footer-ul-header">
                 <h2>Join Lyca mobile</h2>
-                <img src="/content/dam/lyca-mobile/assets/arrow-down-circle.e8d1ba6f.svg" alt="" />
+                <img loading="lazy" src="/content/dam/lyca-mobile/assets/arrow-down-circle.e8d1ba6f.svg" alt="" />
               </div>
               <ul>
                 <li><a href="#">prepaid plans</a></li>
@@ -28,7 +28,7 @@ const Footer = () => {
             <div>
               <div className="footer-ul-header">
                 <h2>Quick links</h2>
-                <img src="/content/dam/lyca-mobile/assets/arrow-down-circle.e8d1ba6f.svg" alt="" />
+                <img loading="lazy" src="/content/dam/lyca-mobile/assets/arrow-down-circle.e8d1ba6f.svg" alt="" />
               </div>
               <ul>
                 <li><a href="#">Rates</a></li>
@@ -45,7 +45,7 @@ const Footer = () => {
             <div>
               <div className="footer-ul-header">
                 <h2>Help & support</h2>
-                <img src="/content/dam/lyca-mobile/assets/arrow-down-circle.e8d1ba6f.svg" alt="" />
+                <img  loading="lazy" src="/content/dam/lyca-mobile/assets/arrow-down-circle.e8d1ba6f.svg" alt="" />
               </div>
               <ul>
                 <li><a href="#">Contact us</a></li>
@@ -61,7 +61,7 @@ const Footer = () => {
             <div>
               <div className="footer-ul-header">
                 <h2>Lyca Mobile US</h2>
-                <img src="/content/dam/lyca-mobile/assets/arrow-down-circle.e8d1ba6f.svg" alt="" />
+                <img loading="lazy" src="/content/dam/lyca-mobile/assets/arrow-down-circle.e8d1ba6f.svg" alt="" />
               </div>
               <ul>
                 <li><a href="#">About us</a></li>
@@ -85,17 +85,17 @@ const Footer = () => {
               <ul>
                 <li>
                   <a href="#">
-                    <img src="/content/dam/lyca-mobile/assets/Gpay.jpg" alt="" />
+                    <img loading="lazy" src="/content/dam/lyca-mobile/assets/Gpay.jpg" alt="" />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="/content/dam/lyca-mobile/assets/AppStore.jpg" alt="" />
+                    <img loading="lazy" src="/content/dam/lyca-mobile/assets/AppStore.jpg" alt="" />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="/content/dam/lyca-mobile/assets/StoreLocator.jpg" alt="" />
+                    <img loading="lazy" src="/content/dam/lyca-mobile/assets/StoreLocator.jpg" alt="" />
                   </a>
                 </li>
               </ul>
@@ -110,14 +110,14 @@ const Footer = () => {
         <div className="footer-signature">
           <div className="footer-signature-container">
             <div>
-              <img src="/content/dam/lyca-mobile/assets/lyca-mobile-logo.jpg" alt="" />
+              <img loading="lazy" src="/content/dam/lyca-mobile/assets/lyca-mobile-logo.jpg" alt="" />
               <br />
             </div>
             <div>© 2025 Lycamobile USA Inc. All rights reserved.</div>
             <div>
-              <a href="#"><img src="/content/dam/lyca-mobile/assets/fb.jpg" alt="" /></a>
-              <a href="#"><img src="/content/dam/lyca-mobile/assets/twitter.jpg" alt="" /></a>
-              <a href="#"><img src="/content/dam/lyca-mobile/assets/Insta.jpg" alt="" /></a>
+              <a href="#"><img  loading="lazy" src="/content/dam/lyca-mobile/assets/fb.jpg" alt="" /></a>
+              <a href="#"><img loading="lazy" src="/content/dam/lyca-mobile/assets/twitter.jpg" alt="" /></a>
+              <a href="#"><img loading="lazy" src="/content/dam/lyca-mobile/assets/Insta.jpg" alt="" /></a>
             </div>
           </div>
         </div>
@@ -126,7 +126,7 @@ const Footer = () => {
       {/* Go to Top Button */}
       <button className="go-to-top-button">
         <a href="#">
-          <img src="/content/dam/lyca-mobile/assets/goToTopHomeIcon.4eba1f71.svg" alt="" loading="lazy" />
+          <img  src="/content/dam/lyca-mobile/assets/goToTopHomeIcon.4eba1f71.svg" alt="" loading="lazy" />
         </a>
       </button>
 

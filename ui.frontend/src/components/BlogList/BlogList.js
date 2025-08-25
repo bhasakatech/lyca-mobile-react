@@ -13,6 +13,7 @@ const BlogSection = () => {
 
           <div className="blog-card">
             <img
+              loading="lazy"
               src="/content/dam/lyca-mobile/assets/WhatsApp%20Image%202025-08-23%20at%2019.06.53_192504ea.jpg"
               alt=""
             />
@@ -30,6 +31,7 @@ const BlogSection = () => {
 
           <div className="blog-card">
             <img
+              loading="lazy"
               src="/content/dam/lyca-mobile/assets/WhatsApp%20Image%202025-08-23%20at%2019.06.52_40692a0a.jpg"
               alt=""
             />
@@ -47,6 +49,7 @@ const BlogSection = () => {
 
           <div className="blog-card">
             <img
+              loading="lazy"
               src="/content/dam/lyca-mobile/assets/WhatsApp%20Image%202025-08-23%20at%2019.06.52_97fdd014.jpg"
               alt=""
             />

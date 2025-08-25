@@ -20,7 +20,7 @@ export default function JoinLyca() {
           <div className="join-card">
             <div id="plans" className="lyca-card">
               <a href="#">
-                <img src="/content/dam/lyca-mobile/assets/plans.jpg" alt="Plans" />
+                <img loading="lazy" src="/content/dam/lyca-mobile/assets/plans.jpg" alt="Plans" />
               </a>
               <p>
                 <a href="#">Plans</a>
@@ -31,7 +31,7 @@ export default function JoinLyca() {
           <div className="join-card">
             <div id="activate" className="lyca-card">
               <a href="#">
-                <img src="/content/dam/lyca-mobile/assets/Activate_SIM.jpg" alt="Activate SIM" />
+                <img loading="lazy" src="/content/dam/lyca-mobile/assets/Activate_SIM.jpg" alt="Activate SIM" />
               </a>
               <p>
                 <a href="#">Activate SIM</a>
@@ -42,7 +42,7 @@ export default function JoinLyca() {
           <div className="join-card">
             <div id="switch" className="lyca-card">
               <a href="#">
-                <img src="/content/dam/lyca-mobile/assets/Switch.jpg" alt="Switch to Lyca" />
+                <img loading="lazy"  src="/content/dam/lyca-mobile/assets/Switch.jpg" alt="Switch to Lyca" />
               </a>
               <p>
                 <a href="#">Switch to Lyca</a>

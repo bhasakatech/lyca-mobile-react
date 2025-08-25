@@ -21,7 +21,7 @@ export default function ChooseAPlan() {
                 <a href="#">Check out our 30 days plans</a>
                 <a href="#"></a>
                 <a href="#">
-                  <img src="/content/dam/lyca-mobile/assets/app_arrow.jpg" alt="arrow" />
+                  <img loading="lazy" src="/content/dam/lyca-mobile/assets/app_arrow.jpg" alt="arrow" />
                 </a>
               </p>
             </div>
@@ -39,7 +39,7 @@ export default function ChooseAPlan() {
                 <a href="#">Stay more, save more</a>
                 <a href="#"></a>
                 <a href="#">
-                  <img src="/content/dam/lyca-mobile/assets/app_arrow.jpg" alt="arrow" />
+                  <img  loading="lazy" src="/content/dam/lyca-mobile/assets/app_arrow.jpg" alt="arrow" />
                 </a>
               </p>
             </div>
@@ -57,7 +57,7 @@ export default function ChooseAPlan() {
                 <a href="#">Unlimited talk & text to 100 countries</a>
                 <a href="#"></a>
                 <a href="#">
-                  <img src="/content/dam/lyca-mobile/assets/app_arrow.jpg" alt="arrow" />
+                  <img loading="lazy" src="/content/dam/lyca-mobile/assets/app_arrow.jpg" alt="arrow" />
                 </a>
               </p>
             </div>

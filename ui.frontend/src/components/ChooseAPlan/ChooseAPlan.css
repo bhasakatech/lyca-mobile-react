@@ -201,7 +201,7 @@
     .best-value-card {
         width: 100%;
         height: auto;
-        background-position-x: 50%;
+        background-position-x: 30%;
         background-position-y: 50%;
         /* min-height: 25.188rem; */
         padding: 6px 8px;
@@ -297,11 +297,5 @@
         height: 14px;
         margin-left: 16px;
         margin-top: 4px;
-    }
-}
-
-@media screen and (max-width:375px){
-    .best-value-card{
-        background-position-x: 30%;
     }
 }

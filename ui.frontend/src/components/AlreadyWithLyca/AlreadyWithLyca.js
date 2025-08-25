@@ -37,6 +37,7 @@ export default function AlreadyWithLyca() {
               <button>
                 <a href="#">
                   <img
+                    loading="lazy"
                     src="/content/dam/lyca-mobile/assets/blueRightCircleArrow.f268c82d.svg"
                     alt=""
                   />
@@ -51,6 +52,7 @@ export default function AlreadyWithLyca() {
           <div className="cms-content">
             <p>
               <img
+                loading="lazy"
                 src="/content/dam/lyca-mobile/assets/mobile-App%20Icon_1.jpg"
                 alt=""
                 id="download-mobile"
@@ -58,6 +60,7 @@ export default function AlreadyWithLyca() {
               <span>Track your usage on the go!</span>
               <a href="#">Download our app</a>
               <img
+                loading="lazy"
                 src="/content/dam/lyca-mobile/assets/app_arrow.jpg"
                 alt=""
                 id="download-right-arrow"
