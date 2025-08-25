@@ -32,6 +32,7 @@
     margin: 0;
     font-size: 48px;
     color:#34405F;
+    font-weight: 500;;
 }
 
 .help-container-card-container {
@@ -87,7 +88,7 @@
 }
 
 
-@media screen and (max-width:480px){
+@media screen and (max-width:600px){
 
        .help-container-header h2 {
         font-size: 24px;
@@ -115,7 +116,7 @@
 
 }
 
-@media (min-width:480px) and (max-width:768px) {
+@media (min-width:600px) and (max-width:768px) {
     
     .help-container-header h2 {
         font-size: 24px;
@@ -127,10 +128,17 @@
     }
 
     .help-container-card-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        column-gap: 0px;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 32px;
+        column-gap: 40px;
+        margin: 0 50px;
+        padding:0 86px;
+    }
+
+    .help-container-card{
+          min-width:6rem;
     }
 
     .help-container-card-icon-container-content a:nth-of-type(1) {
