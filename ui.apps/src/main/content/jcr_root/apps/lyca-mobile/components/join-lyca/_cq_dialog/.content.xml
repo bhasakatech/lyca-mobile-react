@@ -25,10 +25,10 @@
                         jcr:primaryType="nt:unstructured"
                         fieldLabel="Cards"
                         composite="true"
-                        name="./cards"
                         sling:resourceType="granite/ui/components/coral/foundation/form/multifield">
                         <field
                             jcr:primaryType="nt:unstructured"
+                            name="./cards"
                             sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
                             <items jcr:primaryType="nt:unstructured">
                                 <title
