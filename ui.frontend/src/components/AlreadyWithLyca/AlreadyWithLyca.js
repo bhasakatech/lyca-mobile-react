@@ -4,7 +4,7 @@ const { title,
         description, 
         lycaNumber,
         buttonList = [],
-        placeholder,
+        placeHolder,
         mobileIcon,
         mobileIconText,
         appDownloadText,
@@ -39,7 +39,7 @@ const { title,
             <div className="input-section">
               <input
                 type="number"
-                placeholder="{placeholder}"
+                placeholder={placeHolder}
                 id="number"
               />
               <button>
