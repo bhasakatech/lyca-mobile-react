@@ -11,11 +11,50 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="granite/ui/components/coral/foundation/container">
                 <items jcr:primaryType="nt:unstructured">
-                    <text
+                    <title
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                        fieldLabel="Text"
-                        name="./text"/>
+                        fieldLabel="Title"
+                        name="./title"/>
+                    <description
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                        fieldLabel="Description"
+                        name="./description"/>
+                    <lycaNumber
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Lyca Number"
+                        name="./lycaNumber"/>
+                    <button
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                        composite="{Boolean}true"
+                        fieldLabel="Button">
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            name="./button">
+                            <items jcr:primaryType="nt:unstructured">
+                                <buttonText
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Button Text"
+                                    name="./buttonText"/>
+                                <button-link
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                    fieldLabel="Button Link"
+                                    name="./buttonLink"
+                                    rootPath="/content/lyca-mobile"/>
+                            </items>
+                        </field>
+                    </button>
+                    <appDownloadLink
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="App Download Link"
+                        name="./appDownloadLink"/>
                 </items>
             </column>
         </items>
