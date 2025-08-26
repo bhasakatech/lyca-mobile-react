@@ -1,6 +1,8 @@
 package com.lyca.mobile.core.models;
 
 import java.util.List;
+import com.adobe.cq.export.json.ComponentExporter;
+import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
@@ -10,15 +12,18 @@ import org.apache.sling.models.annotations.Exporter;
 import com.adobe.cq.export.json.ExporterConstants;
 
 @Model(
-    adaptables = Resource.class,
+    adaptables = {Resource.class, SlingHttpServletRequest.class},
     defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL,
-    resourceType = "lyca-mobile/components/join-lyca"
+    resourceType = JoinLycaModel.RESOURCE_TYPE,
+        adapters = ComponentExporter.class
 )
 @Exporter(
     name = ExporterConstants.SLING_MODEL_EXPORTER_NAME,
     extensions = ExporterConstants.SLING_MODEL_EXTENSION
 )
-public class JoinLycaModel {
+public class JoinLycaModel implements ComponentExporter{
+
+    static final String RESOURCE_TYPE="lyca-mobile/components/join-lyca";
 
     @ValueMapValue
     private String header;
@@ -39,6 +44,11 @@ public class JoinLycaModel {
 
     public List<Card> getCards() {
         return cards;
+    }
+
+    @Override
+    public String getExportedType() {
+        return RESOURCE_TYPE;
     }
 
     @Model(
