@@ -1,45 +1,55 @@
 package com.lyca.mobile.core.models;
 
+import com.adobe.cq.export.json.ComponentExporter;
+import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.*;
 import org.apache.sling.models.annotations.injectorspecific.*;
-
-
-import javax.inject.Named;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.Collections;
 
 @Model(
-    adaptables = Resource.class,
-    resourceType = "lyca-mobile/components/already-with-lyca",
-    defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL,
-    adapters = {AlreadyWithLycaModel.class}
+        adaptables = {Resource.class, SlingHttpServletRequest.class},
+        resourceType = AlreadyWithLycaModel.RESOURCE_TYPE,
+        defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL,
+        adapters = {ComponentExporter.class}
 )
 @Exporter(
     name = "jackson",
     extensions = "json"
 )
-public class AlreadyWithLycaModel {
+public class AlreadyWithLycaModel implements ComponentExporter {
+
+    static final String RESOURCE_TYPE="lyca-mobile/components/already-with-lyca";
 
     @ValueMapValue
-    @Named("title")
     private String title;
 
     @ValueMapValue
-    @Named("description")
     private String description;
 
     @ValueMapValue
-    @Named("lycaNumber")
     private String lycaNumber;
 
-    @ChildResource(name = "button")
-    private List<Button> buttonList;
+    @ValueMapValue
+    private String placeHolder;
 
     @ValueMapValue
-    @Named("appDownloadLink")
+    private String mobileIcon;
+
+    @ValueMapValue
+    private String mobileIconText;
+
+    @ValueMapValue
+    private String appDownloadText;
+
+    @ValueMapValue
     private String appDownloadLink;
+
+
+    @ChildResource()
+    private List<Button> buttonList;
+
+
 
     public String getTitle() {
         return title;
@@ -57,7 +67,28 @@ public class AlreadyWithLycaModel {
         return appDownloadLink;
     }
     public List<Button> getButtonList() {
-        return buttonList != null ? buttonList.stream().collect(Collectors.toList()) : Collections.emptyList();
+        return buttonList;
+    }
+
+    public String getPlaceHolder() {
+        return placeHolder;
+    }
+
+    public String getMobileIcon() {
+        return mobileIcon;
+    }
+
+    public String getMobileIconText() {
+        return mobileIconText;
+    }
+
+    public String getAppDownloadText() {
+        return appDownloadText;
+    }
+
+    @Override
+    public String getExportedType() {
+        return RESOURCE_TYPE;
     }
 
     @Model(
