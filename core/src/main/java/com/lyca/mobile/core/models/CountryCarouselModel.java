@@ -7,7 +7,6 @@ import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.models.annotations.*;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 import org.apache.sling.models.annotations.injectorspecific.ChildResource;
-import javax.inject.Named;
 import java.util.List;
 
 @Model(
@@ -43,16 +42,14 @@ public class CountryCarouselModel implements ComponentExporter {
         return RESOURCE_TYPE;
     }
 
-    // Nested model for each country entry in multifield
-    @Model(adaptables = Resource.class)
+    @Model(adaptables = Resource.class
+    ,defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
     public static class CountryItem {
 
         @ValueMapValue
-        @Named("countryName")
         private String countryName;
 
         @ValueMapValue
-        @Named("countryFlag")
         private String countryFlag;
 
         public String getCountryName() {

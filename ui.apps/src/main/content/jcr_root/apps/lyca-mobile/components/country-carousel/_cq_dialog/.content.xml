@@ -16,33 +16,27 @@
                         fieldLabel="Heading"
                         name="./heading"
                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield" />
-
-                    <!-- Multifield for countries -->
                     <countries
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
                         fieldLabel="Countries"
-                        composite="{Boolean}true"
-                        name="./countries">
-                        
+                        composite="{Boolean}true">
                         <field
                             jcr:primaryType="nt:unstructured"
+                            name="./countries"
                             sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
-                            
                             <items jcr:primaryType="nt:unstructured">
                                 <countryName
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                     fieldLabel="Country Name"
-                                    name="./countryName" />
-                                
+                                    name="./countryName" /> 
                                 <countryFlag
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
                                     fieldLabel="Flag Image Path"
                                     name="./countryFlag"
-                                    rootPath="/content/dam"
-                                    allowUpload="{Boolean}false" />
+                                    rootPath="/content/dam"/> 
                             </items>
                         </field>
                     </countries>
