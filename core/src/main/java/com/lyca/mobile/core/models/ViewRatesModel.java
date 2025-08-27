@@ -1,47 +1,54 @@
 package com.lyca.mobile.core.models;
 
-import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.*;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 import com.adobe.cq.export.json.ComponentExporter;
 import com.adobe.cq.export.json.ExporterConstants;
+import org.apache.sling.api.SlingHttpServletRequest;
 
 @Model(
     adaptables = {Resource.class, SlingHttpServletRequest.class},
-    resourceType = "lyca-mobile/components/announcement-bar",
+    resourceType = "lyca-mobile/components/view-rates",
     defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL,
-    adapters = {AnnouncementBarModel.class, ComponentExporter.class}
+    adapters = {ViewRatesModel.class, ComponentExporter.class}
 )
 @Exporter(
     name = ExporterConstants.SLING_MODEL_EXPORTER_NAME,
     extensions = ExporterConstants.SLING_MODEL_EXTENSION
 )
-public class AnnouncementBarModel implements ComponentExporter {
+public class ViewRatesModel implements ComponentExporter {
 
     @ValueMapValue
-    private String announcementText;
+    private String viewRatesText;
 
     @ValueMapValue
-    private String announcementImage;
+    private String simIcon;
 
     @ValueMapValue
-    private String announcementLink;
+    private String arrowIcon;
 
-    public String getAnnouncementText() {
-        return announcementText;
+    @ValueMapValue
+    private String viewRatesLink;
+
+    public String getViewRatesText() {
+        return viewRatesText;
     }
 
-    public String getAnnouncementImage() {
-        return announcementImage;
+    public String getSimIcon() {
+        return simIcon;
     }
 
-    public String getAnnouncementLink() {
-        return announcementLink;
+    public String getArrowIcon() {
+        return arrowIcon;
+    }
+
+    public String getViewRatesLink() {
+        return viewRatesLink;
     }
 
     @Override
     public String getExportedType() {
-        return "lyca-mobile/components/announcement-bar";
+        return "lyca-mobile/components/view-rates";
     }
 }
