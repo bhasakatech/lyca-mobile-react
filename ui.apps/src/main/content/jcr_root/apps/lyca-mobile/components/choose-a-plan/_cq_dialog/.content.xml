@@ -36,6 +36,11 @@
                                     fieldLabel="Card Title"
                                     name="./cardTitle"
                                     sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                 <cardText
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Card Text"
+                                    name="./cardText"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>    
                                 <cardLink
                                     jcr:primaryType="nt:unstructured"
                                     fieldLabel="Card Link"
