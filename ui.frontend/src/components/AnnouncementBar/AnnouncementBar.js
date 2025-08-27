@@ -1,19 +1,24 @@
 import React from "react";
-import './AnnouncementBar.css'
-export default function AnnouncementBar() {
+import "./AnnouncementBar.css";
+
+export default function AnnouncementBar(props) {
+  const { announcementText, announcementImage, announcementLink } = props;
+
   return (
     <section className="announcement-bar">
       <div id="bar-container">
         <div id="text-box">
-          <div>
-            Welcome to LycaMobile - The Worlds Largest International Mobile
-            Virtual Network Operator
-          </div>
-          <div>
-            <a href="#">
-              <img loading="lazy" src="/content/dam/lyca-mobile/assets/subnav-img.svg" alt="sub nav" />
-            </a>
-          </div>
+          {/* Announcement Text */}
+          {announcementText && <div>{announcementText}</div>}
+
+          {/* Announcement Link + Image */}
+          {announcementLink && announcementImage && (
+            <div>
+              <a href={announcementLink}>
+                <img loading="lazy" src={announcementImage} alt="announcement icon" />
+              </a>
+            </div>
+          )}
         </div>
       </div>
     </section>
