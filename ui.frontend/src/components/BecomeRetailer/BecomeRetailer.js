@@ -1,14 +1,34 @@
 import React from "react";
-import './BecomeRetailer.css'
-const BecomeRetailer = () => {
+import "./BecomeRetailer.css";
+
+const BecomeRetailer = (props) => {
+  const { mainImage, linkText, linkUrl, arrowImage } = props;
+
   return (
     <section className="become-a-retailer">
       <p className="become-a-retailer-container">
-        <img  loading="lazy" src="/content/dam/lyca-mobile/assets/become.jpg" alt="Become a retailer" />
-        <a href="#">
-          Become a retailer. Join Lyca today
-          <img loading="lazy" src="/content/dam/lyca-mobile/assets/image.jpg" alt="Arrow icon" />
-        </a>
+        {/* Main Image */}
+        {mainImage && (
+          <img
+            loading="lazy"
+            src={mainImage}
+            alt={linkText || "Become a retailer"}
+          />
+        )}
+
+        {/* Link with text + arrow */}
+        {linkText && (
+          <a href={linkUrl || "#"}>
+            {linkText}
+            {arrowImage && (
+              <img
+                loading="lazy"
+                src={arrowImage}
+                alt="Arrow icon"
+              />
+            )}
+          </a>
+        )}
       </p>
     </section>
   );
