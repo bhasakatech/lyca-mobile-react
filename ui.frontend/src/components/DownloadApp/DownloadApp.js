@@ -1,50 +1,73 @@
 import React from "react";
-import './DownloadApp.css'
-export default function DownloadApp() {
+import './DownloadApp.css';
+
+export default function DownloadApp(props) {
+  const {
+    mainImage,
+    mobileImage,
+    heading1,
+    heading2,
+    features = [],
+    appStoreLinks = []
+  } = props;
+
   return (
     <section className="download-app">
       {/* Image Container */}
-      <figure className="download-app-image-container">
-        <img loading="lazy" src="/content/dam/lyca-mobile/assets/App_Loader_Img.jpg" alt="App Loader" />
-      </figure>
+      {mainImage && (
+        <figure className="download-app-image-container">
+          <img loading="lazy" src={mainImage} alt="App Loader" />
+        </figure>
+      )}
 
       {/* Content Section */}
       <div className="download-app-content-container">
-        <div className="mobile-img">
-          <img  loading="lazy" src="/content/dam/lyca-mobile/assets/mobile_1-removebg-preview.png" alt="Mobile Preview" />
-        </div>
+        {mobileImage && (
+          <div className="mobile-img">
+            <img loading="lazy" src={mobileImage} alt="Mobile Preview" />
+          </div>
+        )}
 
         <div className="download-app-content">
-          <h2>
-            <strong>Download iOS/Android </strong>
-          </h2>
-          <h2>
-            <strong>My Lyca Mobile app</strong>
-          </h2>
+          {heading1 && (
+            <h2>
+              <strong>{heading1}</strong>
+            </h2>
+          )}
+          {heading2 && (
+            <h2>
+              <strong>{heading2}</strong>
+            </h2>
+          )}
 
-          <p>
-            <img loading="lazy" src="/content/dam/lyca-mobile/assets/Icon_1.jpg" alt="Feature Icon" />
-            Check your credit balance, data availability & more
-          </p>
+          {/* Features */}
+          {features.map((feature, index) => (
+            <p key={index}>
+              {feature.featureIcon && (
+                <img
+                  loading="lazy"
+                  src={feature.featureIcon}
+                  alt="Feature Icon"
+                />
+              )}
+              {feature.featureText}
+            </p>
+          ))}
 
-          <p>
-            <img loading="lazy" src="/content/dam/lyca-mobile/assets/Icon_1.jpg" alt="Feature Icon" />
-            Get reminders to renew
-          </p>
-
-          <p>
-            <img loading="lazy" src="/content/dam/lyca-mobile/assets/Icon_1.jpg" alt="Feature Icon" />
-            Be the first to know about our latest offers and discounts
-          </p>
-
-          <p>
-            <a href="#">
-              <img loading="lazy" src="/content/dam/lyca-mobile/assets/Group%20383180556%20(1).jpg" alt="Download on App Store" />
-            </a>
-            <a href="#">
-              <img loading="lazy" src="/content/dam/lyca-mobile/assets/Group%20383180557%20(1).jpg" alt="Get it on Google Play" />
-            </a>
-          </p>
+          {/* App Store Links */}
+          {appStoreLinks.length > 0 && (
+            <p>
+              {appStoreLinks.map((store, index) => (
+                <a href={store.storeLink} key={index}>
+                  <img
+                    loading="lazy"
+                    src={store.storeIcon}
+                    alt="App Store Icon"
+                  />
+                </a>
+              ))}
+            </p>
+          )}
         </div>
       </div>
     </section>

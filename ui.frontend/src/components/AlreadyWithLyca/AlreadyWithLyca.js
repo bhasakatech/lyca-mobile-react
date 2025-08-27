@@ -1,37 +1,45 @@
-import React from "react";
 import './AlreadyWithLyca.css'
-export default function AlreadyWithLyca() {
+export default function AlreadyWithLyca(props) {
+const { title,
+        description, 
+        lycaNumber,
+        buttonList = [],
+        placeHolder,
+        mobileIcon,
+        mobileIconText,
+        appDownloadText,
+        appDownloadLink } = props;
+        
   return (
     <section className="already-main-container">
       <div className="already-with-lyca">
         {/* Header Section */}
         <div className="already-header-section">
           <div id="already-top-header">
-            <h1>Already with Lyca?</h1>
-            <p>Add a data pack or renew your current plan.</p>
+            <h1>{title}</h1>
+            <p>{description}</p>
           </div>
         </div>
 
-        {/* Recharge / Renew Buttons */}
+         {/* Recharge / Renew Buttons from JSON */}
         <div className="recharge-and-renew">
           <div className="recharge-tabs-container">
-            <button id="recahrge">
-              <a href="#">Recharge</a>
-            </button>
-            <button id="renew">
-              <a href="#">Renew plan</a>
-            </button>
+            {buttonList.map((button, index) => (
+              <button key={index} id={`btn-${index}`}>
+                <a href={button.buttonLink}>{button.buttonText}</a>
+              </button>
+            ))}
           </div>
         </div>
 
         {/* Enter Lyca Number */}
         <div className="enter-lyca-number">
           <div className="input-container">
-            <p>+1</p>
+            <p>{lycaNumber}</p>
             <div className="input-section">
               <input
                 type="number"
-                placeholder="Enter lyca number & get started "
+                placeholder={placeHolder}
                 id="number"
               />
               <button>
@@ -53,12 +61,12 @@ export default function AlreadyWithLyca() {
             <p>
               <img
                 loading="lazy"
-                src="/content/dam/lyca-mobile/assets/mobile-App%20Icon_1.jpg"
+                src={mobileIcon}
                 alt=""
-                id="download-mobile"
+                id="download-mobile"  
               />
-              <span>Track your usage on the go!</span>
-              <a href="#">Download our app</a>
+              <span>{mobileIconText}</span>
+              <a href={appDownloadLink}>{appDownloadText}</a>
               <img
                 loading="lazy"
                 src="/content/dam/lyca-mobile/assets/app_arrow.jpg"
