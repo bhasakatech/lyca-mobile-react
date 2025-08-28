@@ -176,12 +176,56 @@
     display: block;
     overflow: hidden;
     width: 100%;
-    padding: unset;
+    padding: 0 40px;
+  }
+
+  .carousel-track {
+    gap: 0px;
+  }
+
+  .carousel-arrow{
+    display: none;
   }
   .internatonal-calls-icon > img {
     display: none;
   }
+
+  .flag-container{
+    padding: 0px;
+    width:140px;
+    align-items: center;
+    justify-content: center;
+  }
+
   .flag-container > div {
     padding: 0 37px;
   }
 }
+
+
+@media (min-width:780px){
+
+   .international-calls-heading{
+    width: 100%;
+    padding: 6px 0;
+   }
+  .international-calls-heading>h3{
+    width:100%;
+    font-size: 41px;
+    text-align: center;
+    margin: 44.4px 0;
+    padding: 0;
+    white-space: nowrap;
+  }
+
+    .carousel-arrow{
+    display: block;
+  }
+
+  .international-calls-icon-container {
+    display: flex;
+    align-items: center;
+
+}
+}
+

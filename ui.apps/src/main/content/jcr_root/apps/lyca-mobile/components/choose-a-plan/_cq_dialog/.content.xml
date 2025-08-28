@@ -11,11 +11,49 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="granite/ui/components/coral/foundation/container">
                 <items jcr:primaryType="nt:unstructured">
-                    <text
+                    <planHeader
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                        fieldLabel="Text"
-                        name="./text"/>
+                        fieldLabel="Plan Header"
+                        name="./planHeader"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                    <planDescription
+                        jcr:primaryType="nt:unstructured"
+                        fieldLabel="Plan Description"
+                        name="./planDescription"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"/>
+                    <planCards
+                        jcr:primaryType="nt:unstructured"
+                        fieldLabel="Plan Cards"
+                        composite="true"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield">
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            name="./planCards"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <cardTitle
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Card Title"
+                                    name="./cardTitle"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                 <cardText
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Card Text"
+                                    name="./cardText"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>    
+                                <cardLink
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Card Link"
+                                    name="./cardLink"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"/>
+                                <cardImage
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Card Image"
+                                    name="./cardImage"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"/>
+                            </items>
+                        </field>
+                    </planCards>
                 </items>
             </column>
         </items>

@@ -11,11 +11,39 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="granite/ui/components/coral/foundation/container">
                 <items jcr:primaryType="nt:unstructured">
-                    <text
+                    <sectionHeader
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                        fieldLabel="Text"
-                        name="./text"/>
+                        fieldLabel="Section Header"
+                        name="./sectionHeader"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                    <whyLycaCards
+                        jcr:primaryType="nt:unstructured"
+                        fieldLabel="Why Lyca Cards"
+                        composite="true"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield">
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            name="./whyLycaCards"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <cardImage
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Card Image"
+                                    name="./cardImage"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"/>
+                                <cardTitle
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Card Title"
+                                    name="./cardTitle"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                <cardDescription
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Card Description"
+                                    name="./cardDescription"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textarea"/>
+                            </items>
+                        </field>
+                    </whyLycaCards>
                 </items>
             </column>
         </items>

@@ -71,7 +71,7 @@
     font-weight: 400;
 }
 
-.recharge-and-renew {
+.recharge-and-btn-1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,7 +84,7 @@
     margin: 20px 0 30px;
 }
 
-#recahrge {
+#btn-0 {
     border: none;
     background-color: #006ae0;
     color: #fff;
@@ -97,7 +97,7 @@
     cursor: pointer;
 }
 
-#recahrge a {
+#btn-0 a {
     color: #fff;
     font-weight: 500;
     font-size: 0.875rem;
@@ -107,7 +107,7 @@
     font-weight: 500;
 }
 
-#renew {
+#btn-1 {
     border: none;
     background-color: #e8f4fe;
     opacity: 1;
@@ -120,7 +120,7 @@
     cursor: pointer;
 }
 
-#renew a {
+#btn-1 a {
     color: #344054;
     font-weight: 500;
     font-size: 0.875rem;
@@ -148,6 +148,7 @@
     align-items: center;
     border: 1px solid #d0d5dd;
     border-radius: 4px;
+    height:auto;
 }
 
 .input-container p {
@@ -289,8 +290,8 @@ input::placeholder{
         flex-wrap: wrap;
     }
 
-    #recahrge,
-    #renew {
+    #btn-0,
+    #btn-1 {
         height: 34px;
         min-width: 80px;
         text-align: center;
@@ -301,7 +302,7 @@ input::placeholder{
         border: none;
     }
 
-    #recahrge a {
+    #btn-0 a {
         font-size: 14px;
         text-align: center;
     }
@@ -309,6 +310,15 @@ input::placeholder{
     .enter-lyca-number {
         width: 100%;
         height: auto;
+    }
+
+    .input-container p{
+        margin:0;
+    }
+    .input-section{
+        padding:0;
+        height:auto;
+        /* border:2px solid; */
     }
 
     .input-section input {
@@ -379,8 +389,8 @@ input::placeholder{
         flex-wrap: wrap;
     }
 
-    #recahrge,
-    #renew {
+    #btn-0,
+    #btn-1 {
         height: 34px;
         min-width: 80px;
         text-align: center;
@@ -391,7 +401,7 @@ input::placeholder{
         border: none;
     }
 
-    #recahrge a {
+    #btn-0 a {
         font-size: 14px;
         text-align: center;
     }
