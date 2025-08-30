@@ -20,6 +20,11 @@
     align-items: center;
     background-color: inherit;
 }
+@media (max-width: 870px) {
+    .help-container{
+        padding: 40px 0;
+    }
+}
 
 .help-container-header {
     margin-bottom: 48px;
@@ -86,6 +91,7 @@
     color: #344054;
     font-weight: 400;
 }
+
 
 
 @media screen and (max-width:600px){

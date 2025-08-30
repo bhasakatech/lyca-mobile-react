@@ -22,11 +22,11 @@ const Footer = ({ footerSections = [], onTheGo = [], signatureLogo, copyrightTex
               </ul>
             </div>
           ))}
-
+          {/* <hr /> */}
           {/* Lyca on the go */}
           {onTheGo.length > 0 && (
-            <div>
-              <div className="footer-ul-header">
+            <div class="footer-ul-header2">
+              <div>
                 <h2>Lyca on the go</h2>
               </div>
               <ul>

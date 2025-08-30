@@ -6,6 +6,14 @@
   justify-content: center;
 }
 
+@media screen and (min-width: 780px) {
+  .international-calls-section {
+    padding: 0;
+  }
+  
+}
+
+
 .international-calls {
   background-color: #fff;
   display: flex;

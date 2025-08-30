@@ -70,6 +70,13 @@
     /* overflow: hidden; */
     /* width: inherit; */
     /* padding: 27px 20px 17px; */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp:2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+
 }
 
 
