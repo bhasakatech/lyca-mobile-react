@@ -41,8 +41,7 @@
     font-family: "GTEestiLCDisplayRegular";
     font-size: 16px;
     font-weight: 400;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+
     justify-content: center;
     line-height: 18.56px;
     margin-top: 32px;
@@ -69,8 +68,9 @@
     grid-area: 1 / 1 / span 2 / span 1;
     height: 667px;
     line-height: 18.56px;
-    min-height: 660px;
+    min-height: 400px;
     padding: 47px 28px;
+    width: 517px;
 }
 
 .long-term-card {
@@ -93,6 +93,14 @@
     height: 322px;
     line-height: 18.56px;
     padding: 47px 28px;
+    width: 517px;
+}
+
+@media screen and (max-width:768px){
+    .long-term-card {
+        width: 100%;
+    }
+    
 }
 
 .internation-plans-card {
@@ -203,7 +211,7 @@
         height: auto;
         background-position-x: 30%;
         background-position-y: 50%;
-        /* min-height: 25.188rem; */
+        min-height: 27.188rem;
         padding: 6px 8px;
         background-size: cover;
         /* background-position: 100%; */

@@ -1,7 +1,5 @@
-
-
 /* @media (min-width:600px) and (max-width:2600px) { */
-   
+
 #lyca-logo-mobile,
 #menu-mobile,
 .mobile-img {
@@ -9,28 +7,36 @@
 }
 
 /* } */
+
+.aem-container:nth-child(1) {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+}
+
 .header {
     box-shadow: none;
-    width:100%;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
     left: auto;
     right: 0px;
     min-height: fit-content;
     background-color: rgb(255, 255, 255);
     color: rgb(56, 76, 114);
-    height: 80px;
     display: flex;
-    align-items: center;
-    top: 0px;
-    border-bottom: 1px solid rgb(202, 202, 202);
-    height: 81px;
+    -webkit-box-pack: center;
     justify-content: center;
-    left: 0px;
-    line-height: 18.56px;
-    min-height: fit-content;
-    position: sticky;
-    right: 0px;
+    -webkit-box-align: center;
+    align-items: center;
+    position: fixed;
     top: 0px;
     z-index: 1031;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-bottom: 1px solid rgb (202, 202, 202);
+
 }
 
 .nav-bar {
@@ -40,7 +46,7 @@
     padding: 0 24px;
     display: flex;
     align-items: center;
-  
+
 }
 
 .nav-bar nav {
@@ -51,7 +57,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-   
+
 }
 
 .left-container {
@@ -124,6 +130,8 @@
 #tab-container ul {
     display: flex;
     overflow: hidden;
+    padding-left: 0;
+    margin-bottom: 0px;
 }
 
 #tab-container li {
@@ -165,7 +173,7 @@
 #quick-recharge p {
     font-family: "GTEestiLCDisplayRegular";
     white-space: nowrap;
-   
+
 }
 
 #quick-recharge p a {
@@ -243,19 +251,19 @@
         display: none;
     }
 
-    .go-to-top-button img{
-        width:32px;
-        max-height:32px;
+    .go-to-top-button img {
+        width: 32px;
+        max-height: 32px;
     }
 
-    .access-container button{
-        width:30px;
-        height:30px;
+    .access-container button {
+        width: 30px;
+        height: 30px;
     }
 
-    svg{
-        width:14.7px;
-        height:19.5px;
+    svg {
+        width: 14.7px;
+        height: 19.5px;
     }
 
     .nav-bar {
@@ -267,7 +275,7 @@
         margin: 0px;
         justify-content: space-between;
         width: 100%;
-        min-height:100%;
+        min-height: 100%;
     }
 
     #lyca-logo-mobile {
@@ -308,8 +316,8 @@
         height: 16px;
     }
 
-    #quick-recharge{
-        max-width:92px;
+    #quick-recharge {
+        max-width: 92px;
         width: fit-content;
     }
 
@@ -331,7 +339,7 @@
 
     #lyca-logo-mobile,
     #tab-container,
-     #menu-mobile,
+    #menu-mobile,
     #left-arrow,
     #right-arrow {
         display: none;
@@ -361,15 +369,15 @@
         margin: 0 14.4px 0 30px;
         justify-content: space-between;
         width: 100%;
-        min-height:100%;
+        min-height: 100%;
     }
 
     #right-container {
         overflow: scroll;
     }
 
-    #quick-recharge{
-        max-width:92px;
+    #quick-recharge {
+        max-width: 92px;
         width: fit-content;
     }
 
@@ -385,19 +393,21 @@
 }
 
 @media (min-width:768px) and (max-width:850px) {
-   #tab-container{
-    display: none;
-   }
+    #tab-container {
+        display: none;
+    }
 }
 
-.container{
-    max-width:unset !important;
-    padding-right:0px !important;
-    padding-left:0px !important;
+.container {
+    max-width: unset !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
 }
-.carousel-inner img{
-    width:100vw;
+
+.carousel-inner img {
+    width: 100vw;
 }
-#quick-recharge p{
-    margin-bottom:0 !important;
+
+#quick-recharge p {
+    margin-bottom: 0 !important;
 }

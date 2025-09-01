@@ -1,7 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./footer.css";
 
-const Footer = ({ footerSections = [], onTheGo = [], signatureLogo, copyrightText, socialLinks = [] }) => {
+const Footer = ({
+  footerSections = [],
+  onTheGo = [],
+  signatureLogo,
+  copyrightText,
+  socialLinks = [],
+}) => {
+  const [toggleArrow, setToggleArrow] = useState(true);
+  const [activeSection, setActiveSection] = useState(footerSections);
+  useEffect(() => {
+    const arr = activeSection.map((section, index) => {
+      section.Arrow = toggleArrow;
+      return section;
+    });
+  }, [toggleArrow]);
+
+  const settingToggle = (index) => {
+    setActiveSection((prevSections) =>
+      prevSections.map((section, i) => {
+        if (i === index) {
+          section.Arrow = !section.Arrow;
+        }
+        return section;
+      })
+    );
+  };
+
+  console.log("activeSection : ", activeSection);
   return (
     <footer>
       <div className="footer-container">
@@ -11,22 +38,45 @@ const Footer = ({ footerSections = [], onTheGo = [], signatureLogo, copyrightTex
             <div key={index}>
               <div className="footer-ul-header">
                 <h2>{section.title}</h2>
+                {section.Arrow ? (
+                  <div
+                    className="arrow-icon-down"
+                    onClick={() => settingToggle(index)}
+                  >
+                    <img
+                      src="/content/dam/lyca-mobile/assets/arrow-down-white.svg"
+                      alt=" img not available"
+                      loading="lazy"
+                    />
+                  </div>
+                ) : (
+                  <div
+                    className="arrow-icon-up"
+                    onClick={() => settingToggle(index)}
+                  >
+                    <img
+                      src="/content/dam/lyca-mobile/assets/arrow-up-circle-small.svg"
+                      alt=" img not available"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
               </div>
-              <ul>
-                {section.links &&
-                  section.links.map((link, i) => (
-                    <li key={i}>
-                      <a href={link.url}>{link.label}</a>
-                    </li>
-                  ))}
-              </ul>
+                <ul className={`${section.Arrow ? "expanded": "collapsed"}`}>
+                  {section.links &&
+                    section.links.map((link, i) => (
+                      <li key={i}>
+                        <a href={link.url}>{link.label}</a>
+                      </li>
+                    ))}
+                </ul>
             </div>
           ))}
-
+          {/* <hr /> */}
           {/* Lyca on the go */}
           {onTheGo.length > 0 && (
-            <div>
-              <div className="footer-ul-header">
+            <div class="footer-ul-header2">
+              <div>
                 <h2>Lyca on the go</h2>
               </div>
               <ul>

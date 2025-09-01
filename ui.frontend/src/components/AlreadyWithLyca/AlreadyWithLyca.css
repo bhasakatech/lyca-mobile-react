@@ -244,6 +244,7 @@ input::placeholder{
     font-size: 14.4px;
     font-family: "GTEestiLCDisplayRegular";
     font-weight: 400;
+    color: #667085 !important;
 }
 
 .cms-content a {
