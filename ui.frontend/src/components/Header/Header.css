@@ -8,7 +8,7 @@
 
 /* } */
 
-.aem-container:nth-child(1){
+.aem-container:nth-child(1) {
     position: sticky;
     top: 0;
     left: 0;
@@ -26,7 +26,6 @@
     min-height: fit-content;
     background-color: rgb(255, 255, 255);
     color: rgb(56, 76, 114);
-    /* height: 81px; */
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
@@ -36,7 +35,7 @@
     top: 0px;
     z-index: 1031;
     transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
-    border-bottom: 1px solid rgb #cacaca (202, 202, 202);
+    border-bottom: 1px solid rgb (202, 202, 202);
 
 }
 
@@ -131,6 +130,8 @@
 #tab-container ul {
     display: flex;
     overflow: hidden;
+    padding-left: 0;
+    margin-bottom: 0px;
 }
 
 #tab-container li {
