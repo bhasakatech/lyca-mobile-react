@@ -1,5 +1,5 @@
 {
-  "alloworigin": ["http://localhost:3000"],
+  "alloworigin": ["http://localhost:3000","http://localhost:3001","http://localhost:3002"],
   "allowedpaths": ["/(content|conf)/lyca-mobile.*"],
   "supportedheaders": [
     "Authorization",
