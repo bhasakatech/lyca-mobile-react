@@ -105,3 +105,6 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+.aem-container:first-child{
+    position: static;
+}
