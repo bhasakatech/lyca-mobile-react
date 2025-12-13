@@ -1,0 +1,169 @@
+.how-it-works-container {
+  width: 100%;
+  background-color: #f5faff;
+  display: flex;
+  justify-content: center;
+}
+
+.how-it-works-main {
+  width: 100%;
+  max-width: 1234px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5faff;
+  margin: 0 auto;
+}
+
+.how-it-works-heading {
+  margin-top: 60px;
+  font-size: 48px;
+  color: #344054;
+  margin-bottom: 40px;
+}
+
+/* ===== DESKTOP ===== */
+.carousel {
+  position: relative;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+}
+
+.step {
+  position: relative;
+  max-width: 25%;
+  text-align: center;
+}
+
+.step img {
+  width: 100px;
+  height: 100px;
+}
+
+.step-title {
+  font-size: 18px;
+  margin-top: 12px;
+}
+
+.step-benifit {
+  color: #667085;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* ===== CONNECTOR ARROW (DESKTOP ONLY) ===== */
+.arrow {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 46px;
+  left: 15rem;
+}
+
+.arrow div:nth-of-type(1) {
+  height: 10px;
+  width: 10px;
+  background-color: #bec6d5;
+  border-radius: 50%;
+}
+
+.arrow div:nth-of-type(2) {
+  width: 14.4vw;
+  border: 1px solid #bec6d5;
+  border-image: repeating-linear-gradient(
+    90deg,
+    #bec6d5 0,
+    #bec6d5 5px,
+    transparent 0,
+    transparent 10px
+  ) 1;
+}
+
+.arrow div:nth-of-type(3) {
+  border: solid #bec6d5;
+  border-width: 0 2.2px 2.2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .how-it-works-main {
+    background-color: #eff8ff;
+    padding: 45px 10px 55px;
+    width: 80%;
+  }
+
+  .how-it-works-heading {
+    font-size: 24px;
+    margin-top: 0;
+  }
+
+  .carousel {
+    overflow: hidden;
+  }
+
+  .carousel-track {
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .step {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .step img {
+    width: 82px;
+    height: 82px;
+  }
+
+  /* hide desktop arrow connector */
+  .arrow {
+    display: none;
+  }
+
+  .arrow-btn {
+    position: absolute;
+    top: 40%;
+    background: #fff;
+    border: none;
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+
+  .arrow-btn.left {
+    left: 10px;
+  }
+
+  .arrow-btn.right {
+    right: 10px;
+  }
+
+  .dots {
+    margin-top: 20px;
+  }
+
+  .dot {
+    height: 10px;
+    width: 10px;
+    background: #d0d5dd;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+
+  .dot.active {
+    background: #12b76a;
+  }
+}

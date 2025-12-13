@@ -1,6 +1,9 @@
 import React from "react";
 import './Header.css'
 
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
+
+
 const Header = ({
   logoImage,
   menuImage,
@@ -40,7 +43,8 @@ const Header = ({
                 <ul>
                   {linkLabel && linkLabel.map((label, index) => (
                     <li key={index}>
-                      <a href="#">{label}</a>
+                      {/* <a href="#">{label}</a> */}
+                      <Link to="/content/lyca-mobile/us/en/home/buy-sim---plan.html">{label}</Link>
                     </li>
                   ))}
                 </ul>
