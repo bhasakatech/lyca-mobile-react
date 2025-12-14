@@ -1,4 +1,5 @@
 import './PrepaidCards.css'
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 export default function PrepaidCards(props) {      
   return (
     <section>
@@ -29,6 +30,7 @@ export default function PrepaidCards(props) {
      </div>
      <div className='sim-plan-cards'>
       <div className='sim-plan-container'>
+        <Link to="/content/lyca-mobile/us/en/plan-details.html">
         <div className='plan-card'>
           <div className='plan-upper-card'>
             <div className='plan-card-head'>
@@ -84,6 +86,7 @@ export default function PrepaidCards(props) {
             </div>
           </div>
         </div>
+        </Link>
          <div className='plan-card'>
           <div className='plan-upper-card'>
             <div className='plan-card-head'>

@@ -1,0 +1,334 @@
+/* =========================
+   RESET / GLOBAL
+========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.plan-details-section {
+  background-color: #FFF7F2;
+}
+
+.plan-details-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px 40px;
+  gap: 32px;
+  width: 100%;
+}
+
+/* =========================
+   COLUMNS
+========================= */
+
+.plan-details-left img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: 0.25rem;
+}
+
+.plan-details-right {
+  width: 100%;
+  max-width: 480px;
+}
+
+/* =========================
+   OFFER
+========================= */
+
+.plan-details-offer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.plan-details-offer-text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  padding: 0 1rem;
+  border-radius: 6rem;
+  background: #ffdd64;
+  color: #344054;
+  font: 400 var(--fontSize14) / var(--lh20) GTEestiLCDisplayRegular;
+  white-space: nowrap;
+}
+
+/* =========================
+   SIM
+========================= */
+
+.plan-details-sim {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-top: 12px;
+}
+
+.plan-details-sim img {
+  width: 28px;
+  height: 28px;
+}
+
+/* =========================
+   DATA & PRICE
+========================= */
+
+.plan-details-data {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 16px;
+}
+
+.plan-details-data-row,
+.plan-details-price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+.plan-details-gb,
+.plan-details-price-value {
+  color: #46286E;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  line-height: 1.25;
+  font-family: GTEestiLCDisplayBold;
+  font-weight: 700;
+}
+
+.plan-details-data-text,
+.plan-details-price-label {
+  color: #667085;
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+  line-height: 1.25rem;
+  font-family: GTEestiLCDisplayRegular;
+  font-weight: 400;
+}
+
+/* =========================
+   DIVIDER
+========================= */
+
+.plan-details-divider {
+  width: 100%;
+  max-width: 400px;
+  margin: 22px 0 18px;
+  border: 1px solid #BEC6D5;
+}
+
+/* =========================
+   BENEFITS
+========================= */
+
+.plan-details-benefit-title {
+  color: #667085;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: GTEestiLCDisplayMedium;
+  font-weight: 500;
+}
+
+.plan-details-benefits {
+  padding-top: 8px;
+}
+
+.plan-details-benefit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.plan-details-benefit-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.plan-details-benefit-item img {
+  width: 12px;
+  height: 8px;
+  margin-top: 6px;
+}
+
+.plan-details-benefit-item p {
+  margin-left: 10px;
+  color: #667085;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-family: GTEestiLCDisplayRegular;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.plan-details-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 32px;
+}
+
+.plan-details-btn-buy,
+.plan-details-btn-view {
+  width: 100%;
+  max-width: 348px;
+  height: 44px;
+  padding: 6px 8px;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: GTEestiLCDisplayMedium;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  border: none;
+  user-select: none;
+  filter: drop-shadow(0 1px 2px rgba(16, 24, 40, 0.05));
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.plan-details-btn-buy {
+  background-color: #08DC7D;
+  color: #21254F;
+}
+
+.plan-details-btn-view {
+  background-color: #FFFFFF;
+  color: #2C68D8;
+  border: 1px solid #2C68D8;
+}
+
+/* =========================
+   TABLET (≥768px)
+========================= */
+
+@media (min-width: 768px) {
+  .plan-details-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 24px 50px;
+  }
+
+  .plan-details-left img {
+    display: block;
+    max-width: 480px;
+  }
+
+  .plan-details-right {
+    max-width: 360px;
+  }
+}
+
+/* =========================
+   LAPTOP (≥992px)
+========================= */
+
+@media (min-width: 992px) {
+  .plan-details-wrapper {
+    gap: 50px;
+  }
+
+  .plan-details-right {
+    max-width: 420px;
+  }
+}
+
+/* =========================
+   DESKTOP (≥1200px)
+========================= */
+
+@media (min-width: 1200px) {
+  .plan-details-right {
+    max-width: 32%;
+  }
+}
+
+/* =========================
+   MOBILE IMAGE HIDE
+========================= */
+
+@media (max-width: 767px) {
+  .plan-details-left img {
+    display: none;
+  }
+}
+
+.details-page-text-container div{
+       width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 4rem 0 2rem;
+    background-color: var(--plainWhite);
+    display: flex;
+    flex-direction: column;
+    max-width: 64rem;
+    margin: auto;
+    padding: 1.25rem 9%;
+    overflow-wrap: break-word;
+}
+
+.details-page-text-container h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 3rem;
+    font-family: "GTEestiLCDisplayMedium" !important;
+    text-transform:none;
+   letter-spacing: 0px;
+   text-align:center;
+   margin-bottom:20px;
+}
+
+@media screen and (max-width:768px){
+  .details-page-text-container h1{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+.details-page-text-container p{
+      font-size: 1rem;
+    font-weight: 400;
+    line-height:1.25rem;
+    font-family: "GTEestiLCDisplayRegular" !important;
+}
+
+.details-page-text-container h3{
+      font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    font-family: "GTEestiLCDisplayBold" !important;
+    color:#344054;
+    margin-top:25px;
+}
+
+.details-page-text-container p a{
+    color:#2C68D8;
+    text-decoration: none;
+}
