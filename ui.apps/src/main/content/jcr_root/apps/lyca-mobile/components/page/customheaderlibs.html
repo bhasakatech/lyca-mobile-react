@@ -17,6 +17,10 @@
     <sly data-sly-call="${clientlib.css @ categories='lyca-mobile.base'}"/>
 </sly>
 
+<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.all @ categories='lyca-mobile.dataLayer'}"/>
+</sly>
+
 <!--/*
     SPA-specific meta tags
 */-->
