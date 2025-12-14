@@ -1,6 +1,8 @@
 window.adobeDataLayer = window.adobeDataLayer || [];
 
 (function () {
+  const pageType = document.querySelector('meta[name="page-type"]') ?.getAttribute('content');
+
   const deviceType = (function () {
     const ua = navigator.userAgent;
     if (/tablet|ipad/i.test(ua)) return "tablet";
@@ -12,7 +14,7 @@ window.adobeDataLayer = window.adobeDataLayer || [];
     event: "page-view",
     page: {
       name: document.title || "",
-      type: "",
+      type: pageType,
       url: window.location.href,
       referrer: document.referrer || "",
       language: document.documentElement.lang || "en"
