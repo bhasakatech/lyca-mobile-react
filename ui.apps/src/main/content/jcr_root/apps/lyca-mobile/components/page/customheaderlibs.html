@@ -38,3 +38,8 @@
     There is currently no support for ContextHub in SPA projects:
     https://docs.adobe.com/content/help/en/experience-manager-64/developing/headless/spas/spa-overview.html#limitations
 */-->
+
+<sly data-sly-test="${!properties.excludeGlobalHS}">
+    ${inheritedPageProperties.globalHeaderScript @ context='scriptComment'}
+</sly>
+${properties.localHeaderScript @ context='scriptComment'}
