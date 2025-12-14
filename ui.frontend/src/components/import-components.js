@@ -114,24 +114,24 @@ const TextEditConfig = {
 
 MapTo('lyca-mobile/components/text')(LazyTextComponent, TextEditConfig);
 MapTo("lyca-mobile/components/header")(Header);
-// MapTo('lyca-mobile/components/announcement-bar')(AnnouncementBar);
-// MapTo('lyca-mobile/components/lyca-carousel')(Carousel);
-// MapTo('lyca-mobile/components/join-lyca')(JoinLyca);
-// MapTo('lyca-mobile/components/already-with-lyca')(AlreadyWithLyca);
-// MapTo('lyca-mobile/components/choose-a-plan')(ChooseAPlan);
-// MapTo('lyca-mobile/components/view-rates')(ViewRatesNow);
-// MapTo('lyca-mobile/components/why-lyca')(WhyLyca);
-// MapTo('lyca-mobile/components/download-app')(DownloadApp);
-// MapTo('lyca-mobile/components/help')(Help);
-// MapTo('lyca-mobile/components/become-retailer')(BecomeRetailer);
-// MapTo('lyca-mobile/components/country-carousel')(InternationalCalls);
-// MapTo('lyca-mobile/components/blog-list')(BlogList);
-// MapTo('lyca-mobile/components/signUp')(SignUp)
+MapTo('lyca-mobile/components/announcement-bar')(AnnouncementBar);
+MapTo('lyca-mobile/components/lyca-carousel')(Carousel);
+MapTo('lyca-mobile/components/join-lyca')(JoinLyca);
+MapTo('lyca-mobile/components/already-with-lyca')(AlreadyWithLyca);
+MapTo('lyca-mobile/components/choose-a-plan')(ChooseAPlan);
+MapTo('lyca-mobile/components/view-rates')(ViewRatesNow);
+MapTo('lyca-mobile/components/why-lyca')(WhyLyca);
+MapTo('lyca-mobile/components/download-app')(DownloadApp);
+MapTo('lyca-mobile/components/help')(Help);
+MapTo('lyca-mobile/components/become-retailer')(BecomeRetailer);
+MapTo('lyca-mobile/components/country-carousel')(InternationalCalls);
+MapTo('lyca-mobile/components/blog-list')(BlogList);
+MapTo('lyca-mobile/components/signUp')(SignUp)
 MapTo('lyca-mobile/components/footer')(Footer);
 
 MapTo('lyca-mobile/components/prepaid-cards')(PrepaidCards);
 MapTo('lyca-mobile/components/how-it-works')(HowItWorks)
 MapTo('lyca-mobile/components/faq')(Faq)
-// MapTo('lyca-mobile/components/activate-sim')(ActivateSim)
-// MapTo('lyca-mobile/components/plan-details')(PlanDetails)
-// MapTo('lyca-mobile/components/recharge')(Recharge)
+MapTo('lyca-mobile/components/activate-sim')(ActivateSim)
+MapTo('lyca-mobile/components/plan-details')(PlanDetails)
+MapTo('lyca-mobile/components/recharge')(Recharge)

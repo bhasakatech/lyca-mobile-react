@@ -1,5 +1,6 @@
 import React from "react";
 import './JoinLyca.css';
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 export default function JoinLyca(props) {
   const { header, description, cards = [] } = props;
@@ -18,6 +19,7 @@ export default function JoinLyca(props) {
         {/* Image Cards */}
         <div className="join-image-section">
           {cards.map((card, index) => (
+            <Link to="/content/lyca-mobile/us/en/home/buy-sim---plan.html">
             <div className="join-card" key={index}>
               <div
                 id={card.cardTitle.toLowerCase().replace(/\s+/g, "-")}
@@ -35,6 +37,7 @@ export default function JoinLyca(props) {
                 </p>
               </div>
             </div>
+</Link>
           ))}
         </div>
       </div>
