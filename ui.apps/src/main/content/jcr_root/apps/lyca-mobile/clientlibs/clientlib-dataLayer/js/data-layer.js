@@ -2,6 +2,7 @@ window.adobeDataLayer = window.adobeDataLayer || [];
 
 (function () {
   const pageType = document.querySelector('meta[name="page-type"]') ?.getAttribute('content');
+  const isLoggedIn = document.querySelector('meta[name="isLoggedIn"]') ?.getAttribute('content');
 
   const deviceType = (function () {
     const ua = navigator.userAgent;
@@ -20,7 +21,7 @@ window.adobeDataLayer = window.adobeDataLayer || [];
       language: document.documentElement.lang || "en"
     },
     user: {
-      loggedIn: false
+      loggedIn: isLoggedIn
     },
     device: {
       type: deviceType,

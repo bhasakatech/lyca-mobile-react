@@ -17,6 +17,8 @@
     <sly data-sly-call="${clientlib.css @ categories='lyca-mobile.base'}"/>
 </sly>
 
+<sly data-sly-use.pageModel="com.lyca.mobile.core.models.PageModel"/>
+
 <!--/*
     SPA-specific meta tags
 */-->
@@ -36,6 +38,7 @@
 <meta property="cq:wcmmode" data-sly-test="${wcmmode.preview}" content="preview" />
 
 <meta name="page-type" content="${properties.pageType}" />
+<meta name="isLoggedIn" content="${pageModel.isLoggedIn ? 'true' : 'false'}"/>
 <!--/*
     There is currently no support for ContextHub in SPA projects:
     https://docs.adobe.com/content/help/en/experience-manager-64/developing/headless/spas/spa-overview.html#limitations
