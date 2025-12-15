@@ -13,6 +13,7 @@
   align-items: center;
   background-color: #f5faff;
   margin: 0 auto;
+  padding-bottom:40px;
 }
 
 .how-it-works-heading {
@@ -96,8 +97,9 @@
 @media (max-width: 768px) {
   .how-it-works-main {
     background-color: #eff8ff;
-    padding: 45px 10px 55px;
+    padding: 45px 10px 30px;
     width: 80%;
+
   }
 
   .how-it-works-heading {

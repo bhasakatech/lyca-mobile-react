@@ -3,19 +3,25 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import './PrepaidCards.css';
 import tick from "../../fonts/GT-Eesti/tick.svg"
 
-export const plansData = [];
+export const plansData = {
+  bestValue: [],
+  longTermPlans: []
+};
+
 
 export default function PrepaidCards(props) {
-  const { 
-    heading, 
-    description, 
-    bestValueLabel, 
-    longTermLabel, 
-    plans, 
-    existingTitle, 
-    existingOptions, 
-    containerProps 
+  const {
+    heading,
+    description,
+    bestValueLabel,
+    longTermLabel,
+    plans,
+    existingTitle,
+    existingOptions,
+    containerProps
   } = props;
+
+  console.log(props, "prepaidCards")
 
   const [planTabs, setPlanTabs] = useState('bestValue');
   const [currentPlans, setCurrentPlans] = useState(plans || []);
@@ -86,20 +92,32 @@ export default function PrepaidCards(props) {
 
   // Store plans for debugging or reuse
   useEffect(() => {
-    plansData.push(longTermPlans);
-    plansData.push(plans);
+    plansData.bestValue = plans;
+    plansData.longTermPlans = longTermPlans;
   }, [plans]);
 
-  const createMarkup = (html) => ({ __html: html });
+
 
   // Render plans dynamically
   const renderPlans = (plansArray) =>
     plansArray.map((plan, index) => (
       <React.Fragment key={plan.id || plan.planTag || index}>
         <Link
-          to={`/content/lyca-mobile/us/en/plan-details.html?planId=${plan.planTag || plan.id}`}
+          to="/content/lyca-mobile/us/en/plan-details.html"
           className="plan-card-link"
+          onClick={() => {
+            localStorage.setItem(
+              'selectedPlanId',
+              plan.planTag || String(plan.id)
+            );
+            localStorage.setItem(
+              'selectedPlan',
+              JSON.stringify(plan)
+            );
+          }}
         >
+
+
           <div className="plan-card">
             <div className="plan-upper-card">
               <div className="plan-card-head">
@@ -155,28 +173,28 @@ export default function PrepaidCards(props) {
           </div>
         </Link>
 
-       {index === 1 && (
-  <div className="option-card-container">
-    <div className="option-card-main">
-      <div className="option-details-card">
-        <div className="option-detail-main">
-          <h1>
-            <span>{existingTitle}</span>
-          </h1>
-          {existingOptions.map((option, idx) => (
-            <p key={idx}>
-              <img src="https://cms-pim-assets-dev.ldsvcplatform.com/IRE/s3fs-public/inline-images/Path%20%281%29.png" />
-              {option.text}
-            </p>
-          ))}
-        </div>
-      </div>
-      <div className="option-promotion-card">
-        <img src="https://cms-assets.ldsvcplatform.com/USA/s3fs-public/2024-02/TopUp%201%20%282%29.png?VersionId=uW1IrHzuZhrYLO3foqU.zogD9STFMjQW" />
-      </div>
-    </div>
-  </div>
-)}
+        {index === 1 && (
+          <div className="option-card-container">
+            <div className="option-card-main">
+              <div className="option-details-card">
+                <div className="option-detail-main">
+                  <h1>
+                    <span>{existingTitle}</span>
+                  </h1>
+                  {existingOptions.map((option, idx) => (
+                    <p key={idx}>
+                      <img src="https://cms-pim-assets-dev.ldsvcplatform.com/IRE/s3fs-public/inline-images/Path%20%281%29.png" />
+                      {option.text}
+                    </p>
+                  ))}
+                </div>
+              </div>
+              <div className="option-promotion-card">
+                <img src="https://cms-assets.ldsvcplatform.com/USA/s3fs-public/2024-02/TopUp%201%20%282%29.png?VersionId=uW1IrHzuZhrYLO3foqU.zogD9STFMjQW" />
+              </div>
+            </div>
+          </div>
+        )}
 
       </React.Fragment>
     ));
@@ -205,7 +223,7 @@ export default function PrepaidCards(props) {
               className={planTabs === 'bestValue' ? 'best-value-btn' : 'long-term-plans-btn'}
               onClick={() => handleTabChange('bestValue')}
             >
-              {bestValueLabel } 
+              {bestValueLabel}
             </button>
             <button
               className={planTabs === 'longTermPlans' ? 'best-value-btn' : 'long-term-plans-btn'}

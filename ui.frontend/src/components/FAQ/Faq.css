@@ -71,6 +71,10 @@
     line-height: 28px;
     margin-top: 10px;
 }
+
+.faq-answer a{
+    color:blue !important;
+}
 @media only screen and (max-width: 768px) {
     .faq-container {
         padding-top: 0;

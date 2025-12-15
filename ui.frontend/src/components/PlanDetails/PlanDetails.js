@@ -6,10 +6,18 @@ import { plansData } from '../PrepaidCards/PrepaidCards';
 export default function PlanDetails() {
   const location = useLocation();
   const query = queryString.parse(location.search);
-  const planId = Number(query.planId);
+  const planId = localStorage.getItem('selectedPlanId');
 
-  const allPlans = [...plansData.bestValue, ...plansData.longTermPlans];
-  const plan = allPlans.find(p => p.id === planId);
+
+  const allPlans = [
+    ...plansData.bestValue,
+    ...plansData.longTermPlans
+  ];
+
+  const plan = allPlans.find(
+    p => p.planTag === planId || String(p.id) === planId
+  );
+
 
   if (!plan) return <p>Plan not found</p>;
 
@@ -33,26 +41,35 @@ export default function PlanDetails() {
 
             <div className="plan-details-data">
               <div className="plan-details-data-row">
-                <div className="plan-details-gb">{plan.data}</div>
+                <div className="plan-details-gb">
+                  {plan.authoringLabel || plan.data}
+                </div>
+
                 <div className="plan-details-data-text">Data</div>
               </div>
             </div>
 
             <div className="plan-details-price">
-              <div className="plan-details-price-value">£{plan.price.toFixed(2)}</div>
+              <div className="plan-details-price-value">
+                {plan.price}
+              </div>
+
               <div className="plan-details-price-label">{plan.duration}</div>
             </div>
 
             <hr className="plan-details-divider" />
 
-            <div className="plan-details-benefit-title">{plan.name}</div>
+            <div className="plan-details-benefit-title">
+              {plan.title || plan.name}
+            </div>
+
 
             <div className="plan-details-benefits">
               <div className="plan-details-benefit-list">
-                {plan.benefits.map((b, idx) => (
-                  <div className="plan-details-benefit-item" key={idx}>
+                {(plan.features || plan.benefits).map((b, idx) => (
+                  <div key={idx} className="plan-details-benefit-item">
                     <img src="https://www.lycamobile.co.uk/paymonthly/_next/static/media/greenTick2.ebb6f697.svg" />
-                    <p>{b}</p>
+                    <p>{b.text}</p>
                   </div>
                 ))}
               </div>
