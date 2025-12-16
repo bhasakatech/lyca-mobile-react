@@ -243,6 +243,9 @@ p {
   .plan-details-right {
     max-width: 360px;
   }
+  .details-page-text-container div{
+    width: 75% !important;
+  }
 }
 
 /* =========================
@@ -276,6 +279,16 @@ p {
 @media (max-width: 767px) {
   .plan-details-left img {
     display: none;
+  }
+  .details-page-text-container div{
+    width: 90% !important;
+  }
+  .details-page-text-container p{
+    font-size: 14px !important;
+    color: grey;
+  }
+  .details-page-text-container h1{
+    font-family: 'Times New Roman', Times, serif;
   }
 }
 
