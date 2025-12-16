@@ -125,7 +125,9 @@ body {
   text-align: left;
   color: #667085;
 }
-
+.recharge-verify-text a{
+  color:blue;
+}
 .recharge-verify-link {
   color: #2c68d8;
   cursor: pointer;

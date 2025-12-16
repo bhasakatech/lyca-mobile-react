@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 import "./HowItWorks.css";
 
-export default function HowItWorks() {
+export default function HowItWorks(props) {
+  console.log(props,"HowItWorks")
+  const { headingText, whyLycaCards = [] } = props;
+
   const [current, setCurrent] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -12,33 +15,24 @@ export default function HowItWorks() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const steps = [
-    {
-      img: "https://cms-pim-assets-dev.ldsvcplatform.com/IRE/s3fs-public/inline-images/Group%20383180914%20%282%29.png",
-      title: "Choose a Line",
-      text: "Lyca Mobile offers a variety of high-speed data plan to fit every budget and need."
-    },
-    {
-      img: "https://cms-pim-assets-dev.ldsvcplatform.com/IRE/s3fs-public/inline-images/Group%20383180914%20%283%29.png",
-      title: "Activate your line",
-      text: "Complete your activation by clicking “Activate SIM” from the menu of this site and follow the simple steps to activate your phone in moments."
-    },
-    {
-      img: "https://cms-pim-assets-dev.ldsvcplatform.com/IRE/s3fs-public/inline-images/Group%20383180914%20%284%29.png",
-      title: "Control Your Plan",
-      text: "Download the Lyca Mobile US application on your mobile device and enjoy hassle-free account management."
-    }
-  ];
+  const next = () =>
+    setCurrent((prev) => (prev + 1) % whyLycaCards.length);
 
-  const next = () => setCurrent((prev) => (prev + 1) % steps.length);
-  const prev = () => setCurrent((prev) => (prev - 1 + steps.length) % steps.length);
+  const prev = () =>
+    setCurrent((prev) => (prev - 1 + whyLycaCards.length) % whyLycaCards.length);
+
 
   return (
     <section className="how-it-works-container">
       <div className="how-it-works-main">
-        <h2 className="how-it-works-heading">How it works</h2>
+
+        {/* ✅ Dynamic Section Header */}
+        {headingText && (
+          <h2 className="how-it-works-heading">{headingText}</h2>
+        )}
 
         <div className="carousel">
+
           {isMobile && (
             <button className="arrow-btn left" onClick={prev}>❮</button>
           )}
@@ -51,14 +45,28 @@ export default function HowItWorks() {
                 : {}
             }
           >
-            {steps.map((step, index) => (
+            {whyLycaCards.map((card, index) => (
               <div className="step" key={index}>
-                <img src={step.img} alt={step.title} />
-                <p className="step-title"><strong>{step.title}</strong></p>
-                <p className="step-benifit">{step.text}</p>
 
-                {/* ✅ DESKTOP ARROW CONNECTOR */}
-                {!isMobile && index !== steps.length - 1 && (
+                {/* ✅ Dynamic Image */}
+                {card.cardImage && (
+                  <img src={card.cardImage} alt={card.cardTitle || ""} />
+                )}
+
+                {/* ✅ Dynamic Title */}
+                {card.cardTitle && (
+                  <p className="step-title">
+                    <strong>{card.cardTitle}</strong>
+                  </p>
+                )}
+
+                {/* ✅ Dynamic Description */}
+                {card.cardDescription && (
+                  <p className="step-benifit">{card.cardDescription}</p>
+                )}
+
+                {/* ✅ Desktop Arrow Connector */}
+                {!isMobile && index !== whyLycaCards.length - 1 && (
                   <div className="arrow">
                     <div></div>
                     <div></div>
@@ -74,9 +82,10 @@ export default function HowItWorks() {
           )}
         </div>
 
+        {/* ✅ Mobile Dots */}
         {isMobile && (
           <div className="dots">
-            {steps.map((_, index) => (
+            {whyLycaCards.map((_, index) => (
               <span
                 key={index}
                 className={`dot ${index === current ? "active" : ""}`}

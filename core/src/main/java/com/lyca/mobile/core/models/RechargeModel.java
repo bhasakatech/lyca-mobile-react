@@ -9,7 +9,7 @@ import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.ChildResource;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
-import java.util.List;
+
 import com.adobe.cq.export.json.ComponentExporter;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
@@ -24,14 +24,17 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 @Model(
     adaptables = {Resource.class, SlingHttpServletRequest.class},
     defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL,
-    resourceType = JoinLycaModel.RESOURCE_TYPE,
+    resourceType = RechargeModel.RESOURCE_TYPE,
         adapters = ComponentExporter.class
 )
 @Exporter(
     name = ExporterConstants.SLING_MODEL_EXPORTER_NAME,
     extensions = ExporterConstants.SLING_MODEL_EXTENSION
 )
-public class RechargeModel {
+public class RechargeModel implements ComponentExporter{
+
+    static final String RESOURCE_TYPE="lyca-mobile/components/recharge";
+
 
     /* ================= TEXT FIELDS ================= */
     @ValueMapValue private String title;
@@ -129,6 +132,10 @@ public class RechargeModel {
     public List<TopupAmount> getTopUpAmounts() { return topUpAmountsList; }
 
     /* ================= INNER CLASSES ================= */
+    @Model(
+        adaptables = {Resource.class, SlingHttpServletRequest.class},
+        defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
+    )
     public static class Plan {
         private final String data;
         private final String price;
@@ -157,4 +164,10 @@ public class RechargeModel {
         public String getAmount() { return amount; }
         public String getLabel() { return label; }
     }
+    
+    @Override
+public String getExportedType() {
+    return RESOURCE_TYPE;
+}
+
 }
