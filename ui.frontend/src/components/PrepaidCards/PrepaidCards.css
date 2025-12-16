@@ -7,6 +7,7 @@
   max-width: 1405px;
   padding: 0 24px;
 }
+
 .prepaid-card-heading {
   margin: 0;
   font-family: "GTEestiLCDisplayRegular";
@@ -18,6 +19,7 @@
   color: #344054;
   width: 90%;
 }
+
 #prepaid-description {
   font-family: "GTEestiLCDisplayRegular";
   font-size: 16px;
@@ -31,11 +33,13 @@
   margin: 0 0.9rem 0 2.5rem;
   min-height: 50px;
 }
+
 .tab-switch {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
+
 .tab-switch-container {
   background: #fff;
   display: flex;
@@ -44,11 +48,13 @@
   margin: auto;
   scroll-margin-top: 80px;
 }
+
 .tabs {
   border: 1px solid #21254f;
   border-radius: 40px;
   padding: 2px 3px;
 }
+
 .best-value-btn {
   background: #21264e;
   color: #fff !important;
@@ -58,6 +64,7 @@
   padding: 8px 28px;
   margin: 1px 0;
 }
+
 .long-term-plans-btn {
   min-height: 46px;
   line-height: 0;
@@ -67,6 +74,7 @@
   border: 0px;
   background-color: transparent;
 }
+
 .prepaid-price-filter {
   margin: 0 auto;
   max-width: 1080px;
@@ -76,6 +84,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .filter-container {
   font-family: GTEestiLCDisplayRegular;
   font-size: 14px;
@@ -88,6 +97,7 @@
   border: 1px solid #e6f3fe;
   background: #fff;
 }
+
 .multi-select {
   padding-right: 14px !important;
   height: 42px;
@@ -98,6 +108,7 @@
   margin-top: 11px;
   line-height: 1rem;
 }
+
 .sim-plan-cards {
   margin: 0 auto;
   display: flex;
@@ -105,6 +116,7 @@
   flex-direction: column;
   max-width: 1080px;
 }
+
 .sim-plan-container {
   display: flex;
   justify-content: center;
@@ -116,6 +128,7 @@
   max-width: 1080px;
   padding-bottom: 30px;
 }
+
 .plan-card {
   width: 344px;
   /* height: -moz-fit-content; */
@@ -130,12 +143,14 @@
   overflow: visible !important;
   border-radius: 0.75rem;
 }
+
 .plan-card-head {
   background: #eff8ff;
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
   padding-bottom: 24px;
 }
+
 .plan-type {
   display: flex;
   justify-content: space-between;
@@ -143,18 +158,21 @@
   padding: 24px 24px 0;
   margin: 0;
 }
+
 .plan-type h2 {
   font-size: 16px;
   line-height: 22px;
   margin: 0 0 8px;
   color: #87909f;
 }
+
 .plan-row {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   padding: 0 1.5rem;
 }
+
 .plan-price {
   display: flex;
   justify-content: space-between;
@@ -163,10 +181,12 @@
   padding: 0 1.5rem;
   color: #344054;
 }
+
 .unlimited-data {
   display: flex;
   flex-direction: column;
 }
+
 .unlimited-data span:first-child {
   font-family: GTEestiLCDisplayBold;
   font-size: 28px;
@@ -175,6 +195,7 @@
   text-align: left;
   font-weight: 500;
 }
+
 .unlimited-data span:last-child {
   font-family: GTEestiLCDisplayRegular;
   font-size: 12px;
@@ -183,10 +204,12 @@
   letter-spacing: 0;
   color: #344054;
 }
+
 .price {
   display: flex;
   flex-direction: column;
 }
+
 .price span:first-child {
   font-family: GTEestiLCDisplayBold;
   font-size: 28px;
@@ -194,6 +217,7 @@
   letter-spacing: 0;
   text-align: right;
 }
+
 .price span:last-child {
   font-family: GTEestiLCDisplayRegular;
   font-size: 12px;
@@ -203,12 +227,14 @@
   color: #344054;
   text-align: right;
 }
+
 .plan-card-benifits {
   display: flex;
   flex-direction: column;
   gap: 14px;
   margin: 1.375rem 1.5rem 0.5rem;
 }
+
 .benifit-row {
   width: 100%;
   display: flex;
@@ -216,6 +242,7 @@
   align-items: baseline;
   gap: 12px;
 }
+
 .benifit-row p {
   margin: 0px;
   font-family: GTEestiLCDisplayThin;
@@ -224,6 +251,7 @@
   font-size: 14px;
   line-height: 18px;
 }
+
 .view-more {
   max-height: 40px;
   display: flex;
@@ -232,6 +260,7 @@
   padding-right: 24px;
   padding-bottom: 18px;
 }
+
 .view-more button {
   font-family: GTEestiLCDisplayRegular;
   text-transform: none;
@@ -246,6 +275,7 @@
   background-color: transparent;
   border: 0;
 }
+
 .view-more button p {
   font-family: GTEestiLCDisplayRegular;
   text-transform: none;
@@ -256,6 +286,7 @@
   text-align: left;
   color: #006ae0;
 }
+
 .select-btns {
   margin-top: 0;
   height: auto;
@@ -267,6 +298,7 @@
   align-items: center;
   gap: 10px;
 }
+
 .select-btns .add-basket {
   border: 1px solid #006ae0;
   color: #006ae0;
@@ -285,6 +317,7 @@
   box-shadow: none;
   background-color: transparent;
 }
+
 .select-btns .add-basket p {
   height: 100%;
   z-index: 1;
@@ -294,6 +327,7 @@
   align-items: center;
   margin: 0px !important;
 }
+
 .select-btns .add-basket span {
   overflow: hidden;
   pointer-events: none;
@@ -302,6 +336,7 @@
   inset: 0px;
   border-radius: inherit;
 }
+
 .select-btns .buy-now {
   width: 100%;
   background: #08dc7d;
@@ -318,6 +353,7 @@
   box-shadow: none;
   border: 0;
 }
+
 .select-btns .buy-now p {
   font-size: 16px;
   font-family: GTEestiLCDisplayRegular;
@@ -332,6 +368,7 @@
   align-items: center;
   margin: 0px !important;
 }
+
 .activation {
   border-bottom-left-radius: 0.75rem;
   border-bottom-right-radius: 0.75rem;
@@ -343,6 +380,7 @@
   margin-top: 16px;
   min-height: 28px;
 }
+
 .activation div {
   font-family: GTEestiLCDisplayRegular;
   color: #344054;
@@ -351,13 +389,15 @@
   line-height: 18px;
   letter-spacing: 0;
 }
+
 .view-all-btn {
   display: flex;
   justify-content: center;
 }
+
 .view-all-btn button {
   max-width: 344px;
-  width: 100%;
+  width: 90%;
   font-size: 18px;
   font-family: GTEestiLCDisplayLight;
   font-weight: 400;
@@ -371,9 +411,11 @@
   border-radius: 5px;
   background-color: transparent;
 }
+
 .view-all-btn button p {
   color: #87909f;
 }
+
 .option-card-container {
   flex-direction: column;
   background: #fff;
@@ -388,6 +430,7 @@
 
   border-radius: 0.75rem;
 }
+
 .option-card-main {
   background-color: #fff;
   justify-content: center;
@@ -396,6 +439,7 @@
   display: flex;
   flex-direction: column;
 }
+
 .option-details-card {
   margin: 0;
   padding: 0 14px;
@@ -405,6 +449,7 @@
   font-weight: 500;
   line-height: 36px;
 }
+
 .option-detail-main h1 {
   font-weight: 500;
   font-family: GTEestiLCDisplayMedium;
@@ -415,6 +460,7 @@
   color: #46286e;
   margin-bottom: 8px;
 }
+
 .option-detail-main p {
   color: #667085;
   font-family: GTEestiLCDisplayRegular;
@@ -428,105 +474,137 @@
   margin-top: 0;
   margin-bottom: 13px;
 }
+
 .option-detail-main p img {
   max-width: 80px;
   height: auto;
   margin: 0 0 1rem;
 }
+
 .option-promotion-card {
   min-height: 68px;
   display: flex;
   justify-content: center;
   margin: 0 auto;
 }
+
 .option-promotion-card img {
   margin: 12px auto;
   width: 33px;
   height: 32px;
 }
+
 .plan-card:hover {
   border-color: #09f68c;
+}
+
+.plan-card-link {
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (max-width: 870px) and (min-width: 426px) {
   .option-card-container {
     width: 45%;
+    min-height: 30.313rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
   .prepaid-sim-phone {
     margin-top: 30px;
     gap: 5px;
     margin-bottom: 30px;
   }
+
   .prepaid-card-heading {
     font-size: 24px;
     line-height: 27.84px;
   }
+
   #prepaid-description {
     font-size: 14px;
   }
+
   .sim-plan-container {
     padding-top: 20px;
   }
+
   .view-all-btn {
     display: none;
   }
+
   .activation div {
     display: none;
   }
+
   .activation {
     background-color: white;
   }
 }
+
 @media screen and (max-width: 768px) and (min-width: 426px) {
   #prepaid-description {
     width: 90%;
     margin: 0;
     padding: 0;
   }
+
   .tab-switch {
     display: block;
     padding-top: 0;
   }
+
   .tab-switch-container {
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   .best-value-btn {
     font-size: 12px;
   }
+
   .long-term-plans-btn {
     font-size: 12px;
   }
+
   .prepaid-price-filter {
     top: 10px;
     justify-content: center;
     min-height: 64px;
   }
+
   .multi-select {
     font-size: 14px;
   }
+
   .sim-plan-cards {
     margin: 0;
   }
+
   .sim-plan-container {
     row-gap: 2rem;
   }
+
   .plan-card {
     min-height: 400px;
   }
 }
+
 @media screen and (max-width: 426px) {
   .option-card-container {
     width: 92%;
   }
+
   .plan-card {
     width: calc(100% - 32px);
   }
 }
 
-h1{
+h1 {
   letter-spacing: 0px !important;
   text-transform: none !important;
 }
