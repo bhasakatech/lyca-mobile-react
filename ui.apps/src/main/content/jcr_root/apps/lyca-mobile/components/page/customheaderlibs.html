@@ -17,6 +17,8 @@
     <sly data-sly-call="${clientlib.css @ categories='lyca-mobile.base'}"/>
 </sly>
 
+<sly data-sly-use.pageModel="com.lyca.mobile.core.models.PageModel"/>
+
 <!--/*
     SPA-specific meta tags
 */-->
@@ -34,10 +36,17 @@
 <meta property="cq:datatype" data-sly-test="${wcmmode.edit || wcmmode.preview}" content="JSON" />
 <meta property="cq:wcmmode" data-sly-test="${wcmmode.edit}" content="edit" />
 <meta property="cq:wcmmode" data-sly-test="${wcmmode.preview}" content="preview" />
+
+<meta name="page-type" content="${properties.pageType}" />
+<meta name="isLoggedIn" content="${pageModel.isLoggedIn ? 'true' : 'false'}"/>
 <!--/*
     There is currently no support for ContextHub in SPA projects:
     https://docs.adobe.com/content/help/en/experience-manager-64/developing/headless/spas/spa-overview.html#limitations
 */-->
+
+<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.all @ categories='lyca-mobile.dataLayer'}"/>
+</sly>
 
 <sly data-sly-test="${!properties.excludeGlobalHS}">
     ${inheritedPageProperties.globalHeaderScript @ context='scriptComment'}
