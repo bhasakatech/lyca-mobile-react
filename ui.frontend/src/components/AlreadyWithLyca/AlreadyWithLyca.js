@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import './AlreadyWithLyca.css'
 export default function AlreadyWithLyca(props) {
 const { title,
@@ -25,8 +26,10 @@ const { title,
         <div className="recharge-and-renew">
           <div className="recharge-tabs-container">
             {buttonList.map((button, index) => (
+              
               <button key={index} id={`btn-${index}`}>
-                <a href={button.buttonLink}>{button.buttonText}</a>
+                {/* <a href={button.buttonLink}>{button.buttonText}</a> */}
+                <Link to="/content/lyca-mobile/us/en/quick-top-up.html">{button.buttonText}</Link>
               </button>
             ))}
           </div>

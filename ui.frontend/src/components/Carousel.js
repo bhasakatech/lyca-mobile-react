@@ -1,15 +1,18 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from "react-bootstrap/Carousel";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const ControlledCarousel = ({ carouselImages = [] }) => {
   return (
+    <Link to="/content/lyca-mobile/us/en/home/buy-sim---plan.html">
     <Carousel 
       indicators={true} 
       controls={true} 
       interval={3000}
       pause={false} 
     >
+      
       {carouselImages.map((img, index) => (
         <Carousel.Item key={index}>
           <img
@@ -19,7 +22,9 @@ const ControlledCarousel = ({ carouselImages = [] }) => {
           />
         </Carousel.Item>
       ))}
+   
     </Carousel>
+       </Link>
   );
 };
 

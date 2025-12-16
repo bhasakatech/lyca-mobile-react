@@ -1,0 +1,76 @@
+.banner-container{
+    max-width: 64rem;
+    margin: 32px auto auto;
+}
+.banner-main{
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: wrap;
+    margin-top: -48px;
+    width: calc(100% + 48px);
+    margin-left: -48px;
+}
+.banner-left{
+        padding-left: 0 !important;
+    text-align: end;
+        padding-top: 2rem !important;
+}
+.banner-left img{
+        width: 100%;
+    height: 23.75rem;
+    max-width: 30rem;
+    max-height: 23.75rem;
+    border-radius: .25rem;
+}
+.banner-right{
+        padding-left: 48px;
+        padding-top: 2rem !important;
+}
+.offer-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .5rem;
+    flex-wrap: wrap;
+}
+.offer-text{
+    color: #344054;
+    background:#ffdd64;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    height: 2rem;
+    padding: 0 1rem;
+    border-radius: 6rem;
+    font-size: var(--fontSize14);
+    font-weight: 400;
+    font-family: GTEestiLCDisplayRegular;
+    line-height: var(--lh20);
+}
+.sim-type{
+        display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .25rem;
+    padding-top: 11px;
+}
+.data-allowance{
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+.data-allowance-container{
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: .5rem;
+}
+.gb-text{
+    color: #46286E;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: GTEestiLCDisplayBold;
+    line-height: 2.5rem;
+}

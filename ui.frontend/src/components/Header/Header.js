@@ -1,6 +1,9 @@
 import React from "react";
 import './Header.css'
 
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
+
+
 const Header = ({
   logoImage,
   menuImage,
@@ -20,15 +23,15 @@ const Header = ({
         <nav>
           <div className="left-container">
             <button id="lyca-logo">
-              <a href="#">
+              <Link to="/content/lyca-mobile/us/en/home.html">
                 <img loading="lazy" src={logoImage} alt="Lyca Logo" />
-              </a>
+              </Link>
             </button>
 
             <button id="lyca-logo-mobile">
-              <a href="#">
+              <Link to="/content/lyca-mobile/us/en/home.html">
                 <img loading="lazy" src={logoMobileImage} alt="Lyca Mobile Logo" />
-              </a>
+              </Link>
             </button>
 
             <button id="menu">
@@ -40,7 +43,8 @@ const Header = ({
                 <ul>
                   {linkLabel && linkLabel.map((label, index) => (
                     <li key={index}>
-                      <a href="#">{label}</a>
+                      {/* <a href="#">{label}</a> */}
+                      <Link to="/content/lyca-mobile/us/en/home/buy-sim---plan.html">{label}</Link>
                     </li>
                   ))}
                 </ul>
@@ -51,7 +55,8 @@ const Header = ({
           <div id="right-container">
             <button id="quick-recharge">
               <p>
-                <a href="#">{quickRechargeLabel}</a>
+                {/* <a href="#">{quickRechargeLabel}</a> */}
+                <Link to="/content/lyca-mobile/us/en/quick-top-up.html">{quickRechargeLabel}</Link>
               </p>
             </button>
 

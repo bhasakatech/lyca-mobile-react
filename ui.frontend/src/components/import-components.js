@@ -61,6 +61,12 @@ import DownloadApp from "./DownloadApp/DownloadApp";
 import Help from "./Help/Help";
 import BecomeRetailer from "./BecomeRetailer/BecomeRetailer";
 import InternationalCalls from "./CountryCarousel/CountryCarousel";
+import PrepaidCards from "./PrepaidCards/PrepaidCards";
+import HowItWorks from "./HowItWorks/HowItWorks";
+import Faq from "./FAQ/Faq";
+import ActivateSim from "./ActivateSim/ActivateSim";
+import PlanDetails from "./PlanDetails/PlanDetails";
+import Recharge from "./Recharge/Recharge";
 
 //lazyload / code splitting example of an internal component
 const LazyTextComponent = withAsyncImport(() => import(`./Text/Text`));
@@ -122,3 +128,10 @@ MapTo('lyca-mobile/components/country-carousel')(InternationalCalls);
 MapTo('lyca-mobile/components/blog-list')(BlogList);
 MapTo('lyca-mobile/components/signUp')(SignUp)
 MapTo('lyca-mobile/components/footer')(Footer);
+
+MapTo('lyca-mobile/components/prepaid-cards')(PrepaidCards);
+MapTo('lyca-mobile/components/how-it-works')(HowItWorks)
+MapTo('lyca-mobile/components/faq')(Faq)
+MapTo('lyca-mobile/components/activate-sim')(ActivateSim)
+MapTo('lyca-mobile/components/plan-details')(PlanDetails)
+MapTo('lyca-mobile/components/recharge')(Recharge)
