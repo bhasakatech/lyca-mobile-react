@@ -168,6 +168,7 @@
     justify-content: center;
     padding: 4px 24px;
     border: none;
+    margin-right:20px;
 }
 
 #quick-recharge p {
@@ -199,6 +200,7 @@
     margin: auto 1rem auto auto;
     background: transparent;
     border: none;
+    position: relative;
 }
 
 #cart img {
@@ -319,6 +321,7 @@
     #quick-recharge {
         max-width: 92px;
         width: fit-content;
+        margin-right:10px;
     }
 
     #quick-recharge p a {
@@ -329,6 +332,18 @@
     #cart img {
         min-width: 28px;
         height: 28px;
+    }
+
+    .carousel-inner {
+        height: 100%;
+    }
+
+    .carousel-item {
+        height: 100%;
+    }
+
+    .carousel-item img {
+        height: 100%;
     }
 }
 
@@ -410,4 +425,16 @@
 
 #quick-recharge p {
     margin-bottom: 0 !important;
+    
+}
+
+.cart-superscript {
+    position: absolute;
+    background-color: red;
+    height: 17px;
+    width: 17px;
+    z-index: 10;
+    border-radius: 50px;
+    top: 0;
+    left: 21px;
 }

@@ -2,6 +2,7 @@ import './PlanDetails.css';
 import { useLocation } from 'react-router-dom';
 import queryString from 'query-string';
 import { plansData } from '../PrepaidCards/PrepaidCards';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 export default function PlanDetails() {
   const location = useLocation();
@@ -19,7 +20,24 @@ export default function PlanDetails() {
   );
 
 
-  if (!plan) return <p>Plan not found</p>;
+  if (!plan) {
+    return (
+      <div className="empty-cart">
+        <h2>Currently the basket is empty</h2>
+        <p>We have a wide range of plans to choose from</p>
+
+        <Link to="/content/lyca-mobile/us/en/home/buy-sim---plan.html" onClick={() => window.scrollTo(0, 0)}>
+          <div className="buy-box">
+            <button className="buy-btn">
+              Buy a new line now <span>→</span>
+            </button>
+          </div>
+        </Link>
+
+      
+      </div>)
+  }
+
 
   return (
     <section className="plan-details-section">
@@ -89,6 +107,5 @@ export default function PlanDetails() {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>)
 }

@@ -109,6 +109,7 @@
 
   .carousel {
     overflow: hidden;
+    height: 50vh;
   }
 
   .carousel-track {
