@@ -29,7 +29,7 @@ const { title,
               
               <button key={index} id={`btn-${index}`}>
                 {/* <a href={button.buttonLink}>{button.buttonText}</a> */}
-                <Link to="/content/lyca-mobile/us/en/quick-top-up.html">{button.buttonText}</Link>
+                <Link to="/content/lyca-mobile/us/en/quick-top-up.html" onClick={() => window.scrollTo(0, 0)}>{button.buttonText}</Link>
               </button>
             ))}
           </div>

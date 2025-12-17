@@ -5,7 +5,11 @@
     justify-content: center;
     background-color: rgb(255, 255, 255);
 }
-
+.blog{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .blog-container {
     width: 90%;
     height: fit-content;
