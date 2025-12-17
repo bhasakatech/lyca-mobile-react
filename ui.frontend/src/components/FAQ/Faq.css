@@ -76,6 +76,9 @@
     color:blue !important;
 }
 @media only screen and (max-width: 768px) {
+    .faq-list {
+    width: 85%;
+}
     .faq-container {
         padding-top: 0;
     }

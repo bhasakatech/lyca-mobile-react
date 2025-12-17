@@ -215,6 +215,9 @@
         padding: 6px 8px;
         background-size: cover;
         /* background-position: 100%; */
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
     }
 
     .long-term-card {

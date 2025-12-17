@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import './PrepaidCards.css';
 import tick from "../../fonts/GT-Eesti/tick.svg"
+import { useGlobal } from '../../context/GlobalContext';
 
 export const plansData = {
   bestValue: [],
@@ -25,6 +26,8 @@ export default function PrepaidCards(props) {
 
   const [planTabs, setPlanTabs] = useState('bestValue');
   const [currentPlans, setCurrentPlans] = useState(plans || []);
+
+  const { cartItems, setCartItems, buyItem,setBuyItem } = useGlobal();
 
   // Hardcoded long-term plans
   const longTermPlans = [
@@ -96,82 +99,90 @@ export default function PrepaidCards(props) {
     plansData.longTermPlans = longTermPlans;
   }, [plans]);
 
+  const addingBasket = (obj) => {
+    console.log('obj ::', obj);
+    setCartItems((i) => [...i, obj])
+  }
 
-
+  console.log("plansArray :: ", currentPlans);
+  console.log("cartItems :: ", cartItems);
   // Render plans dynamically
   const renderPlans = (plansArray) =>
     plansArray.map((plan, index) => (
       <React.Fragment key={plan.id || plan.planTag || index}>
-        <Link
-          to="/content/lyca-mobile/us/en/plan-details.html"
-          className="plan-card-link"
-          onClick={() => {
-            localStorage.setItem(
-              'selectedPlanId',
-              plan.planTag || String(plan.id)
-            );
-            localStorage.setItem(
-              'selectedPlan',
-              JSON.stringify(plan)
-            );
-          }}
-        >
 
 
-          <div className="plan-card">
-            <div className="plan-upper-card">
-              <div className="plan-card-head">
-                <div className="plan-type">
-                  <h2>{plan.title || plan.name}</h2>
-                </div>
-                <div className="plan-row">&nbsp;</div>
-                <div className="plan-price">
-                  <div className="unlimited-data">
-                    <span>{plan.authoringLabel || plan.data}</span>
-                    <span>Data</span>
-                  </div>
-                  <div className="price">
-                    <span>{plan.price}</span>
-                    <span>{plan.duration}</span>
-                  </div>
-                </div>
+
+        <div className="plan-card">
+          <div className="plan-upper-card">
+            <div className="plan-card-head">
+              <div className="plan-type">
+                <h2>{plan.title || plan.name}</h2>
               </div>
-
-              <div className="plan-card-benifits">
-                {(plan.features || plan.benefits || []).map((feature, idx) => (
-                  <div className="benifit-row" key={idx}>
-                    <img src={tick} alt="tick" />
-                    <p>{feature.text}</p>
-                  </div>
-                ))}
+              <div className="plan-row">&nbsp;</div>
+              <div className="plan-price">
+                <div className="unlimited-data">
+                  <span>{plan.authoringLabel || plan.data}</span>
+                  <span>Data</span>
+                </div>
+                <div className="price">
+                  <span>{plan.price}</span>
+                  <span>{plan.duration}</span>
+                </div>
               </div>
             </div>
 
-            <div className="plan-lower-card">
-              <div className="plan-btns">
-                <div className="view-more">
-                  <button>
-                    <p>View More</p>
-                    <span></span>
-                  </button>
+            <div className="plan-card-benifits">
+              {(plan.features || plan.benefits || []).map((feature, idx) => (
+                <div className="benifit-row" key={idx}>
+                  <img src={tick} alt="tick" />
+                  <p>{feature.text}</p>
                 </div>
-                <div className="select-btns">
-                  <button className="add-basket">
-                    <p>{plan.basketCta || "Add to basket"}</p>
-                    <span></span>
-                  </button>
-                  <button className="buy-now">
-                    <p>{plan.buyCta || "Buy now"}</p>
-                    <span></span>
-                  </button>
-                </div>
-              </div>
-              <div className="activation">
-                <div>{plan.esimNote}</div>
-              </div>
+              ))}
             </div>
           </div>
-        </Link>
+
+          <div className="plan-lower-card">
+            <div className="plan-btns">
+              <div className="view-more">
+                <button>
+                  <Link
+                    to="/content/lyca-mobile/us/en/plan-details.html"
+                    className="plan-card-link"
+                    onClick={() => {
+                      localStorage.setItem(
+                        'selectedPlanId',
+                        plan.planTag || String(plan.id)
+                      );
+                      localStorage.setItem(
+                        'selectedPlan',
+                        JSON.stringify(plan)
+                      );
+                    }}
+                  ><p>View More</p></Link>
+
+                  <span></span>
+                </button>
+              </div>
+              <div className="select-btns">
+                <button className="add-basket" onClick={() => (addingBasket(plan))}>
+                  <p>{plan.basketCta || "Add to basket"}</p>
+                  <span></span>
+                </button>
+                <Link to="/content/lyca-mobile/us/en/home/cart.html" onClick={() => window.scrollTo(0, 0)}>
+                <button className="buy-now" onClick={() => setBuyItem(plan)}>
+                  <p>{plan.buyCta || "Buy now"}</p>
+                  <span></span>
+                </button>
+                </Link>
+              </div>
+            </div>
+            <div className="activation">
+              <div>{plan.esimNote}</div>
+            </div>
+          </div>
+        </div>
+
 
         {index === 1 && (
           <div className="option-card-container">
@@ -241,12 +252,6 @@ export default function PrepaidCards(props) {
         </div>
       </div>
 
-      <div className="view-all-btn">
-        <button>
-          <p>View all plans</p>
-          <span></span>
-        </button>
-      </div>
     </section>
   );
 }

@@ -19,7 +19,7 @@ export default function JoinLyca(props) {
         {/* Image Cards */}
         <div className="join-image-section">
           {cards.map((card, index) => (
-            <Link to="/content/lyca-mobile/us/en/home/buy-sim---plan.html">
+            <Link to="/content/lyca-mobile/us/en/home/buy-sim---plan.html" onClick={() => window.scrollTo(0, 0)}>
             <div className="join-card" key={index}>
               <div
                 id={card.cardTitle.toLowerCase().replace(/\s+/g, "-")}

@@ -67,6 +67,8 @@ import Faq from "./FAQ/Faq";
 import ActivateSim from "./ActivateSim/ActivateSim";
 import PlanDetails from "./PlanDetails/PlanDetails";
 import Recharge from "./Recharge/Recharge";
+import CartSection from "./CartSection/CartSection";
+import HelpSupport from "./HelpSupport/HelpSupport";
 
 //lazyload / code splitting example of an internal component
 const LazyTextComponent = withAsyncImport(() => import(`./Text/Text`));
@@ -135,3 +137,5 @@ MapTo('lyca-mobile/components/faq')(Faq)
 MapTo('lyca-mobile/components/activate-sim')(ActivateSim)
 MapTo('lyca-mobile/components/plan-details')(PlanDetails)
 MapTo('lyca-mobile/components/recharge')(Recharge)
+MapTo('lyca-mobile/components/cart-section')(CartSection)
+MapTo('lyca-mobile/components/help-support')(HelpSupport)
