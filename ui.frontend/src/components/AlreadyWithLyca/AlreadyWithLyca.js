@@ -1,16 +1,16 @@
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import './AlreadyWithLyca.css'
 export default function AlreadyWithLyca(props) {
-const { title,
-        description, 
-        lycaNumber,
-        buttonList = [],
-        placeHolder,
-        mobileIcon,
-        mobileIconText,
-        appDownloadText,
-        appDownloadLink } = props;
-        
+  const { title,
+    description,
+    lycaNumber,
+    buttonList = [],
+    placeHolder,
+    mobileIcon,
+    mobileIconText,
+    appDownloadText,
+    appDownloadLink } = props;
+
   return (
     <section className="already-main-container">
       <div className="already-with-lyca">
@@ -22,11 +22,11 @@ const { title,
           </div>
         </div>
 
-         {/* Recharge / Renew Buttons from JSON */}
+        {/* Recharge / Renew Buttons from JSON */}
         <div className="recharge-and-renew">
           <div className="recharge-tabs-container">
             {buttonList.map((button, index) => (
-              
+
               <button key={index} id={`btn-${index}`}>
                 {/* <a href={button.buttonLink}>{button.buttonText}</a> */}
                 <Link to="/content/lyca-mobile/us/en/quick-top-up.html" onClick={() => window.scrollTo(0, 0)}>{button.buttonText}</Link>
@@ -44,16 +44,17 @@ const { title,
                 type="number"
                 placeholder={placeHolder}
                 id="number"
+                required
               />
-              <button>
-                <a href="#">
+              <Link to="/content/lyca-mobile/us/en/home/buy-sim---plan.html" onClick={() => window.scrollTo(0, 0)}>
+                <button>
                   <img
                     loading="lazy"
                     src="/content/dam/lyca-mobile/assets/blueRightCircleArrow.f268c82d.svg"
                     alt=""
                   />
-                </a>
-              </button>
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -66,16 +67,18 @@ const { title,
                 loading="lazy"
                 src={mobileIcon}
                 alt=""
-                id="download-mobile"  
+                id="download-mobile"
               />
               <span>{mobileIconText}</span>
-              <a href={appDownloadLink}>{appDownloadText}</a>
+              <Link to="https://play.google.com/store/apps/details?id=com.lycadigital.lycamobile&pcampaignid=web_share">
+              <div className='lycaAppDownload' >{appDownloadText}</div>
               <img
                 loading="lazy"
                 src="/content/dam/lyca-mobile/assets/app_arrow.jpg"
                 alt=""
                 id="download-right-arrow"
               />
+              </Link>
             </p>
           </div>
         </div>

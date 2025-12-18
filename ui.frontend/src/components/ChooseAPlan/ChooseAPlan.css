@@ -150,7 +150,7 @@
      border-radius: 5px;
 }
 
-.block-text-container h2 a {
+.block-text-container h2 span {
     color: #fff;
     font-family: "GTEestiLCDisplayMedium";
     font-weight: 500;
@@ -163,7 +163,7 @@
     align-items: center;
 }
 
-.block-text-container p a {
+.block-text-container p span {
     color: #fff;
     font-family: "GTEestiLCDisplayLight";
     font-weight: 500;
@@ -171,7 +171,7 @@
     text-decoration: none;
 }
 
-.block-text-container p>a:last-child img {
+.block-text-container p>span:last-child img {
     width: 24px;
     height: 14px;
     margin-left: 16px;
@@ -230,15 +230,15 @@
         padding: 8px 8px;
     }
 
-    .block-text-container h2 a {
+    .block-text-container h2 span {
         font-size: 22px;
     }
 
-    .block-text-container p a:nth-of-type(1) {
+    .block-text-container p span:nth-of-type(1) {
         font-size: 14px;
     }
 
-    .block-text-container p a:nth-of-type(3) img {
+    .block-text-container p span:nth-of-type(3) img {
         width: 1.5rem;
         height: 14px;
         margin-left: 16px;
@@ -295,15 +295,15 @@
         padding: 8px 8px;
     }
 
-    .block-text-container h2 a {
+    .block-text-container h2 span {
         font-size: 22px;
     }
 
-    .block-text-container p a:nth-of-type(1) {
+    .block-text-container p span:nth-of-type(1) {
         font-size: 14px;
     }
 
-    .block-text-container p a:nth-of-type(3) img {
+    .block-text-container p span:nth-of-type(3) img {
         width: 1.5rem;
         height: 14px;
         margin-left: 16px;

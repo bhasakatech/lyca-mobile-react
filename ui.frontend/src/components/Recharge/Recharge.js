@@ -127,9 +127,8 @@ export default function Recharge(props) {
                   setSelectedPlan(idx);
                   setSelectedAmount(null);
                 }}
-                className={`recharge-plan-card ${
-                  selectedPlan === idx ? 'recharge-selected' : ''
-                }`}
+                className={`recharge-plan-card ${selectedPlan === idx ? 'recharge-selected' : ''
+                  }`}
               >
                 <div className="recharge-plan-data">{plan.data}</div>
                 <div className="recharge-plan-price">{plan.price}</div>
@@ -138,7 +137,7 @@ export default function Recharge(props) {
             ))}
           </div>
 
-        
+
         </div>
       </div>
 
@@ -167,9 +166,8 @@ export default function Recharge(props) {
                 setSelectedAmount(idx);
                 setSelectedPlan(null);
               }}
-              className={`recharge-plan-card ${
-                selectedAmount === idx ? 'recharge-selected' : ''
-              }`}
+              className={`recharge-plan-card ${selectedAmount === idx ? 'recharge-selected' : ''
+                }`}
             >
               <div className="recharge-plan-data">{item.amount}</div>
               <div className="recharge-plan-validity recharge-amount-validity">
@@ -200,18 +198,28 @@ export default function Recharge(props) {
       </div>
 
       {/* CTA */}
+
       <div className="recharge-section">
         <p className="recharge-terms-text">{termsText}</p>
         <button
           className="recharge-confirm-button"
-          disabled={!isValidMobile || totalAmount === 0}
+          disabled={!(selectedPlan !== null || selectedAmount !== null) || !isValidMobile} // enable if valid mobile AND a plan/amount is selected
           style={{
-            pointerEvents: isValidMobile && totalAmount ? 'auto' : 'none'
+            pointerEvents: selectedPlan !== null || selectedAmount !== null ? 'auto' : 'none'
+          }}
+          onClick={() => {
+            alert('Recharge successful!');
+            // Clear the form
+            setPhoneNumber('');
+            setSelectedPlan(null);
+            setSelectedAmount(null);
+            setActiveTab('30days'); // reset tab if you want
           }}
         >
           {ctaText}
         </button>
       </div>
+
     </div>
   );
 }

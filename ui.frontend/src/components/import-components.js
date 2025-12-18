@@ -19,7 +19,7 @@ import './Page/Page';
 import './Container/Container';
 import './ExperienceFragment/ExperienceFragment';
 
-import {MapTo} from '@adobe/aem-react-editable-components';
+import { MapTo } from '@adobe/aem-react-editable-components';
 
 import {
     CarouselV1IsEmptyFn
@@ -32,22 +32,22 @@ import {
 import {
     ContainerV1, ContainerV1IsEmptyFn,
     TabsV1, TabsV1IsEmptyFn,
-    AccordionV1,AccordionV1IsEmptyFn,
+    AccordionV1, AccordionV1IsEmptyFn,
 } from '@adobe/aem-core-components-react-spa';
 
-import Footer from "./Footer/footer"; 
-import SignUp from "./SignUp/SignUp"; 
-import BlogList from "./BlogList/BlogList"; 
+import Footer from "./Footer/footer";
+import SignUp from "./SignUp/SignUp";
+import BlogList from "./BlogList/BlogList";
 import {
-    BreadCrumbV2,BreadCrumbV2IsEmptyFn,
-    ButtonV1,ButtonV1IsEmptyFn,
-    ImageV2,ImageV2IsEmptyFn,
+    BreadCrumbV2, BreadCrumbV2IsEmptyFn,
+    ButtonV1, ButtonV1IsEmptyFn,
+    ImageV2, ImageV2IsEmptyFn,
     LanguageNavigationV1,
     NavigationV1,
-    TeaserV1,TeaserV1IsEmptyFn,
-    DownloadV1,DownloadV1IsEmptyFn,
-    SeparatorV1,SeparatorV1IsEmptyFn,
-    ListV2,ListV2IsEmptyFn
+    TeaserV1, TeaserV1IsEmptyFn,
+    DownloadV1, DownloadV1IsEmptyFn,
+    SeparatorV1, SeparatorV1IsEmptyFn,
+    ListV2, ListV2IsEmptyFn
 } from '@adobe/aem-core-components-react-base';
 import Header from "./Header/Header";
 import AnnouncementBar from "./AnnouncementBar/AnnouncementBar";
@@ -78,25 +78,25 @@ const TitleV2 = withAsyncImport(() => import(`@adobe/aem-core-components-react-b
 const CarouselV1 = withAsyncImport(() => import(`@adobe/aem-core-components-react-spa/dist/container/carousel/v1/CarouselV1`));
 
 
-MapTo('lyca-mobile/components/download')(DownloadV1, {isEmpty: DownloadV1IsEmptyFn});
-MapTo('lyca-mobile/components/list')(ListV2, {isEmpty: ListV2IsEmptyFn});
-MapTo('lyca-mobile/components/separator')(SeparatorV1, {isEmpty: SeparatorV1IsEmptyFn});
+MapTo('lyca-mobile/components/download')(DownloadV1, { isEmpty: DownloadV1IsEmptyFn });
+MapTo('lyca-mobile/components/list')(ListV2, { isEmpty: ListV2IsEmptyFn });
+MapTo('lyca-mobile/components/separator')(SeparatorV1, { isEmpty: SeparatorV1IsEmptyFn });
 
-MapTo('lyca-mobile/components/button')(ButtonV1, {isEmpty: ButtonV1IsEmptyFn});
-MapTo('lyca-mobile/components/teaser')(TeaserV1, {isEmpty: TeaserV1IsEmptyFn});
-MapTo('lyca-mobile/components/image')(ImageV2, {isEmpty: ImageV2IsEmptyFn});
-MapTo('lyca-mobile/components/title')(TitleV2, {isEmpty: TitleV2IsEmptyFn});
+MapTo('lyca-mobile/components/button')(ButtonV1, { isEmpty: ButtonV1IsEmptyFn });
+MapTo('lyca-mobile/components/teaser')(TeaserV1, { isEmpty: TeaserV1IsEmptyFn });
+MapTo('lyca-mobile/components/image')(ImageV2, { isEmpty: ImageV2IsEmptyFn });
+MapTo('lyca-mobile/components/title')(TitleV2, { isEmpty: TitleV2IsEmptyFn });
 
 
-MapTo('lyca-mobile/components/breadcrumb')(BreadCrumbV2, {isEmpty: BreadCrumbV2IsEmptyFn});
+MapTo('lyca-mobile/components/breadcrumb')(BreadCrumbV2, { isEmpty: BreadCrumbV2IsEmptyFn });
 MapTo('lyca-mobile/components/navigation')(NavigationV1);
 MapTo('lyca-mobile/components/languagenavigation')(LanguageNavigationV1);
 
 
-MapTo('lyca-mobile/components/tabs')(TabsV1, {isEmpty: TabsV1IsEmptyFn});
-MapTo('lyca-mobile/components/accordion')(AccordionV1, {isEmpty: AccordionV1IsEmptyFn});
-MapTo('lyca-mobile/components/carousel')(CarouselV1, {isEmpty: CarouselV1IsEmptyFn});
-MapTo('lyca-mobile/components/container')(ContainerV1, {isEmpty: ContainerV1IsEmptyFn});
+MapTo('lyca-mobile/components/tabs')(TabsV1, { isEmpty: TabsV1IsEmptyFn });
+MapTo('lyca-mobile/components/accordion')(AccordionV1, { isEmpty: AccordionV1IsEmptyFn });
+MapTo('lyca-mobile/components/carousel')(CarouselV1, { isEmpty: CarouselV1IsEmptyFn });
+MapTo('lyca-mobile/components/container')(ContainerV1, { isEmpty: ContainerV1IsEmptyFn });
 
 
 //lazy load of internal component (hello world)
@@ -132,7 +132,7 @@ MapTo('lyca-mobile/components/signUp')(SignUp)
 MapTo('lyca-mobile/components/footer')(Footer);
 
 MapTo('lyca-mobile/components/prepaid-cards')(PrepaidCards);
-MapTo('lyca-mobile/components/how-it-works')(HowItWorks)
+// MapTo('lyca-mobile/components/how-it-works')(HowItWorks)
 MapTo('lyca-mobile/components/faq')(Faq)
 MapTo('lyca-mobile/components/activate-sim')(ActivateSim)
 MapTo('lyca-mobile/components/plan-details')(PlanDetails)

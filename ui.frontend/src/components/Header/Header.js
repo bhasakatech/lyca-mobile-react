@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './Header.css'
 
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
@@ -19,7 +19,26 @@ const Header = ({
   menuMobileImage,
   countryDropdownImage
 }) => {
-  const {cartItems}=useGlobal();
+  const { setBuyItem, cartItems } = useGlobal();
+  const [cartCount, setCartCount] = useState("");
+
+  const clearUser = () => {
+    window.scrollTo(0, 0);
+    localStorage.removeItem("user");
+    setBuyItem(null)
+  };
+
+  // useEffect(() => {
+  //   const items = JSON.parse(localStorage.getItem("cartPlanItems")) || [];
+  //   console.log(items.length, items, "items")
+  //   if (items?.length > 0) {
+  //     setCartCount(items.length);
+  //   }
+  // }, [cartItems]);
+
+  console.log(cartItems.length)
+
+
   return (
     <header className="header">
       <div className="nav-bar">
@@ -44,17 +63,17 @@ const Header = ({
             <div id="tab-container">
               <div id="block-container">
                 <ul>
-                  
-                    <li>
-                      
-                      <Link to="/content/lyca-mobile/us/en/home/buy-sim---plan.html" onClick={() => window.scrollTo(0, 0)}>{linkLabel[0]}</Link>
-                    </li>
 
-                     <li>
-                      
-                      <Link to="/content/lyca-mobile/us/en/help-support.html" onClick={() => window.scrollTo(0, 0)}>{linkLabel[1]}</Link>
-                    </li>
-                 
+                  <li>
+
+                    <Link to="/content/lyca-mobile/us/en/home/buy-sim---plan.html" onClick={() => window.scrollTo(0, 0)}>{linkLabel[0]}</Link>
+                  </li>
+
+                  <li>
+
+                    <Link to="/content/lyca-mobile/us/en/help-support.html" onClick={() => window.scrollTo(0, 0)}>{linkLabel[1]}</Link>
+                  </li>
+
                 </ul>
               </div>
             </div>
@@ -68,13 +87,16 @@ const Header = ({
               </p>
             </button>
 
-         
 
-            <Link to="/content/lyca-mobile/us/en/home/cart.html" onClick={() => window.scrollTo(0, 0)}>
-            <button id="cart">
-              <img loading="lazy" src={cartImage} alt="Cart" />
-              <div className={cartItems.length === 0 ? "":"cart-superscript"}>{cartItems.length === 0 ? "":cartItems.length}</div>
-            </button>
+
+            <Link to="/content/lyca-mobile/us/en/home/cart.html" onClick={() => clearUser()}>
+              <button id="cart">
+                <img loading="lazy" src={cartImage} alt="Cart" />
+                <div className={cartItems.length === 0 ? "cart-empty" : "cart-superscript"}>
+                  {cartItems.length}
+                </div>
+
+              </button>
             </Link>
 
             <button id="country">
