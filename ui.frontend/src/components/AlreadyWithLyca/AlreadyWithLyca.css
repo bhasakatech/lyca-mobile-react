@@ -448,3 +448,8 @@ input::placeholder{
         margin-left: 2px;
     }
 }
+
+.lycaAppDownload{
+    display: inline;
+    color: #006ae0 !important;
+}

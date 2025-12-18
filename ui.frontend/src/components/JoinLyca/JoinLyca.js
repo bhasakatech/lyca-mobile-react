@@ -20,27 +20,29 @@ export default function JoinLyca(props) {
         <div className="join-image-section">
           {cards.map((card, index) => (
             <Link to="/content/lyca-mobile/us/en/home/buy-sim---plan.html" onClick={() => window.scrollTo(0, 0)}>
-            <div className="join-card" key={index}>
-              <div
-                id={card.cardTitle.toLowerCase().replace(/\s+/g, "-")}
-                className="lyca-card"
-              >
-                <a href={card.cardLink}>
-                  <img
-                    loading="lazy"
-                    src={card.cardImage}
-                    alt={card.cardTitle}
-                  />
-                </a>
-                <p>
-                  <a href={card.cardLink}>{card.cardTitle}</a>
-                </p>
+              <div className="join-card" key={index}>
+                <div
+                  id={card.cardTitle.toLowerCase().replace(/\s+/g, "-")}
+                  className="lyca-card"
+                >
+                  <Link to="/content/lyca-mobile/us/en/home/buy-sim---plan.html" onClick={() => window.scrollTo(0, 0)}>
+                    <img
+                      loading="lazy"
+                      src={card.cardImage}
+                      alt={card.cardTitle}
+                    />
+                  </Link>
+                  <p>
+                    <Link to="/content/lyca-mobile/us/en/home/buy-sim---plan.html" onClick={() => window.scrollTo(0, 0)}>
+                      {card.cardTitle}
+                    </Link>
+                  </p>
+                </div>
               </div>
-            </div>
-</Link>
+            </Link>
           ))}
         </div>
       </div>
-    </section>
+    </section >
   );
 }

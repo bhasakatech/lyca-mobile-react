@@ -1,5 +1,6 @@
 import React from "react";
 import "./ChooseAPlan.css";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 export default function ChooseAPlan(props) {
   const { planHeader, planDescription, planCards = [] } = props;
@@ -19,26 +20,28 @@ export default function ChooseAPlan(props) {
 
           return (
             <div key={index} className={rootClass}>
-              <div className="text-container">
-                <div className="block-text-container">
-                  {card.cardTitle && (
-                    <h2>
-                      <a href={card.cardLink || "#"}>{card.cardTitle}</a>
-                    </h2>
-                  )}
-                  {(card.cardText || arrowSrc) && (
-                    <p>
-                      {card.cardText && (
-                        <a href={card.cardLink || "#"}>{card.cardText}</a>
-                      )}
-                      <a href={card.cardLink || "#"}></a>
-                      <a href={card.cardLink || "#"}>
-                        <img loading="lazy" src={arrowSrc} alt="arrow" />
-                      </a>
-                    </p>
-                  )}
+              <Link to="/content/lyca-mobile/us/en/home/buy-sim---plan.html" onClick={() => window.scrollTo(0, 0)}>
+                <div className="text-container">
+                  <div className="block-text-container">
+                    {card.cardTitle && (
+                      <h2>
+                        <span>{card.cardTitle}</span>
+                      </h2>
+                    )}
+                    {(card.cardText || arrowSrc) && (
+                      <p>
+                        {card.cardText && (
+                          <span href={card.cardLink || "#"}>{card.cardText}</span>
+                        )}
+                        <span href={card.cardLink || "#"}></span>
+                        <span href={card.cardLink || "#"}>
+                          <img loading="lazy" src={arrowSrc} alt="arrow" />
+                        </span>
+                      </p>
+                    )}
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           );
         })}

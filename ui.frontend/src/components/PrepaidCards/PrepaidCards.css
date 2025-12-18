@@ -299,6 +299,10 @@
   gap: 10px;
 }
 
+.select-btns a {
+  width: 100%;
+}
+
 .select-btns .add-basket {
   border: 1px solid #006ae0;
   color: #006ae0;
@@ -374,11 +378,11 @@
   border-bottom-right-radius: 0.75rem;
   background: #eff8ff;
   display: flex;
-  padding: 5px 24px;
+  /* padding: 5px 24px; */
   align-items: center;
   justify-content: center;
   margin-top: 16px;
-  min-height: 28px;
+  min-height: 0px;
 }
 
 .activation div {

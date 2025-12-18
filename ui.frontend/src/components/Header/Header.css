@@ -168,7 +168,7 @@
     justify-content: center;
     padding: 4px 24px;
     border: none;
-    margin-right:20px;
+    margin-right: 20px;
 }
 
 #quick-recharge p {
@@ -321,7 +321,7 @@
     #quick-recharge {
         max-width: 92px;
         width: fit-content;
-        margin-right:10px;
+        margin-right: 10px;
     }
 
     #quick-recharge p a {
@@ -425,7 +425,7 @@
 
 #quick-recharge p {
     margin-bottom: 0 !important;
-    
+
 }
 
 .cart-superscript {
@@ -437,4 +437,8 @@
     border-radius: 50px;
     top: 0;
     left: 21px;
+}
+
+.cart-empty {
+    display: none;
 }

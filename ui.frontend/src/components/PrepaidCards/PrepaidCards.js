@@ -27,16 +27,17 @@ export default function PrepaidCards(props) {
   const [planTabs, setPlanTabs] = useState('bestValue');
   const [currentPlans, setCurrentPlans] = useState(plans || []);
 
-  const { cartItems, setCartItems, buyItem,setBuyItem } = useGlobal();
+  const { cartItems, setCartItems, buyItem, setBuyItem } = useGlobal();
 
   // Hardcoded long-term plans
   const longTermPlans = [
     {
       id: 101,
-      name: 'Business Plan',
-      price: 99.0,
-      duration: '30 days',
+      planTag: 'Business Plan',
+      price: '$99.0',
+      duration: '/30 days',
       data: 'Unlimited',
+      esimNote: "Get Immediate Activation with eSIM",
       benefits: [
         { text: 'Unlimited Talk & Text' },
         { text: 'Unlimited data' },
@@ -45,9 +46,10 @@ export default function PrepaidCards(props) {
     },
     {
       id: 102,
-      name: 'Travel Plan',
-      price: 59.0,
-      duration: '30 days',
+      planTag: 'Travel Plan',
+      price: '$59.0',
+      duration: '/30 days',
+      esimNote: "Get Immediate Activation with eSIM",
       data: '15GB',
       benefits: [
         { text: 'Unlimited Talk & Text' },
@@ -57,9 +59,10 @@ export default function PrepaidCards(props) {
     },
     {
       id: 103,
-      name: 'Data Only Plan',
-      price: 19.0,
-      duration: '30 days',
+      planTag: 'Data Only Plan',
+      price: '$19.0',
+      duration: '/30 days',
+      esimNote: "Get Immediate Activation with eSIM",
       data: '20GB',
       benefits: [
         { text: 'High-speed data up to 20GB' },
@@ -69,9 +72,10 @@ export default function PrepaidCards(props) {
     },
     {
       id: 104,
-      name: 'Basic Plan',
-      price: 15.0,
-      duration: '30 days',
+      planTag: 'Basic Plan',
+      price: '$15.0',
+      duration: '/30 days',
+      esimNote: "Get Immediate Activation with eSIM",
       data: '2GB',
       benefits: [
         { text: 'Talk & Text included' },
@@ -81,9 +85,10 @@ export default function PrepaidCards(props) {
     },
     {
       id: 105,
-      name: 'Unlimited Basic',
-      price: 29.0,
-      duration: '30 days',
+      planTag: 'Unlimited Basic',
+      price: '$29.0',
+      duration: '/30 days',
+      esimNote: "Get Immediate Activation with eSIM",
       data: '10GB',
       benefits: [
         { text: 'Unlimited Talk & Text' },
@@ -99,9 +104,25 @@ export default function PrepaidCards(props) {
     plansData.longTermPlans = longTermPlans;
   }, [plans]);
 
-  const addingBasket = (obj) => {
-    console.log('obj ::', obj);
-    setCartItems((i) => [...i, obj])
+  const addingBasket = (plan) => {
+    setCartItems((prev) => {
+      const updatedCart = [...prev, plan];
+      localStorage.setItem(
+        "cartPlanItems",
+        JSON.stringify(updatedCart)
+      );
+      return updatedCart;
+    });
+  };
+
+
+  const itemToBuy = (plan) => {
+    setBuyItem(plan)
+    localStorage.setItem("user", JSON.stringify(plan));
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+
+    console.log("storedUser", storedUser);
+
   }
 
   console.log("plansArray :: ", currentPlans);
@@ -117,7 +138,7 @@ export default function PrepaidCards(props) {
           <div className="plan-upper-card">
             <div className="plan-card-head">
               <div className="plan-type">
-                <h2>{plan.title || plan.name}</h2>
+                <h2>{plan.title || plan.planTag}</h2>
               </div>
               <div className="plan-row">&nbsp;</div>
               <div className="plan-price">
@@ -170,10 +191,10 @@ export default function PrepaidCards(props) {
                   <span></span>
                 </button>
                 <Link to="/content/lyca-mobile/us/en/home/cart.html" onClick={() => window.scrollTo(0, 0)}>
-                <button className="buy-now" onClick={() => setBuyItem(plan)}>
-                  <p>{plan.buyCta || "Buy now"}</p>
-                  <span></span>
-                </button>
+                  <button className="buy-now" onClick={() => itemToBuy(plan)}>
+                    <p>{plan.buyCta || "Buy now"}</p>
+                    <span></span>
+                  </button>
                 </Link>
               </div>
             </div>
