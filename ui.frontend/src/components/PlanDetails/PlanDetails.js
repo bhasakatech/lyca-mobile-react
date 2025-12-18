@@ -3,13 +3,14 @@ import { useLocation } from 'react-router-dom';
 import queryString from 'query-string';
 import { plansData } from '../PrepaidCards/PrepaidCards';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import { useGlobal } from '../../context/GlobalContext';
 
 export default function PlanDetails() {
   const location = useLocation();
   const query = queryString.parse(location.search);
   const planId = localStorage.getItem('selectedPlanId');
 
-
+  const { cartItems, setCartItems, buyItem, setBuyItem } = useGlobal();
   const allPlans = [
     ...plansData.bestValue,
     ...plansData.longTermPlans
@@ -19,6 +20,14 @@ export default function PlanDetails() {
     p => p.planTag === planId || String(p.id) === planId
   );
 
+  const itemToBuy = (plan) => {
+    setBuyItem(plan)
+    localStorage.setItem("user", JSON.stringify(plan));
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+
+    console.log("storedUser", storedUser);
+
+  }
 
   if (!plan) {
     return (
@@ -34,7 +43,7 @@ export default function PlanDetails() {
           </div>
         </Link>
 
-      
+
       </div>)
   }
 
@@ -94,15 +103,18 @@ export default function PlanDetails() {
             </div>
 
             <div className="plan-details-buttons">
-              <button className="plan-details-btn-buy">
-                <p>Buy now</p>
-                <span></span>
-              </button>
-
-              <button className="plan-details-btn-view">
-                <p>View all plans</p>
-                <span></span>
-              </button>
+              <Link to="/content/lyca-mobile/us/en/home/cart.html" onClick={() => window.scrollTo(0, 0)}>
+                <button className="plan-details-btn-buy" onClick={() => itemToBuy(plan)}>
+                  <p>Buy now</p>
+                  <span></span>
+                </button>
+              </Link>
+              <Link to="/content/lyca-mobile/us/en/home/buy-sim---plan.html" onClick={() => window.scrollTo(0, 0)}>
+                <button className="plan-details-btn-view">
+                  <p>View all plans</p>
+                  <span></span>
+                </button>
+              </Link>
             </div>
           </div>
         </div>
