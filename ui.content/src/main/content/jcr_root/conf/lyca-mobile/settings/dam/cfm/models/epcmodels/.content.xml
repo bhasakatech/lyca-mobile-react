@@ -1,0 +1,1191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Template"
+    allowedPaths="[/content/dam/lyca-mobile(/.*)?]"
+    ranking="{Long}100">
+    <jcr:content
+        cq:scaffolding="/conf/lyca-mobile/settings/dam/cfm/models/epcmodels/jcr:content/model"
+        cq:templateType="/libs/settings/dam/cfm/model-types/fragment"
+        jcr:mixinTypes="[cq:ReplicationStatus2]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Lyca EPC Offers Fragment Model"
+        sling:resourceSuperType="dam/cfm/models/console/components/data/entity"
+        sling:resourceType="dam/cfm/models/console/components/data/entity/default"
+        isLocked="{Boolean}true"
+        status="enabled">
+        <metadata jcr:primaryType="nt:unstructured"/>
+        <model
+            cq:targetPath="/content/entities"
+            jcr:primaryType="cq:PageContent"
+            sling:resourceType="wcm/scaffolding/components/scaffolding"
+            dataTypesConfig="/mnt/overlay/settings/dam/cfm/models/formbuilderconfig/datatypes"
+            maxGeneratedOrder="20">
+            <cq:dialog
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/gui/components/authoring/dialog">
+                <content
+                    jcr:lastModified="{Date}2021-07-11T18:52:24.207+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                    <items
+                        jcr:primaryType="nt:unstructured"
+                        maxGeneratedOrder="21">
+                        <_x0031_626007518296
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Offer ID"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="offerid"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_626007518296>
+                        <_x0031_633526718213
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                            emptyOption="{Boolean}true"
+                            fieldLabel="Offer Type"
+                            listOrder="6"
+                            metaType="enumeration"
+                            name="offerType"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <datasource
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="dam/cfm/admin/components/datasources/optionrendererenumeration"
+                                variant="default"/>
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                            <optionsmultifield jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Select Offer Type"
+                                    fieldValue="\0"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="prepaid"
+                                    fieldValue="prepaid"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="postpaid"
+                                    fieldValue="postpaid"/>
+                                <item3
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="bolton"
+                                    fieldValue="bolton"/>
+                                <item4
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="topup (PAYG)"
+                                    fieldValue="pay_as_you_go"/>
+                            </optionsmultifield>
+                        </_x0031_633526718213>
+                        <_x0031_633526718215
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                            emptyOption="{Boolean}true"
+                            fieldLabel="Type"
+                            listOrder="6"
+                            metaType="enumeration"
+                            name="type"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <datasource
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="dam/cfm/admin/components/datasources/optionrendererenumeration"
+                                variant="default"/>
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                            <optionsmultifield jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Select Type"
+                                    fieldValue="\0"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="BUNDLE"
+                                    fieldValue="BUNDLE"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="BOLTON"
+                                    fieldValue="BOLTON"/>
+                            </optionsmultifield>
+                        </_x0031_633526718215>
+                        <_x0031_721042726927
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Billing Type"
+                            listOrder="22"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="billingType"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_721042726927>
+                        <_x0031_659097062755
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/admin/components/authoring/contenteditor/multicheckbox"
+                            emptyOption="{Boolean}true"
+                            fieldLabel="Channels"
+                            listOrder="6"
+                            metaType="enumeration"
+                            name="channels"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string[]">
+                            <optionsmultifield jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Web"
+                                    fieldValue="web"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="App"
+                                    fieldValue="app"/>
+                            </optionsmultifield>
+                            <datasource
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="dam/cfm/admin/components/datasources/optionrendererenumeration"
+                                variant="default"/>
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_659097062755>
+                        <_x0031_667568864194
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                            listOrder="21"
+                            metaType="boolean"
+                            name="isAllowedForNewCustomers"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            text="Is Allowed For New Customers"
+                            valueType="boolean">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_667568864194>
+                        <_x0031_667568901743
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                            listOrder="22"
+                            metaType="boolean"
+                            name="isAllowedForExistingCustomers"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            text="Is Allowed For Existing Customers"
+                            valueType="boolean">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_667568901743>
+                        <_x0031_626007604231
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Name"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="name"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_626007604231>
+                        <_x0031_626007604232
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldDescription="When configured, this will be displayed as plan name by overriding the name on order confirmation screen."
+                            fieldLabel="Order Confirmation Plan Name"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="orderConfirmationPlanName"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_626007604232>
+                        <_x0031_626007922345
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Validity"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="validity"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_626007922345>
+                        <_x0031_738068490959
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                            emptyOption="{Boolean}true"
+                            emptyText="Select Validity"
+                            fieldDescription="By default value is Days for prepaid and postpaid. Days, Weeks, Months Labels are configured from GlobalConfig - General Labels"
+                            fieldLabel="Validity In (Only for prepaid)"
+                            listOrder="6"
+                            metaType="enumeration"
+                            name="validityIn"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <optionsmultifield jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Days"
+                                    fieldValue="days"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Weeks"
+                                    fieldValue="weeks"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Months"
+                                    fieldValue="months"/>
+                            </optionsmultifield>
+                            <datasource
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="dam/cfm/admin/components/datasources/optionrendererenumeration"
+                                variant="default"/>
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_738068490959>
+                        <_x0031_626007775688
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                            listOrder="4"
+                            metaType="boolean"
+                            name="active"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            text="Active"
+                            valueType="boolean">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_626007775688>
+                        <_x0031_626007982326
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                            fieldLabel="Cost"
+                            listOrder="3"
+                            metaType="number"
+                            name="cost"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            step="any"
+                            typeHint="double"
+                            valueType="double">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_626007982326>
+                        <_x0031_750844515850
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldDescription="Provide the cost tooltip information that specifies any particular details about the cost."
+                            fieldLabel="Cost Tooltip Info"
+                            listOrder="21"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="costTooltipInfo"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_750844515850>
+                        <_x0031_756375594152
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldDescription="Provide the effective price name for this product, which will be used for structured data in the Hero Product Banner component."
+                            fieldLabel="Effective price name"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="effectivePriceName"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_756375594152>
+                        <_x0031_756375621359
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                            fieldDescription="Provide the effective price value for this product, which will be used for structured data in the Hero Product Banner component."
+                            fieldLabel="Effective price value"
+                            listOrder="3"
+                            metaType="number"
+                            name="effectivePriceValue"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            step="any"
+                            valueType="double">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_756375621359>
+                        <_x0031_693292509451
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                            listOrder="4"
+                            metaType="boolean"
+                            name="isUnlimited"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            text="Unlimited Data"
+                            valueType="boolean">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_693292509451>
+                        <_x0031_693292571028
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Unlimited Data Label"
+                            listOrder="21"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="unlimitedLabel"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_693292571028>
+                        <_x0031_632203187642
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/admin/components/authoring/contenteditor/multieditor"
+                            cfm-element="Additional Offer Information"
+                            checked="false"
+                            default-mime-type="text/html"
+                            listOrder="2"
+                            metaType="text-multi"
+                            name="additionalOffers"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string/multiline"/>
+                        <_x0031_653400882230
+                            granite:class="additional-offers-accordion"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                            fieldDescription="When configured with the tooltip content, this will override the Additional Offer Information and tooltip will be shown next to the allowance"
+                            fieldLabel="Additional Offers Information With ToolTip Content"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="additionalOffersWithTooltipInfoCMF"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string[]">
+                            <field
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                maxlength="255"
+                                name="additionalOffersWithTooltipInfoCMF"
+                                renderReadOnly="false">
+                                <granite:data jcr:primaryType="nt:unstructured"/>
+                            </field>
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_653400882230>
+                        <_x0031_637302965718
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/contentreference"
+                            fieldLabel="product information File"
+                            filter="hierarchy"
+                            listOrder="21"
+                            metaType="reference"
+                            name="productInformationFile"
+                            nameSuffix="contentReference"
+                            renderReadOnly="false"
+                            rootPath="/content/dam/lyca-mobile"
+                            showEmptyInReadOnly="true"
+                            showThumbnail="false"
+                            validation="cfm.validation.contenttype.pdf"
+                            valueType="string/reference">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                thumbnail-validation="cfm.validation.thumbnail.show"/>
+                        </_x0031_637302965718>
+                        <_x0031_639741886502
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                            fieldLabel="Allowances"
+                            listOrder="21"
+                            metaType="text-single"
+                            name="allowancesList"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string[]">
+                            <field
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                name="allowancesList"
+                                renderReadOnly="false">
+                                <granite:data jcr:primaryType="nt:unstructured"/>
+                            </field>
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_639741886502>
+                        <_x0031_721042662775
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                            fieldLabel="Categories"
+                            listOrder="21"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="categoriesList"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string[]">
+                            <field
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                maxlength="255"
+                                name="categoriesList"
+                                renderReadOnly="false">
+                                <granite:data jcr:primaryType="nt:unstructured"/>
+                            </field>
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_721042662775>
+                        <_x0031_638441445406
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                            fieldDescription="When checked, shows Auto Renew Toggle else shows auto renew disclaimer"
+                            listOrder="21"
+                            metaType="boolean"
+                            name="showAutorenewOnCheckout"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            text="Show Auto Renew Toggle on Checkout"
+                            valueType="boolean">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_638441445406>
+                        <_x0031_677212881203
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Highlighter Text Web"
+                            listOrder="21"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="promotionalMessage"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_677212881203>
+                        <_x0031_638441445446
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                            listOrder="21"
+                            metaType="boolean"
+                            name="activatePromotion"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            text="Activate Web Promotion"
+                            valueType="boolean">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_638441445446>
+                        <_x0031_755791118330
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                            checked="{Boolean}false"
+                            fieldDescription="When checked,Plan and Minutes - both values are displayed"
+                            listOrder="4"
+                            metaType="boolean"
+                            name="displayPlanAndMinutes"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            text="Display Plan And Minutes"
+                            valueType="boolean">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_755791118330>
+                        <_x0031_638509896404
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/fragmentreference"
+                            allowNew="{Boolean}true"
+                            fieldLabel="Promotion Web Fragment"
+                            filter="hierarchy"
+                            fragmentmodelreference="/conf/lyca-mobile/settings/dam/cfm/models/promotion-plan-fragment"
+                            listOrder="21"
+                            metaType="fragment-reference"
+                            name="promotionFragment"
+                            nameSuffix="contentReference"
+                            renderReadOnly="false"
+                            rootPath="/content/dam/lyca-mobile"
+                            showEmptyInReadOnly="true"
+                            valueType="string/content-fragment">
+                            <field
+                                jcr:primaryType="nt:unstructured"
+                                rootPath="/content/dam/lyca-mobile"/>
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_638509896404>
+                        <_x0031_659102354220
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                            listOrder="21"
+                            metaType="boolean"
+                            name="activateAppPromotion"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            text="Activate App Promotion"
+                            valueType="boolean">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_659102354220>
+                        <_x0031_659102424665
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/fragmentreference"
+                            allowNew="{Boolean}true"
+                            fieldLabel="Promotion App Fragment"
+                            filter="hierarchy"
+                            fragmentmodelreference="/conf/lyca-mobile/settings/dam/cfm/models/promotion-plan-fragment"
+                            listOrder="22"
+                            metaType="fragment-reference"
+                            name="promotionAppFragment"
+                            nameSuffix="contentReference"
+                            renderReadOnly="false"
+                            rootPath="/content/dam/lyca-mobile"
+                            showEmptyInReadOnly="true"
+                            valueType="string/content-fragment">
+                            <field
+                                jcr:primaryType="nt:unstructured"
+                                rootPath="/content/dam/lyca-mobile"/>
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_659102424665>
+                        <_x0031_653401192658
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/tabplaceholder"
+                            fieldLabel="additionalOffersWithTooltipInfoCMFTemplate"
+                            listOrder="11"
+                            metaType="tab-placeholder"
+                            name="placeholder"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string/tab"/>
+                        <_x0031_763008253191
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/fragmentreference"
+                            allowNew="{Boolean}true"
+                            fieldLabel="Product Additional Offers Info Generic Fragments(Once authored, parent additonal offers will not be considered.)"
+                            filter="hierarchy"
+                            fragmentmodelreference="/conf/lyca-mobile/settings/dam/cfm/models/additional-offers-tool-tip-info-model"
+                            listOrder="22"
+                            metaType="fragment-reference"
+                            name="productInfoGenericFragments"
+                            nameSuffix="contentReference"
+                            renderReadOnly="false"
+                            rootPath="/content/dam/lyca-mobile"
+                            showEmptyInReadOnly="true"
+                            valueType="string/content-fragment">
+                            <field
+                                jcr:primaryType="nt:unstructured"
+                                rootPath="/content/dam/lyca-mobile"/>
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_763008253191>
+                        <_x0031_738127363477
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/contentreference"
+                            fieldLabel="Allowance Icon"
+                            filter="hierarchy"
+                            listOrder="8"
+                            metaType="reference"
+                            name="allowanceIcon"
+                            nameSuffix="contentReference"
+                            renderReadOnly="false"
+                            rootPath="/content/dam/lyca-mobile"
+                            showEmptyInReadOnly="true"
+                            showThumbnail="false"
+                            valueType="string/reference">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                thumbnail-validation="cfm.validation.thumbnail.show"/>
+                        </_x0031_738127363477>
+                        <_x0031_652718425740
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldDescription="Configure the allowance text same as in additional offer information"
+                            fieldLabel="Allowance"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="allowance"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_652718425740>
+                        <_x0031_663843659136
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/contentreference"
+                            fieldDescription="Configure the tooltip icon with width and height of 14px"
+                            fieldLabel="Tooltip Icon"
+                            filter="hierarchy"
+                            listOrder="21"
+                            metaType="reference"
+                            name="tooltipIcon"
+                            nameSuffix="contentReference"
+                            renderReadOnly="false"
+                            rootPath="/content/dam/lyca-mobile"
+                            showEmptyInReadOnly="true"
+                            showThumbnail="false"
+                            valueType="string/reference">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                thumbnail-validation="cfm.validation.thumbnail.show"/>
+                        </_x0031_663843659136>
+                        <_x0031_652718507075
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldDescription="Configure the tooltip text which gets displayed on click of tooltip icon"
+                            fieldLabel="Tooltip Text"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="tooltipText"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_652718507075>
+                        <_x0031_738127363479
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/contentreference"
+                            fieldDescription="When configured, on click of tooltip open the PDF in a popup"
+                            fieldLabel="Tooltip CTA Popup PDF Link"
+                            filter="hierarchy"
+                            listOrder="36"
+                            metaType="reference"
+                            name="tooltipCtaPopupLink"
+                            nameSuffix="contentReference"
+                            renderReadOnly="false"
+                            rootPath="/content/dam/lyca-mobile"
+                            showEmptyInReadOnly="true"
+                            showThumbnail="false"
+                            valueType="string/reference">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                thumbnail-validation="cfm.validation.thumbnail.show"/>
+                        </_x0031_738127363479>
+                        <_x0031_732536688565
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/tabplaceholder"
+                            fieldLabel="Plan Info"
+                            listOrder="11"
+                            metaType="tab-placeholder"
+                            name="placeholder"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string/tab"/>
+                        <_x0031_7381273634972
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/contentreference"
+                            fieldLabel="Plan Info Image(If this is configured, plan fragment CF reference wont be shown)"
+                            filter="hierarchy"
+                            listOrder="10"
+                            metaType="reference"
+                            name="planInfoImage"
+                            nameSuffix="contentReference"
+                            renderReadOnly="false"
+                            rootPath="/content/dam/lyca-mobile"
+                            showEmptyInReadOnly="true"
+                            showThumbnail="false"
+                            valueType="string/reference">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                thumbnail-validation="cfm.validation.thumbnail.show"/>
+                        </_x0031_7381273634972>
+                        <_x0031_73812736349733
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/contentreference"
+                            fieldLabel="Plan Info Mobile Image(If this is configured, plan fragment CF reference wont be shown)"
+                            filter="hierarchy"
+                            listOrder="10"
+                            metaType="reference"
+                            name="planInfoMobileImage"
+                            nameSuffix="contentReference"
+                            renderReadOnly="false"
+                            rootPath="/content/dam/lyca-mobile"
+                            showEmptyInReadOnly="true"
+                            showThumbnail="false"
+                            valueType="string/reference">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                thumbnail-validation="cfm.validation.thumbnail.show"/>
+                        </_x0031_73812736349733>
+                        <_x0031_634548203004
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/fragmentreference"
+                            allowNew="{Boolean}false"
+                            fieldLabel="Plan Fragment"
+                            filter="hierarchy"
+                            fragmentmodelreference="/conf/lyca-mobile/settings/dam/cfm/models"
+                            listOrder="9"
+                            metaType="fragment-reference"
+                            name="planInfoPath"
+                            nameSuffix="contentReference"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string/content-fragment">
+                            <field jcr:primaryType="nt:unstructured"/>
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_634548203004>
+                        <_x0031_732536688563
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/tabplaceholder"
+                            fieldLabel="Web and App Strikeouts"
+                            listOrder="11"
+                            metaType="tab-placeholder"
+                            name="placeholder"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string/tab"/>
+                        <_x0031_732541079433
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                            listOrder="21"
+                            metaType="boolean"
+                            name="hideAppStrikeoutData"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            text="Hide App Strikeout Data"
+                            valueType="boolean">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_732541079433>
+                        <_x0031_732541183036
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                            listOrder="24"
+                            metaType="boolean"
+                            name="hideAppStrikeoutPrice"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            text="Hide App Strikeout Price"
+                            valueType="boolean">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_732541183036>
+                        <_x0031_732541172351
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                            listOrder="23"
+                            metaType="boolean"
+                            name="hideWebStrikeoutData"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            text="Hide Web Strikeout Data"
+                            valueType="boolean">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_732541172351>
+                        <_x0031_732541146529
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                            listOrder="22"
+                            metaType="boolean"
+                            name="hideWebStrikeoutPrice"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            text="Hide Web Strikeout Price"
+                            valueType="boolean">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_732541146529>
+                        <_x0031_746015521048
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/tabplaceholder"
+                            fieldLabel="Contract Summary and Product-Feed Fields"
+                            listOrder="11"
+                            metaType="tab-placeholder"
+                            name="placeholder"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string/tab"/>
+                        <_x0031_746015566073
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/contentreference"
+                            fieldDescription="Configure the Contract Summary with-Sim PDF File"
+                            fieldLabel="Contract Summary With SIM"
+                            filter="hierarchy"
+                            listOrder="8"
+                            metaType="reference"
+                            name="contractSummaryWithSim"
+                            nameSuffix="contentReference"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            showThumbnail="false"
+                            valueType="string/reference">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                thumbnail-validation="cfm.validation.thumbnail.show"/>
+                        </_x0031_746015566073>
+                        <_x0031_746015547767
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/contentreference"
+                            fieldDescription="Configure the Contract Summary without-Sim PDF File"
+                            fieldLabel="Contract Summary Without Sim"
+                            filter="hierarchy"
+                            listOrder="8"
+                            metaType="reference"
+                            name="contractSummaryWithoutSim"
+                            nameSuffix="contentReference"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            showThumbnail="false"
+                            valueType="string/reference">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                thumbnail-validation="cfm.validation.thumbnail.show"/>
+                        </_x0031_746015547767>
+                        <_x0031_764756563749
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/contentreference"
+                            fieldDescription="Provide the PDP Page URL of this specific Product."
+                            fieldLabel="PDP Page URL for Product-Feed"
+                            filter="hierarchy"
+                            listOrder="21"
+                            metaType="reference"
+                            name="purl"
+                            nameSuffix="contentReference"
+                            renderReadOnly="false"
+                            rootPath="/content/lyca-mobile"
+                            showEmptyInReadOnly="true"
+                            showThumbnail="false"
+                            valueType="string/reference">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                thumbnail-validation="cfm.validation.thumbnail.show"/>
+                        </_x0031_764756563749>
+                        <_x0031_764756682692
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/contentreference"
+                            fieldLabel="Image URL for Product-Feed"
+                            filter="hierarchy"
+                            listOrder="22"
+                            metaType="reference"
+                            name="imageurl"
+                            nameSuffix="contentReference"
+                            renderReadOnly="false"
+                            rootPath="/content/dam/lyca-mobile"
+                            showEmptyInReadOnly="true"
+                            showThumbnail="false"
+                            valueType="string/reference">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                thumbnail-validation="cfm.validation.thumbnail.show"/>
+                        </_x0031_764756682692>
+                        <_x0031_764756747082
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                            fieldDescription="Provide the required keywords."
+                            fieldLabel="Keywords for Product-Feed"
+                            listOrder="23"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="keywords"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string[]">
+                            <field
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                maxlength="255"
+                                name="keywords"
+                                renderReadOnly="false">
+                                <granite:data jcr:primaryType="nt:unstructured"/>
+                            </field>
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_764756747082>
+                        <_x0031_747205212686
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/tabplaceholder"
+                            fieldLabel="Extra Promotion"
+                            listOrder="11"
+                            metaType="tab-placeholder"
+                            name="placeholder"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string/tab"/>
+                        <_x0031_763376763352
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                            emptyOption="{Boolean}true"
+                            fieldLabel="One-time promotion type"
+                            listOrder="6"
+                            metaType="enumeration"
+                            name="oneTimePromotionType"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string/enum">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                            <optionsmultifield jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="No Promotion"
+                                    fieldValue="noPromotion"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Discount on one-time cost "
+                                    fieldValue="discountOnOne-timeCost"/>
+                            </optionsmultifield>
+                            <datasource
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="dam/cfm/admin/components/datasources/optionrendererenumeration"
+                                variant="default"/>
+                        </_x0031_763376763352>
+                        <_x0031_763457179188
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                            emptyOption="{Boolean}true"
+                            fieldLabel="Extra Data Promotion Type"
+                            listOrder="21"
+                            metaType="enumeration"
+                            name="extraDataPromotionType"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string/enum">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                            <optionsmultifield jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="No promotion"
+                                    fieldValue="noPromotion"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Extra GB forever"
+                                    fieldValue="extraGBforever "/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Extra GB for X months"
+                                    fieldValue="extraGBforXmonths"/>
+                                <item3
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Extra GB after X months"
+                                    fieldValue="extraGBafterXmonths"/>
+                            </optionsmultifield>
+                            <datasource
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="dam/cfm/admin/components/datasources/optionrendererenumeration"
+                                variant="default"/>
+                        </_x0031_763457179188>
+                        <_x0031_747232137726
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldDescription="Provide the Extra Promo Highlighted Text"
+                            fieldLabel="Extra Promo Highlighted Text"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="extraDataInGb"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_747232137726>
+                        <_x0031_747205292288
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldDescription="Provide the Extra Promo Additional Text"
+                            fieldLabel="Extra Promo Additional Text"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="extraDataInfo"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_747205292288>
+                        <_x0031_747205264017
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldDescription="Provide the Extra Promo tooltip Text "
+                            fieldLabel="Extra Promo tooltip Text "
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="extraDataTooltipMsg"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_747205264017>
+                        <_x0031_763457015569
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                            emptyOption="{Boolean}true"
+                            fieldLabel="Monthly Cost Promotion Type"
+                            listOrder="6"
+                            metaType="enumeration"
+                            name="monthlyCostPromotionType"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string/enum">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                            <optionsmultifield jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="No promotion"
+                                    fieldValue="noPromotion"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Discount on monthly payment forever"
+                                    fieldValue="discountOnMonthlyPaymentForever"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Discount on monthly payment for X months"
+                                    fieldValue="discountOnMonthlyPaymentforXmonths"/>
+                                <item3
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Discount on monthly payment after X months"
+                                    fieldValue="discountOnMonthlyPaymentAfterXmonths"/>
+                            </optionsmultifield>
+                            <datasource
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="dam/cfm/admin/components/datasources/optionrendererenumeration"
+                                variant="default"/>
+                        </_x0031_763457015569>
+                        <_x0031_748323780890
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldDescription="Provide the Cost per month Label"
+                            fieldLabel="Cost Per Month Label"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="label"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_748323780890>
+                        <_x0031_748324710931
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldDescription="Provide the Initial Promotion period. Example - (1-3 month)"
+                            fieldLabel="Promotion period"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="promotionMonth"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_748324710931>
+                        <_x0031_748324958800
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldDescription="Provide the post promotion period. Example - (4-12 month)"
+                            fieldLabel="Post Promotion Period"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="actualMonth"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_748324958800>
+                        <_x0031_763457308230
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                            emptyOption="{Boolean}true"
+                            fieldLabel="International Minutes Promotion Type"
+                            listOrder="22"
+                            metaType="enumeration"
+                            name="extraMinutesPromotionType"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string/enum">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                            <optionsmultifield jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="No promotion"
+                                    fieldValue="noPromotion"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Extra international minutes forever"
+                                    fieldValue="extraInternationalMinutesForever"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Extra international minutes for X months "
+                                    fieldValue="extraInternationalMinutesForXmonths "/>
+                                <item3
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Extra international minutes after X months"
+                                    fieldValue="extraInternationalMinutesAfterXmonths"/>
+                            </optionsmultifield>
+                            <datasource
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="dam/cfm/admin/components/datasources/optionrendererenumeration"
+                                variant="default"/>
+                        </_x0031_763457308230>
+                        <_x0031_763117685450
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Extra Minutes Label"
+                            listOrder="23"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="extraMinutesValue"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_763117685450>
+                        <_x0031_763117677134
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Extra Minutes Info"
+                            listOrder="22"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="extraMinutesInfo"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_763117677134>
+                        <_x0031_763117567417
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Extra Minutes Tooltip Message"
+                            listOrder="21"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="extraMinutesTooltipMsg"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_763117567417>
+                        <_x0031_764743203988
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/tabplaceholder"
+                            fieldLabel="Retention Promotion"
+                            listOrder="14"
+                            metaType="tab-placeholder"
+                            name="placeholder"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string/tab"/>
+                        <_x0031_764743429620
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Promotion Section Label"
+                            listOrder="21"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="promotionLabel"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_764743429620>
+                        <_x0031_764743563173
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Info Icon Tooltip Text"
+                            listOrder="22"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="infoIconText"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_764743563173>
+                    </items>
+                </content>
+            </cq:dialog>
+        </model>
+    </jcr:content>
+</jcr:root>
