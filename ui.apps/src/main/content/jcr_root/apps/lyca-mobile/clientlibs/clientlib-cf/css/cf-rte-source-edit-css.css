@@ -1,0 +1,11 @@
+.cfm-multieditor-toolbar-parent .rte-sourceEditor {
+  width: 99.6%;
+  min-height: 14rem;
+  height:150px;
+}
+
+.cfm-multieditor-fullscreen-richtext-editor-wrapper .rte-sourceEditor {
+  width: 99.6%;
+  min-height: 14rem;
+  height:300px;
+}
