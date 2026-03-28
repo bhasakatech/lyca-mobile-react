@@ -1,0 +1,207 @@
+/* carousel styles */
+
+.carousel {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index:12;
+}
+
+#carousel-img {
+    width: 100%;
+    height: 100%;
+}
+
+#carousel-img img {
+    width: 100%;
+    height: 100%;
+}
+
+#left-arrow {
+    width: 47px;
+    height: 47px;
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+    z-index: 1;
+    border-radius: 50%;
+}
+
+#left-arrow img {
+    width: 100%;
+    height: 100%;
+}
+
+#right-arrow {
+    width: 47px;
+    height: 47px;
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%);
+    z-index: 1;
+    border-radius: 50%;
+}
+
+#right-arrow img {
+    width: 100%;
+    height: 100%;
+}
+
+.join-lyca-container {
+    width: 100%;
+    display: flex;
+    position: relative;
+    /* z-index: -10; */
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 30.68rem;
+    background-color: #21254f;
+}
+
+.join-lyca-box {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.join-header-section {
+    margin-bottom: 4px;
+}
+
+#top-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#top-header h1 {
+    font-size: 3rem;
+    line-height: 3.48rem;
+    color: #fff;
+    margin-bottom: .25rem;
+    margin-top: 32.16px;
+    font-weight: 700;
+}
+
+#top-header p {
+    font-size: 1rem;
+    line-height: 1.16rem;
+    color: #fff;
+    margin-bottom: 1.2rem;
+    margin-top: 0;
+    font-family: "GTEestiLCDisplayRegular";
+    text-align: center;
+    font-weight: 400;
+}
+
+.join-image-section {
+    display: flex;
+    justify-content: center;
+    gap: 57px;
+}
+
+.join-card {
+    cursor: pointer;
+    padding-left: 0;
+}
+
+.lyca-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+}
+
+.lyca-card img {
+    width: 85px;
+    height: 85px;
+}
+
+.lyca-card p {
+    width: 100%;
+    padding: 1.2rem 0;
+}
+
+.lyca-card p a {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    line-height: 1.16rem;
+    color: #fff;
+    font-family: "GTEestiLCDisplayRegular";
+    font-weight: 400;
+}
+@media (max-width:480px) {
+/* carousel section */
+
+    .carousel {
+        height: auto;
+    }
+
+    #carousel-img {
+        /* min-height:256px; */
+        height: auto;
+        width: 100%;
+    }
+
+    #carousel-img img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (min-width:480px) and (max-width:768px) {
+     /* carousel section */
+
+    .carousel {
+        height: auto;
+    }
+
+    #carousel-img {
+        /* min-height:256px; */
+        height: auto;
+        width: 100%;
+    }
+
+    #carousel-img img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.carousel-control-prev{
+    padding-left: 20px !important;
+    display: flex !important;
+    justify-content: start !important;
+    align-items: center !important;
+}
+.carousel-control-next{
+    padding-right: 20px !important;
+    display: flex !important;
+    justify-content: end !important;
+    align-items: center !important;
+}
+.carousel-control-prev-icon{
+    height: 2.75rem !important;
+    width: 2.75rem !important;
+    background-image: url("../../fonts/GT-Eesti/slider_left_arrow.e49.svg") !important;
+    background-color: rgba(5, 5, 5, 0.61) !important;
+    border-radius: 50px;
+    background-size: cover;
+}
+.carousel-control-next-icon{
+    background-image: url("../../fonts/GT-Eesti/slider_right_arrow.0d76d2f7.svg") !important;
+    height: 2.75rem !important;
+    width: 2.75rem !important;
+    background-color: rgba(5, 5, 5, 0.61) !important;
+    border-radius: 50px;
+    background-size: cover;
+}

@@ -1,0 +1,231 @@
+/* International Calls Section */
+.international-calls-section {
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.international-calls {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Heading */
+.international-calls-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 38px;
+  font-weight: 700;
+  color: #344054;
+  line-height: 40px;
+  letter-spacing: -0.5px;
+  padding: 44px 0;
+  margin-bottom: 1.5rem;
+}
+
+.international-calls-heading h3 {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 700;
+  color: #34405F;
+  line-height: 40px;
+  letter-spacing: -0.5px;
+}
+
+.international-calls-heading img {
+  display: none;
+  width: 26px;
+  height: 27px;
+  cursor: pointer;
+}
+
+/* Carousel Container */
+.international-calls-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 76px;
+  gap: 1rem;
+}
+
+.internatonal-calls-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.internatonal-calls-icon > div {
+  display: flex;
+  align-items: center;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.internatonal-calls-icon > img {
+  width: 36px;
+  height: 36px;
+}
+
+.internatonal-calls-icon img[alt*="arrow"],
+.carousel-arrow {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+/* Carousel Track */
+.carousel-track {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Flags */
+.international-calls-flag {
+  flex: 0 0 auto;
+}
+
+.flag-container {
+  text-align: center;
+  padding: 0 30px;
+  width: 180px;
+}
+
+.flag-container > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  padding: 19px 46px;
+}
+
+.flag-container img {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.flag-container p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  color: #333;
+  line-height: 19px;
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+  .international-calls {
+    padding: 8px 0;
+  }
+  .international-calls-heading {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 23.2656px 0 27.1562px;
+  }
+  .international-calls-heading h3 {
+    font-size: 16.38px;
+    line-height: 25px;
+    color: #667085;
+    padding: 0 44px;
+  }
+  .international-calls-heading img {
+    display: block;
+  }
+  .international-calls-icon-container {
+    display: none;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 780px) {
+  .international-calls {
+    padding: 8px 0;
+  }
+  .international-calls-heading {
+    justify-content: space-between;
+    align-items: center;
+    padding: unset;
+  }
+  .international-calls-heading h3 {
+    font-size: 16.38px;
+    line-height: 25px;
+    color: #667085;
+    padding: 0 44px;
+  }
+  .international-calls-heading img {
+    display: none;
+  }
+  .international-calls-icon-container {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    padding: 0 40px;
+  }
+
+  .carousel-track {
+    gap: 0px;
+  }
+
+  .carousel-arrow{
+    display: none;
+  }
+  .internatonal-calls-icon > img {
+    display: none;
+  }
+
+  .flag-container{
+    padding: 0px;
+    width:140px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .flag-container > div {
+    padding: 0 37px;
+  }
+}
+
+
+@media (min-width:780px){
+
+   .international-calls-heading{
+    width: 100%;
+    padding: 6px 0;
+   }
+  .international-calls-heading>h3{
+    width:100%;
+    font-size: 41px;
+    text-align: center;
+    margin: 44.4px 0;
+    padding: 0;
+    white-space: nowrap;
+  }
+
+    .carousel-arrow{
+    display: block;
+  }
+
+  .international-calls-icon-container {
+    display: flex;
+    align-items: center;
+
+}
+}
+

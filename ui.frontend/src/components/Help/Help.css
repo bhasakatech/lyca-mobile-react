@@ -1,0 +1,151 @@
+    
+/* help section */
+
+.help {
+    width: 100%;
+    background-color: #eff8ff;
+    display: flex;
+    justify-content: center;
+    border-bottom: .5px solid #bec6d5;
+}
+
+.help-container {
+    width: 100%;
+    max-width: 1200px;
+    padding-top: 62px;
+    padding-bottom: 68px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: inherit;
+}
+
+.help-container-header {
+    margin-bottom: 48px;
+    line-height: 66px;
+    text-align: center;
+    color: #344054;
+}
+
+.help-container-header>h2 {
+    margin: 0;
+    font-size: 48px;
+    color:#34405F;
+    font-weight: 500;;
+}
+
+.help-container-card-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 13%;
+    gap: 40px;
+}
+
+.help-container-card {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    gap: 15px;
+}
+
+.help-container-card-icon-container {
+    height: 106px;
+    width: 106px;
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    border-radius: 50%;
+    background-color: #006ae0;
+}
+
+/* .help-container-card-icon-container>a{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 16px;
+} */
+.help-container-card-icon-container>a>img {
+    width: 100%;
+}
+
+.help-container-card-icon-container-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 16px;
+    line-height: 17.92px;
+    text-align: center;
+    color: #344054;
+    font-weight: 400;
+}
+
+
+@media screen and (max-width:600px){
+
+       .help-container-header h2 {
+        font-size: 24px;
+    }
+
+    .help-container-card-icon-container {
+        width: 76px;
+        height: 76px;
+    }
+
+    .help-container-card-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 0px;
+    }
+
+    .help-container-card-icon-container-content a:nth-of-type(1) {
+        font-size: 12px;
+    }
+
+    .help-container-card-icon-container-content a:nth-of-type(2) {
+        font-size: 12px;
+    }
+
+}
+
+@media (min-width:600px) and (max-width:768px) {
+    
+    .help-container-header h2 {
+        font-size: 24px;
+    }
+
+    .help-container-card-icon-container {
+        width: 76px;
+        height: 76px;
+    }
+
+    .help-container-card-container {
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 32px;
+        column-gap: 40px;
+        margin: 0 50px;
+        padding:0 86px;
+    }
+
+    .help-container-card{
+          min-width:6rem;
+    }
+
+    .help-container-card-icon-container-content a:nth-of-type(1) {
+        font-size: 12px;
+    }
+
+    .help-container-card-icon-container-content a:nth-of-type(2) {
+        font-size: 12px;
+    }
+}

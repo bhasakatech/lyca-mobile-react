@@ -1,0 +1,181 @@
+
+.join-lyca-container {
+    width: 100%;
+    display: flex;
+    position: relative;
+    z-index: 11;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 30.68rem;
+    background-color: #21254f;
+}
+
+.join-lyca-box {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.join-header-section {
+    margin-bottom: 4px;
+}
+
+#top-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#top-header h1 {
+    font-size: 3rem;
+    line-height: 3.48rem;
+    color: #fff;
+    margin-bottom: .25rem;
+    margin-top: 32.16px;
+    font-weight: 700;
+}
+
+#top-header p {
+    font-size: 1rem;
+    line-height: 1.16rem;
+    color: #fff;
+    margin-bottom: 1.2rem;
+    margin-top: 0;
+    font-family: "GTEestiLCDisplayRegular";
+    text-align: center;
+    font-weight: 400;
+}
+
+.join-image-section {
+    display: flex;
+    justify-content: center;
+    gap: 57px;
+}
+
+.join-card {
+    cursor: pointer;
+    padding-left: 0;
+}
+
+.lyca-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+}
+
+.lyca-card img {
+    width: 85px;
+    height: 85px;
+}
+
+.lyca-card p {
+    width: 100%;
+    padding: 1.2rem 0;
+}
+
+.lyca-card p a {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    line-height: 1.16rem;
+    color: #fff;
+    font-family: "GTEestiLCDisplayRegular";
+    font-weight: 400;
+}
+
+@media (max-width:480px) {
+.join-lyca-container {
+        height: auto;
+        width: 100%;
+        padding: 30px 15px;
+        min-height: 21.875rem; 
+    }
+
+    #top-header h1 {
+        margin: 16.08px 0 4px 0;
+        font-size: 24px;
+    }
+
+    #top-header p {
+        margin-bottom: 19.2px;
+        font-size: 14px;
+    }
+
+    .join-image-section {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: space-around;
+    }
+
+    .lyca-card {
+        width: fit-content;
+        min-width: 107px;
+    }
+
+    .lyca-card img {
+        max-width: 67px;
+        height: 67px;
+    }
+
+    .lyca-card p {
+        margin: 16px 0 30px 0;
+        padding: 0px;
+    }
+
+    .lyca-card p a {
+        font-size: 14px;
+    }
+}
+
+@media (min-width:480px) and (max-width:768px) {
+
+     .join-lyca-container {
+        height: auto;
+        width: 100%;
+        padding: 30px 15px;
+        min-height: 21.875rem; 
+    }
+
+    #top-header h1 {
+        margin: 16.08px 0 4px 0;
+        font-size: 24px;
+    }
+
+    #top-header p {
+        margin-bottom: 19.2px;
+        font-size: 14px;
+    }
+
+    .join-image-section {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: space-around;
+    }
+
+    .lyca-card {
+        width: fit-content;
+        min-width: 107px;
+    }
+
+    .lyca-card img {
+        max-width: 67px;
+        height: 67px;
+    }
+
+    .lyca-card p {
+        margin: 16px 0 30px 0;
+        padding: 0px;
+    }
+
+    .lyca-card p a {
+        font-size: 14px;
+    }
+
+}

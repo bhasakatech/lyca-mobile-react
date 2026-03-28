@@ -1,0 +1,449 @@
+
+/* already-main-container styles */
+
+.already-main-container {
+    background-color: #fff;
+    margin-bottom: 200px;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: wrap;
+    width: 100%;
+    height: 0;
+    align-items: center;
+    justify-content: center;
+    z-index:11;
+}
+
+.already-with-lyca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .15);
+    position: relative;
+    top: -180px;
+    width: 80%;
+    max-width: 1078px;
+    z-index: 12;
+    background-color: #fff;
+    background-size: 100%;
+    background-image: url(../../fonts/GT-Eesti/already-with-lyca.svg);
+    background-position: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.already-header-section {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#already-top-header {
+    margin: 0px;
+    font-family: "GTEestiLCDisplayThin";
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+#already-top-header h1 {
+    margin: 39.8px 0 4px;
+    font-size: 48px;
+    line-height: 3.48rem;
+    color: #384c72;
+    margin-bottom: .25rem;
+    font-weight: 700;
+}
+
+#already-top-header p {
+    font-size: 1rem;
+    line-height: 1.16rem;
+    margin-bottom: 1.2rem;
+    font-family: "GTEestiLCDisplayRegular";
+    color: #667085;
+    text-align: center;
+    margin-top: 0;
+    font-weight: 400;
+}
+
+.recharge-and-btn-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recharge-tabs-container {
+    height: 42px;
+    display: flex;
+    gap: 11px;
+    margin: 20px 0 30px;
+}
+
+#btn-0 {
+    border: none;
+    background-color: #006ae0;
+    color: #fff;
+    opacity: 1;
+    padding: 12px 16px;
+    border-radius: 21px;
+    min-height: 2.06rem;
+    min-width: 130px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#btn-0 a {
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.25;
+    white-space: normal;
+    font-family: "GTEestiLCDisplayMedium";
+    font-weight: 500;
+}
+
+#btn-1 {
+    border: none;
+    background-color: #e8f4fe;
+    opacity: 1;
+    padding: 12px 16px;
+    border-radius: 21px;
+    min-height: 2.06rem;
+    min-width: 130px;
+    text-align: center;
+    border: 1px solid #667085;
+    cursor: pointer;
+}
+
+#btn-1 a {
+    color: #344054;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.25;
+    white-space: normal;
+    font-family: "GTEestiLCDisplayMedium";
+    font-weight: 500;
+}
+
+.enter-lyca-number {
+    width: 21.87rem;
+    height: 3rem;
+    background-color: #fff;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    position: relative;
+}
+
+.input-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid #d0d5dd;
+    border-radius: 4px;
+    height:auto;
+}
+
+.input-container p {
+    font-size: .938rem;
+    line-height: 1.099rem;
+    color: #667085;
+    font-family: "GTEestiLCDisplayMedium";
+    background-color: #f9f9ff;
+    padding: 15px;
+    border-right: 1px solid #dfe0f8;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    font-weight: 400;
+}
+
+.input-section {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #fff;
+    padding: 0 0 0 12px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.input-section input {
+    padding: 4px 0px 5px;
+    border: none;
+    box-sizing: content-box;
+    outline: none;
+    background: none;
+    height: 1.4375em;
+    display: block;
+    box-shadow: none;
+    font-size: 16px;
+    font-weight: 400;
+    width: 100%;
+    font-family: "GTEestiLCDisplayMedium";
+    color: #667085; 
+}
+
+input::placeholder{
+    color: #d2d4da;
+}
+
+.input-section button {
+    padding: 8px;
+    border: none;
+    background: transparent;
+}
+
+.input-section button img {
+    width: 27px;
+    height: 27px;
+}
+
+.download-our-app {
+    margin: 8px 0 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: -12px;
+}
+
+.cms-content {
+    width: fit-content;
+    margin-top: 16px;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    height: 3.06rem;
+    justify-content: center;
+    align-items: center;
+    font-family: "GTEestiLCDisplayRegular";
+    font-size: .9rem;
+    color: #667085;
+}
+
+.cms-content p {
+    display: flex;
+    align-items: center;
+}
+
+#download-mobile {
+    width: 36px;
+    height: 40px;
+}
+
+.cms-content span {
+    font-size: 14.4px;
+    font-family: "GTEestiLCDisplayRegular";
+    font-weight: 400;
+}
+
+.cms-content a {
+    margin-left: 5px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.313rem;
+    color: #006ae0;
+    font-family: "GTEestiLCDisplayBold";
+}
+
+#download-right-arrow {
+    width: 14px;
+    height: 14px;
+    margin: 4px 0 0 5px;
+}
+@media (max-width:480px) {
+.already-with-lyca {
+        background-image: url(../../fonts/GT-Eesti/mobile-already-main-section-bg-img.svg);
+        box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .1);
+        padding: 0 10px;
+        background-position: top;
+        background-size: auto;
+        top: -60px;
+        background-origin: content-box;
+        padding-top: 23px;
+        width: 90%;
+    }
+
+    #already-top-header h1 {
+        margin: 21.58px 0 11.2px 0;
+        padding: 30px 0 0 0;
+        font-size: 26px;
+    }
+
+    #already-top-header p {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    .recharge-tabs-container {
+        gap: 4px;
+        /* overflow: auto; */
+        flex-wrap: wrap;
+    }
+
+    #btn-0,
+    #btn-1 {
+        height: 34px;
+        min-width: 80px;
+        text-align: center;
+        line-height: 16.416px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+    }
+
+    #btn-0 a {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .enter-lyca-number {
+        width: 100%;
+        height: auto;
+    }
+
+    .input-container p{
+        margin:0;
+    }
+    .input-section{
+        padding:0;
+        height:auto;
+        /* border:2px solid; */
+    }
+
+    .input-section input {
+        font-size: 13px;
+    }
+
+    .input-section input::placeholder {
+        font-size: 10px;
+    }
+
+    .cms-content {
+        padding: 20px 0;
+        height: 8.95px;
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    .cms-content p {
+        margin: 11.70px 0 11.70px 10px;
+
+    }
+
+    #download-mobile {
+        min-width: 29px;
+        height: 40px;
+    }
+
+
+    .cms-content span {
+        font-size: 11px;
+    }
+
+    .cms-content a {
+        white-space: nowrap;
+        font-size: 11px;
+        margin-left: 2px;
+    }
+}
+
+@media (min-width:480px) and (max-width:768px) {
+
+    .already-with-lyca {
+        background-image: url(../../fonts/GT-Eesti/mobile-already-main-section-bg-img.svg);
+        box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .1);
+        padding: 0 10px;
+        background-position: top;
+        background-size: auto;
+        top: -45px;
+        background-origin: content-box;
+        padding-top: 23px;
+        width: 90%;
+    }
+
+    #already-top-header h1 {
+        margin: 21.58px 0 11.2px 0;
+        padding: 30px 0 0 0;
+        font-size: 26px;
+    }
+
+    #already-top-header p {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    .recharge-tabs-container {
+        gap: 4px;
+        /* overflow: auto; */
+        flex-wrap: wrap;
+    }
+
+    #btn-0,
+    #btn-1 {
+        height: 34px;
+        min-width: 80px;
+        text-align: center;
+        line-height: 16.416px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+    }
+
+    #btn-0 a {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .enter-lyca-number {
+        width: 100%;
+        height: auto;
+    }
+
+    .input-section input {
+        font-size: 13px;
+    }
+
+    .input-section input::placeholder {
+        font-size: 10px;
+    }
+
+    .cms-content {
+        padding: 20px 0;
+        height: 8.95px;
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    .cms-content p {
+        margin: 11.70px 0 11.70px 10px;
+
+    }
+
+    #download-mobile {
+        min-width: 29px;
+        height: 40px;
+    }
+
+
+    .cms-content span {
+        font-size: 11px;
+    }
+
+    .cms-content a {
+        white-space: nowrap;
+        font-size: 11px;
+        margin-left: 2px;
+    }
+}

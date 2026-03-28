@@ -1,0 +1,301 @@
+/* choose-a-plan styles */
+.choose-a-plan {
+    height: fit-content;
+    width: 80%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 90px 0 79px;
+    row-gap: 5px;
+    max-width: 1078px;
+    margin: auto;
+    /* position: relative; */
+}
+
+.choose-a-plan h2 {
+    color: rgb(56, 76, 114);
+    font-family: "GTEestiLCDisplayBold";
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 40.68px;
+}
+
+.choose-a-plan p {
+    align-items: center;
+    box-sizing: border-box;
+    color: rgb(102, 112, 133);
+    display: flex;
+    font-family: "GTEestiLCDisplayLight";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32.56px;
+}
+
+
+.choose-a-plan-cards {
+    color: rgb(102, 112, 133);
+    column-gap: 23px;
+    display: grid;
+    flex-direction: row;
+    font-family: "GTEestiLCDisplayRegular";
+    font-size: 16px;
+    font-weight: 400;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    line-height: 18.56px;
+    margin-top: 32px;
+    row-gap: 23px;
+    width: 100%;
+}
+
+.best-value-card {
+    align-items: flex-start;
+    background-image: url(../../fonts/GT-Eesti/imgi_69_HP_Left_Img.jpg);
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: rgb(102, 112, 133);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-family: "GTEestiLCDisplayRegular";
+    font-size: 16px;
+    font-weight: 400;
+    grid-area: 1 / 1 / span 2 / span 1;
+    height: 667px;
+    line-height: 18.56px;
+    min-height: 660px;
+    padding: 47px 28px;
+}
+
+.long-term-card {
+    align-items: flex-start;
+    background-image: url(../../fonts/GT-Eesti/imgi_84_HP_1st_Img_0_2es.jpg);
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: rgb(102, 112, 133);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-family: "GTEestiLCDisplayRegular";
+    font-size: 16px;
+    font-weight: 400;
+    grid-area: 1 / 2 / span 1 / span 1;
+    height: 322px;
+    line-height: 18.56px;
+    padding: 47px 28px;
+}
+
+.internation-plans-card {
+    align-items: flex-start;
+    background-image: url(../../fonts/GT-Eesti/imgi_85_HP_2nd_Img_0_3es.jpg);
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: rgb(102, 112, 133);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-family: "GTEestiLCDisplayRegular";
+    font-size: 16px;
+    font-weight: 400;
+    grid-area: 2 / 2 / auto / auto;
+    height: 322px;
+    line-height: 18.56px;
+    padding: 47px 28px;
+}
+
+.text-container {
+    color: rgb(102, 112, 133);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.block-text-container {
+    align-items: flex-start;
+    border-radius: 4px;
+    color: rgb(102, 112, 133);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    padding-left: 12px;
+    padding-top: 4px;
+    row-gap: 3px;
+}
+
+.block-text-container:hover{
+     background-color: rgba(195, 200, 207,.5);
+     border-radius: 5px;
+}
+
+.block-text-container h2 a {
+    color: #fff;
+    font-family: "GTEestiLCDisplayMedium";
+    font-weight: 500;
+    font-size: 36px;
+    text-decoration: none;
+}
+
+.block-text-container p {
+    display: flex;
+    align-items: center;
+}
+
+.block-text-container p a {
+    color: #fff;
+    font-family: "GTEestiLCDisplayLight";
+    font-weight: 500;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.block-text-container p>a:last-child img {
+    width: 24px;
+    height: 14px;
+    margin-left: 16px;
+    margin-top: 4px;
+    aspect-ratio: auto 26 / 16;
+}
+
+@media (max-width:480px) {
+.choose-a-plan {
+        padding: 230px 10px 33px 16px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .choose-a-plan h2 {
+        font-size: 1.5rem;
+        line-height: 27.84px;
+        text-align: center;
+    }
+
+    .choose-a-plan p {
+        font-size: .875rem;
+        text-align: center;
+        line-height: 16.24px;
+    }
+
+    .choose-a-plan-cards {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .best-value-card {
+        width: 100%;
+        height: auto;
+        background-position-x: 30%;
+        background-position-y: 50%;
+        /* min-height: 25.188rem; */
+        padding: 6px 8px;
+        background-size: cover;
+        /* background-position: 100%; */
+    }
+
+    .long-term-card {
+        height: 202px;
+        padding: 8px 8px;
+    }
+
+    .internation-plans-card {
+        height: 200px;
+        padding: 8px 8px;
+    }
+
+    .block-text-container h2 a {
+        font-size: 22px;
+    }
+
+    .block-text-container p a:nth-of-type(1) {
+        font-size: 14px;
+    }
+
+    .block-text-container p a:nth-of-type(3) img {
+        width: 1.5rem;
+        height: 14px;
+        margin-left: 16px;
+        margin-top: 4px;
+    }
+}
+
+@media (min-width:480px) and (max-width:768px) {
+
+  .choose-a-plan {
+        padding: 230px 10px 33px 16px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .choose-a-plan h2 {
+        font-size: 1.5rem;
+        line-height: 27.84px;
+        text-align: center;
+    }
+
+    .choose-a-plan p {
+        font-size: .875rem;
+        text-align: center;
+        line-height: 16.24px;
+    }
+
+    .choose-a-plan-cards {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .best-value-card {
+        width: 100%;
+        height: auto;
+        background-position-x: 50%;
+        background-position-y: 50%;
+        /* min-height: 25.188rem; */
+        padding: 6px 8px;
+        background-size: cover;
+        /* background-position: 100%; */
+    }
+
+    .long-term-card {
+        height: 202px;
+        padding: 8px 8px;
+    }
+
+    .internation-plans-card {
+        height: 200px;
+        padding: 8px 8px;
+    }
+
+    .block-text-container h2 a {
+        font-size: 22px;
+    }
+
+    .block-text-container p a:nth-of-type(1) {
+        font-size: 14px;
+    }
+
+    .block-text-container p a:nth-of-type(3) img {
+        width: 1.5rem;
+        height: 14px;
+        margin-left: 16px;
+        margin-top: 4px;
+    }
+}

@@ -35,6 +35,9 @@ import {
     AccordionV1,AccordionV1IsEmptyFn,
 } from '@adobe/aem-core-components-react-spa';
 
+import Footer from "./Footer/footer"; 
+import SignUp from "./SignUp/SignUp"; 
+import BlogList from "./BlogList/BlogList"; 
 import {
     BreadCrumbV2,BreadCrumbV2IsEmptyFn,
     ButtonV1,ButtonV1IsEmptyFn,
@@ -46,6 +49,18 @@ import {
     SeparatorV1,SeparatorV1IsEmptyFn,
     ListV2,ListV2IsEmptyFn
 } from '@adobe/aem-core-components-react-base';
+import Header from "./Header/Header";
+import AnnouncementBar from "./AnnouncementBar/AnnouncementBar";
+import Carousel from "./Carousel/Carousel";
+import JoinLyca from "./JoinLyca/JoinLyca";
+import AlreadyWithLyca from "./AlreadyWithLyca/AlreadyWithLyca";
+import ChooseAPlan from "./ChooseAPlan/ChooseAPlan";
+import ViewRatesNow from "./ViewRates/ViewRates";
+import WhyLyca from "./WhyLyca/WhyLyca";
+import DownloadApp from "./DownloadApp/DownloadApp";
+import Help from "./Help/Help";
+import BecomeRetailer from "./BecomeRetailer/BecomeRetailer";
+import InternationalCalls from "./CountryCarousel/CountryCarousel";
 
 //lazyload / code splitting example of an internal component
 const LazyTextComponent = withAsyncImport(() => import(`./Text/Text`));
@@ -92,3 +107,18 @@ const TextEditConfig = {
 };
 
 MapTo('lyca-mobile/components/text')(LazyTextComponent, TextEditConfig);
+MapTo("lyca-mobile/components/header")(Header);
+MapTo('lyca-mobile/components/announcement-bar')(AnnouncementBar);
+MapTo('lyca-mobile/components/lyca-carousel')(Carousel);
+MapTo('lyca-mobile/components/join-lyca')(JoinLyca);
+MapTo('lyca-mobile/components/already-with-lyca')(AlreadyWithLyca);
+MapTo('lyca-mobile/components/choose-a-plan')(ChooseAPlan);
+MapTo('lyca-mobile/components/view-rates')(ViewRatesNow);
+MapTo('lyca-mobile/components/why-lyca')(WhyLyca);
+MapTo('lyca-mobile/components/download-app')(DownloadApp);
+MapTo('lyca-mobile/components/help')(Help);
+MapTo('lyca-mobile/components/become-retailer')(BecomeRetailer);
+MapTo('lyca-mobile/components/country-carousel')(InternationalCalls);
+MapTo('lyca-mobile/components/blog-list')(BlogList);
+MapTo('lyca-mobile/components/signUp')(SignUp)
+MapTo('lyca-mobile/components/footer')(Footer);

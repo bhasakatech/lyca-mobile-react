@@ -1,0 +1,116 @@
+/* announcement-bar styles */
+
+.announcement-bar {
+    position: relative;
+    background-color: #ffeeb2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    box-sizing: border-box;
+    width: 100%;
+    z-index: 11;
+}
+
+#bar-container {
+    /* max-width:1200px; */
+    height: 100%;
+    width: 100%;
+    margin: 0 32.5px;
+    padding: 0 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border:2px solid blue; */
+}
+
+#text-box {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-size-adjust: 100%;
+    /* border:2px solid red; */
+}
+
+#text-box>div:first-child {
+    text-align: center;
+    color: rgb(52, 64, 84);
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    font-weight: 300;
+    align-items: center;
+    flex: 1 1;
+    padding: 0 !important;
+    font-family: "GTEestiLCDisplayRegular";
+}
+
+#text-box>div:last-child {
+    align-self: flex-end;
+}
+
+
+#text-box>div:last-child {
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+    aspect-ratio: auto 24/24;
+}
+@media (max-width:480px) {
+
+/* announcement-bar section */
+
+    .announcement-bar {
+        height: auto;
+    }
+
+    #bar-container {
+        margin: 0px;
+        padding: 0px 16px;
+    }
+
+    #text-box {
+        align-self: center;
+        justify-content: center;
+    }
+
+    #text-box>div:first-child {
+        text-align: left;
+        font-size: 14px;
+    }
+
+    #text-box>div:last-child {
+        align-self: center;
+    }
+}
+
+@media (min-width:480px) and (max-width:768px) {
+    
+    /* announcement-bar section */
+
+    .announcement-bar {
+        height: auto;
+    }
+
+    #bar-container {
+        margin: 0px;
+        padding: 0px 16px;
+    }
+
+    #text-box {
+        align-self: center;
+        justify-content: center;
+    }
+
+    #text-box>div:first-child {
+        text-align: left;
+        font-size: 14px;
+    }
+
+    #text-box>div:last-child {
+        align-self: center;
+    }
+}

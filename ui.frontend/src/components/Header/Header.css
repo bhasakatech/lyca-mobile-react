@@ -1,0 +1,403 @@
+
+
+/* @media (min-width:600px) and (max-width:2600px) { */
+   
+#lyca-logo-mobile,
+#menu-mobile,
+.mobile-img {
+    display: none;
+}
+
+/* } */
+.header {
+    box-shadow: none;
+    width:100%;
+    left: auto;
+    right: 0px;
+    min-height: fit-content;
+    background-color: rgb(255, 255, 255);
+    color: rgb(56, 76, 114);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    top: 0px;
+    border-bottom: 1px solid rgb(202, 202, 202);
+    height: 81px;
+    justify-content: center;
+    left: 0px;
+    line-height: 18.56px;
+    min-height: fit-content;
+    position: sticky;
+    right: 0px;
+    top: 0px;
+    z-index: 1031;
+}
+
+.nav-bar {
+    height: 100%;
+    width: 100%;
+    max-width: 1405px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+  
+}
+
+.nav-bar nav {
+    width: 100%;
+    margin: 0px 0.9rem 0px 2.5rem;
+    min-height: 64px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+.left-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+#lyca-logo {
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    align-items: flex-start;
+    margin: -3px 16px 0px -12px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    padding: 12px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+#lyca-logo img {
+    width: 100px;
+    height: 40px;
+    aspect-ratio: auto 100 / 40;
+}
+
+#menu {
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    flex: 0 0 auto;
+    margin: 0 0 0 -12px;
+    padding: 12px;
+    background: transparent;
+    border: none;
+}
+
+#menu img {
+    width: 24px;
+    height: 12px;
+    aspect-ratio: auto 100 / 40;
+}
+
+#tab-container {
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    width: 100%;
+    overflow: hidden;
+}
+
+#block-container {
+    width: 100%;
+    overflow: hidden;
+    min-height: 48px;
+    position: relative;
+    display: inline-block;
+    flex: 1 1 auto;
+    align-items: center;
+    white-space: nowrap;
+}
+
+#tab-container ul {
+    display: flex;
+    overflow: hidden;
+}
+
+#tab-container li {
+    padding: 22px 16px;
+    min-width: auto;
+    white-space: nowrap;
+}
+
+#tab-container li a {
+    color: #21264e;
+    font-family: "GTEestiLCDisplayMedium";
+    text-align: left;
+    margin: 0 auto 0 0;
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+    font-weight: 500;
+}
+
+#right-container {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+#quick-recharge {
+    background-color: #006ae0;
+    min-width: 7.5rem;
+    height: 2rem;
+    border-radius: 4px;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 24px;
+    border: none;
+}
+
+#quick-recharge p {
+    font-family: "GTEestiLCDisplayRegular";
+    white-space: nowrap;
+   
+}
+
+#quick-recharge p a {
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    position: relative;
+    background: transparent;
+}
+
+#profile {
+    cursor: pointer;
+    margin: 0 5px 0 8px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+}
+
+#cart {
+    cursor: pointer;
+    margin: auto 1rem auto auto;
+    background: transparent;
+    border: none;
+}
+
+#cart img {
+    width: 32px;
+    height: 32px;
+    aspect-ratio: auto 32/32;
+}
+
+#drop-down {
+    width: 14px;
+    height: 8px;
+    aspect-ratio: auto 14/8;
+}
+
+#country {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 16px;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #384c72;
+    background: transparent;
+    border: none;
+}
+
+#country span {
+    font-family: "GTEestiLCDisplayRegular";
+    font-size: 15px;
+    margin: 0 10px 0 0;
+    color: #344054;
+    font-weight: 400;
+}
+
+#us {
+    width: 18px;
+    height: 18px;
+    margin: 0 5px 0 0;
+}
+
+@media (max-width:480px) {
+
+    /* header-section */
+
+    #lyca-logo,
+    #menu,
+    #tab-container,
+    #country,
+    #left-arrow,
+    #right-arrow {
+        display: none;
+    }
+
+    .go-to-top-button img{
+        width:32px;
+        max-height:32px;
+    }
+
+    .access-container button{
+        width:30px;
+        height:30px;
+    }
+
+    svg{
+        width:14.7px;
+        height:19.5px;
+    }
+
+    .nav-bar {
+        padding: 0 16px;
+    }
+
+    .nav-bar nav {
+        padding: 0 0 0 10px;
+        margin: 0px;
+        justify-content: space-between;
+        width: 100%;
+        min-height:100%;
+    }
+
+    #lyca-logo-mobile {
+        display: block;
+        padding: 12px;
+        margin-left: -12px;
+        border: none;
+        outline: none;
+        background: transparent;
+        margin-right: 5px;
+    }
+
+    #lyca-logo-mobile a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+    }
+
+    #lyca-logo-mobile img {
+        width: 100%;
+        height: 100%;
+    }
+
+    #right-container {
+        overflow: scroll;
+    }
+
+    #menu-mobile {
+        display: block;
+        padding: 12px;
+        margin: 0 0 0 -10px;
+    }
+
+    #menu-mobile img {
+        width: 20px;
+        height: 16px;
+    }
+
+    #quick-recharge{
+        max-width:92px;
+        width: fit-content;
+    }
+
+    #quick-recharge p a {
+        font-size: 12px;
+    }
+
+    #profile>img:first-child,
+    #cart img {
+        min-width: 28px;
+        height: 28px;
+    }
+}
+
+
+@media (min-width:480px) and (max-width:768px) {
+
+    /* header-section */
+
+    #lyca-logo-mobile,
+    #tab-container,
+     #menu-mobile,
+    #left-arrow,
+    #right-arrow {
+        display: none;
+    }
+
+    .go-to-top-button img {
+        width: 32px;
+        max-height: 32px;
+    }
+
+    .access-container button {
+        width: 30px;
+        height: 30px;
+    }
+
+    svg {
+        width: 14.7px;
+        height: 19.5px;
+    }
+
+    .nav-bar {
+        padding: 0 24px;
+    }
+
+    .nav-bar nav {
+        padding: 0 0 0 24px;
+        margin: 0 14.4px 0 30px;
+        justify-content: space-between;
+        width: 100%;
+        min-height:100%;
+    }
+
+    #right-container {
+        overflow: scroll;
+    }
+
+    #quick-recharge{
+        max-width:92px;
+        width: fit-content;
+    }
+
+    #quick-recharge p a {
+        font-size: 12px;
+    }
+
+    #profile>img:first-child,
+    #cart img {
+        min-width: 32px;
+        height: 32px;
+    }
+}
+
+@media (min-width:768px) and (max-width:850px) {
+   #tab-container{
+    display: none;
+   }
+}
+
+.container{
+    max-width:unset !important;
+    padding-right:0px !important;
+    padding-left:0px !important;
+}
+.carousel-inner img{
+    width:100vw;
+}
+#quick-recharge p{
+    margin-bottom:0 !important;
+}
