@@ -1,40 +1,47 @@
 package com.lyca.mobile.core.models;
 
-import com.adobe.cq.export.json.ExporterConstants;
+import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.*;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
+import com.adobe.cq.export.json.ComponentExporter;
+import com.adobe.cq.export.json.ExporterConstants;
 
 @Model(
-    adaptables = Resource.class,
-    adapters = AnnouncementBarModel.class,
-    resourceType = AnnouncementBarModel.RESOURCE_TYPE,
-    defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
+    adaptables = {Resource.class, SlingHttpServletRequest.class},
+    resourceType = "lyca-mobile/components/announcement-bar",
+    defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL,
+    adapters = {AnnouncementBarModel.class, ComponentExporter.class}
 )
-@Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME, extensions = ExporterConstants.SLING_MODEL_EXTENSION)
-public class AnnouncementBarModel {
-
-    public static final String RESOURCE_TYPE = "yourproject/components/announcementbar";
-
-    @ValueMapValue
-    private String message;
+@Exporter(
+    name = ExporterConstants.SLING_MODEL_EXPORTER_NAME,
+    extensions = ExporterConstants.SLING_MODEL_EXTENSION
+)
+public class AnnouncementBarModel implements ComponentExporter {
 
     @ValueMapValue
-    private String imageUrl;
+    private String announcementText;
 
     @ValueMapValue
-    private String linkUrl;
+    private String announcementImage;
 
-    public String getMessage() {
-        return message;
+    @ValueMapValue
+    private String announcementLink;
+
+    public String getAnnouncementText() {
+        return announcementText;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public String getAnnouncementImage() {
+        return announcementImage;
     }
 
-    public String getLinkUrl() {
-        return linkUrl;
+    public String getAnnouncementLink() {
+        return announcementLink;
+    }
+
+    @Override
+    public String getExportedType() {
+        return "lyca-mobile/components/announcement-bar";
     }
 }
-

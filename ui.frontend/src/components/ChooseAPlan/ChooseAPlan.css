@@ -41,8 +41,7 @@
     font-family: "GTEestiLCDisplayRegular";
     font-size: 16px;
     font-weight: 400;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+
     justify-content: center;
     line-height: 18.56px;
     margin-top: 32px;
@@ -69,8 +68,9 @@
     grid-area: 1 / 1 / span 2 / span 1;
     height: 667px;
     line-height: 18.56px;
-    min-height: 660px;
+    min-height: 400px;
     padding: 47px 28px;
+    width: 517px;
 }
 
 .long-term-card {
@@ -93,6 +93,14 @@
     height: 322px;
     line-height: 18.56px;
     padding: 47px 28px;
+    width: 517px;
+}
+
+@media screen and (max-width:768px){
+    .long-term-card {
+        width: 100%;
+    }
+    
 }
 
 .internation-plans-card {
@@ -142,7 +150,7 @@
      border-radius: 5px;
 }
 
-.block-text-container h2 a {
+.block-text-container h2 span {
     color: #fff;
     font-family: "GTEestiLCDisplayMedium";
     font-weight: 500;
@@ -155,7 +163,7 @@
     align-items: center;
 }
 
-.block-text-container p a {
+.block-text-container p span {
     color: #fff;
     font-family: "GTEestiLCDisplayLight";
     font-weight: 500;
@@ -163,7 +171,7 @@
     text-decoration: none;
 }
 
-.block-text-container p>a:last-child img {
+.block-text-container p>span:last-child img {
     width: 24px;
     height: 14px;
     margin-left: 16px;
@@ -203,10 +211,13 @@
         height: auto;
         background-position-x: 30%;
         background-position-y: 50%;
-        /* min-height: 25.188rem; */
+        min-height: 27.188rem;
         padding: 6px 8px;
         background-size: cover;
         /* background-position: 100%; */
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
     }
 
     .long-term-card {
@@ -219,15 +230,15 @@
         padding: 8px 8px;
     }
 
-    .block-text-container h2 a {
+    .block-text-container h2 span {
         font-size: 22px;
     }
 
-    .block-text-container p a:nth-of-type(1) {
+    .block-text-container p span:nth-of-type(1) {
         font-size: 14px;
     }
 
-    .block-text-container p a:nth-of-type(3) img {
+    .block-text-container p span:nth-of-type(3) img {
         width: 1.5rem;
         height: 14px;
         margin-left: 16px;
@@ -284,15 +295,15 @@
         padding: 8px 8px;
     }
 
-    .block-text-container h2 a {
+    .block-text-container h2 span {
         font-size: 22px;
     }
 
-    .block-text-container p a:nth-of-type(1) {
+    .block-text-container p span:nth-of-type(1) {
         font-size: 14px;
     }
 
-    .block-text-container p a:nth-of-type(3) img {
+    .block-text-container p span:nth-of-type(3) img {
         width: 1.5rem;
         height: 14px;
         margin-left: 16px;

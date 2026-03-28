@@ -8,7 +8,7 @@ footer {
 .footer-container {
     max-width: 1372px;
     margin: auto;
-    padding: 0 24px;
+    /* padding: 0 24px; */
 }
 
 .footer-content {
@@ -24,28 +24,40 @@ footer {
 
 }
 
+
 .footer-content>div {
     /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     gap: 14px;
-    padding: 0 16px;
+    /* padding: 0 16px; */
     /* min-width:25%; */
 }
 
-.footer-content>div>ul {
+.footer-content>div .expanded {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+    padding-bottom: 16px;
+    padding-left: 0;
+}
+
+.footer-content>div .collapsed {
     display: flex;
     flex-direction: column;
     gap: 16px;
     list-style: none;
     padding-bottom: 16px;
     padding-left: 0;
-
-
 }
 
 .footer-content :last-child>ul {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
     gap: 10px;
+    padding-left: 0;
 }
 
 .footer-content>div>div>h2 {
@@ -64,8 +76,33 @@ footer {
     width: 100%;
     justify-content: space-between;
     align-items: center;
-
 }
+
+.arrow-icon-down {
+    display: none;
+}
+
+.arrow-icon-up {
+    display: none;
+}
+
+.arrow-icon-down {
+    height: 18vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+@media screen and (max-width: 468px) {
+    .arrow-icon-up {
+        display: flex;
+        height: 18vh;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
+
+
 
 .footer-ul-header>img {
     width: 26px;
@@ -75,7 +112,7 @@ footer {
 
 .footer-content>div>ul>li>a {
     font-size: 16px;
-    color: rgb(255, 255, 255);
+    color: #fff !important;
     text-align: left;
     font-weight: 400;
     letter-spacing: -0.5px;
@@ -106,7 +143,6 @@ footer hr {
 .footer-signature {
     width: 100%;
     max-width: 1317px;
-    /* margin: auto; */
     min-height: 100px;
     display: flex;
     justify-content: space-between;
@@ -120,12 +156,13 @@ footer hr {
     gap: 14px;
     width: 100%;
     padding: 0 96px;
-
 }
 
-.footer-signature-container>div>img {
+/* ✅ Fixes for direct logo + copyright + socials */
+.footer-signature-container>img {
     width: 93px;
     height: 36px;
+    object-fit: contain;
 }
 
 .footer-signature-container>div {
@@ -142,10 +179,11 @@ footer hr {
     width: 32px;
     height: 32px;
     border-radius: 100%;
+    object-fit: cover;
 }
 
-@media (max-width:468px){
-/* footer section */
+@media (max-width:468px) {
+    /* footer section */
 
     .footer-ul-header {
         padding-bottom: 14px;
@@ -155,16 +193,60 @@ footer hr {
         display: block;
     }
 
+    .footer-content>div:not(:last-child) {
+        padding: 0 40px;
+    }
+
+
+    .footer-ul-header2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0px;
+        margin-left: 9px;
+        margin-right: 9px;
+
+    }
+
+    .footer-content {
+        width: 100%;
+    }
+
+    .footer-ul-header2>ul>li>a>img {
+        width: 120px;
+        height: 30px;
+        object-fit: contain;
+        border-radius: 8px;
+    }
+
+    .footer-container div:nth-of-type(5) ul {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+        width: 298px;
+
+    }
+
     .footer-content {
         padding: none;
         flex-direction: column;
         gap: 10px;
     }
 
-    .footer-content :nth-child(1)>ul,
+    /* .footer-content :nth-child(1)>ul,
     .footer-content :nth-child(2)>ul,
     .footer-content :nth-child(3)>ul,
     .footer-content :nth-child(4)>ul {
+        display: none;
+    } */
+
+    .collapse {
+        background-color: red !important;
+        display: block;
+    }
+
+    .expanded {
         display: none;
     }
 
@@ -177,26 +259,28 @@ footer hr {
     .footer-content :nth-child(6) {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        /* gap: 20px; */
-        justify-content: center;
-        padding: 24px 0;
+        align-items: start;
+        justify-content: start;
+        /* padding: 24px 0; */
+    }
+
+    .footer-ul-header2 {
+        border-top: 1px solid #bec6d5;
+        margin: 0;
+        /* padding: 40px 0px; */
     }
 
     .footer-content :nth-child(6)>div {
-        justify-content: center;
+        justify-content: start;
         align-items: center;
-        /* padding: 24px 0; */
         padding-bottom: 0;
     }
 
     .footer-content :nth-child(6)>ul {
-        /* display: flex; */
         width: 100%;
         justify-content: center;
         flex-direction: row;
         align-items: center;
-        /* height: fit-content; */
         padding: unset;
         gap: 10px;
     }
@@ -224,9 +308,8 @@ footer hr {
     }
 }
 
-@media (min-width:469px) and (max-width:767px){
+@media (min-width:469px) and (max-width:767px) {
     /* footer section */
-
 
     .footer-ul-header>img {
         display: none;
@@ -236,22 +319,28 @@ footer hr {
         padding: none;
     }
 
-    .footer-content:nth-child(1){
+    .footer-content:nth-child(1) {
         flex-direction: column;
 
     }
-    .footer-content:nth-child(2){
+
+    .footer-content:nth-child(2) {
         flex-direction: column;
 
     }
-    .footer-content:nth-child(3){
+
+    .footer-content:nth-child(3) {
         flex-direction: column;
 
     }
-    .footer-content:nth-child(4){
+
+    .footer-content:nth-child(4) {
         flex-direction: column;
 
+
+
     }
+
     .footer-content:nth-child(1)>ul,
     .footer-content:nth-child(2)>ul,
     .footer-content:nth-child(3)>ul,
@@ -272,9 +361,7 @@ footer hr {
     .footer-content:nth-child(6) {
         border: 1px solid red !important;
         display: flex;
-        /* flex-direction: column; */
         align-items: center;
-        /* gap: 20px; */
         justify-content: center;
         padding: 24px 0;
     }
@@ -282,17 +369,13 @@ footer hr {
     .footer-content:nth-child(6)>div {
         justify-content: flex-start;
         align-items: center;
-        /* padding: 24px 0; */
         padding-bottom: 0;
     }
 
     .footer-content :nth-child(6)>ul {
-        /* display: flex; */
         width: 100%;
         justify-content: flex-start;
-        /* flex-direction: row; */
         align-items: flex-start;
-        /* height: fit-content; */
         padding: unset;
         gap: 10px;
     }
@@ -320,33 +403,64 @@ footer hr {
     }
 }
 
-@media (min-width:767px) and (max-width:768px){
+@media (min-width:767px) and (max-width:768px) {
     .footer-content {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin: auto;
-    flex-wrap: wrap;
-    padding-top: 40px;
-    width: 100%;
-    gap:0;
+        padding: 0 50px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin: auto;
+        flex-wrap: wrap;
+        padding-top: 40px;
+        width: 100%;
+        gap: 0;
+    }
+
+    .footer-content>div {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 16px;
+        gap: 16px;
+        width: 25%;
+        padding: unset;
+    }
+
+    .footer-ul-header2>ul {
+        width: 138px;
+    }
+
+    .footer-ul-header2>ul>li>a>img {
+        width: 138px;
+        height: 40px;
+        object-fit: contain;
+        border-radius: 8px;
+    }
+
+    .footer-content>div>div>h2 {
+        padding: 0;
+        margin: 0
+    }
+
+    .footer-content>div>ul>li {
+        white-space: nowrap;
+    }
 }
-.footer-content>div {
-    display: flex;
-    flex-direction: column;
-    grid-gap: 16px;
-    gap: 16px;
-    width:25%;
-    padding: unset;
+
+/* Hide arrows and collapse/expand logic for tablet and above */
+@media (min-width: 469px) {
+
+    .arrow-icon-up,
+    .arrow-icon-down {
+        display: none !important;
+    }
+
+    .expanded,
+    .collapsed {
+        display: flex !important;
+    }
 }
-.footer-content>div>div>h2{
-    padding:0;
-    margin:0
-}
-.footer-content>div>ul>li{
-    white-space: nowrap;
-}
-}
+
+
 
 /* Go To Top Button*/
 .go-to-top-button {
@@ -370,7 +484,8 @@ footer hr {
     border-radius: 100%;
 }
 
-@media (max-width:768px){
+@media (max-width:768px) {
+
     .go-to-top-button a,
     .go-to-top-button img {
         width: 32px;
@@ -384,7 +499,7 @@ footer hr {
     position: fixed;
     left: 20px;
     bottom: 20px;
-    z-index:999;
+    z-index: 999;
 }
 
 .access-container button {
@@ -410,14 +525,14 @@ svg {
     transform: scale(1.15);
 }
 
-@media (max-width:768px){
-      .access-container button{
-        width:30px;
-        height:30px;
+@media (max-width:768px) {
+    .access-container button {
+        width: 30px;
+        height: 30px;
     }
 
-    svg{
-        width:14.7px;
-        height:19.5px;
+    svg {
+        width: 14.7px;
+        height: 19.5px;
     }
 }

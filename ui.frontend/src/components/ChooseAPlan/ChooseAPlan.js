@@ -1,68 +1,50 @@
 import React from "react";
-import './ChooseAPlan.css'
-export default function ChooseAPlan() {
+import "./ChooseAPlan.css";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
+
+export default function ChooseAPlan(props) {
+  const { planHeader, planDescription, planCards = [] } = props;
+
+  // Keep your original per-card classes so CSS works unchanged
+  const classMap = ["best-value-card", "long-term-card", "internation-plans-card"];
+
   return (
     <section className="choose-a-plan">
-      <h2>Choose a prepaid plan today</h2>
-      <p>
-        Want flexibility with international calling benefits? Choose from our
-        wide range of prepaid plans.
-      </p>
+      {planHeader && <h2>{planHeader}</h2>}
+      {planDescription && <p>{planDescription}</p>}
 
       <div className="choose-a-plan-cards">
-        {/* Best Value Card */}
-        <div className="best-value-card">
-          <div className="text-container">
-            <div className="block-text-container">
-              <h2>
-                <a href="#">Best value</a>
-              </h2>
-              <p>
-                <a href="#">Check out our 30 days plans</a>
-                <a href="#"></a>
-                <a href="#">
-                  <img loading="lazy" src="/content/dam/lyca-mobile/assets/app_arrow.jpg" alt="arrow" />
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
+        {planCards.map((card, index) => {
+          const rootClass = classMap[index] || "plan-card"; // fallback if more than 3
+          const arrowSrc = card.cardImage || "/content/dam/lyca-mobile/assets/app_arrow.jpg";
 
-        {/* Long Term Card */}
-        <div className="long-term-card">
-          <div className="text-container">
-            <div className="block-text-container">
-              <h2>
-                <a href="#">Long term plans</a>
-              </h2>
-              <p>
-                <a href="#">Stay more, save more</a>
-                <a href="#"></a>
-                <a href="#">
-                  <img  loading="lazy" src="/content/dam/lyca-mobile/assets/app_arrow.jpg" alt="arrow" />
-                </a>
-              </p>
+          return (
+            <div key={index} className={rootClass}>
+              <Link to="/content/lyca-mobile/us/en/home/buy-sim---plan.html" onClick={() => window.scrollTo(0, 0)}>
+                <div className="text-container">
+                  <div className="block-text-container">
+                    {card.cardTitle && (
+                      <h2>
+                        <span>{card.cardTitle}</span>
+                      </h2>
+                    )}
+                    {(card.cardText || arrowSrc) && (
+                      <p>
+                        {card.cardText && (
+                          <span href={card.cardLink || "#"}>{card.cardText}</span>
+                        )}
+                        <span href={card.cardLink || "#"}></span>
+                        <span href={card.cardLink || "#"}>
+                          <img loading="lazy" src={arrowSrc} alt="arrow" />
+                        </span>
+                      </p>
+                    )}
+                  </div>
+                </div>
+              </Link>
             </div>
-          </div>
-        </div>
-
-        {/* International Plans Card */}
-        <div className="internation-plans-card">
-          <div className="text-container">
-            <div className="block-text-container">
-              <h2>
-                <a href="#">International plans</a>
-              </h2>
-              <p>
-                <a href="#">Unlimited talk & text to 100 countries</a>
-                <a href="#"></a>
-                <a href="#">
-                  <img loading="lazy" src="/content/dam/lyca-mobile/assets/app_arrow.jpg" alt="arrow" />
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
+          );
+        })}
       </div>
     </section>
   );

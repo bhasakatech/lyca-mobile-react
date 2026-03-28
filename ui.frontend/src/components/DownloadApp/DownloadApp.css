@@ -9,7 +9,7 @@
     width: 100%;
     max-width: 1400px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     /* gap: 191px; */
     margin: 0 auto;

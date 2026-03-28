@@ -5,9 +5,13 @@
     justify-content: center;
     background-color: rgb(255, 255, 255);
 }
-
-.blog-container {
+.blog{
     width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.blog-container {
+    width: 90%;
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -70,6 +74,13 @@
     /* overflow: hidden; */
     /* width: inherit; */
     /* padding: 27px 20px 17px; */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp:2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+
 }
 
 

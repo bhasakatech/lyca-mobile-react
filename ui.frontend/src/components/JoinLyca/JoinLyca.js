@@ -1,5 +1,6 @@
 import React from "react";
 import './JoinLyca.css';
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 export default function JoinLyca(props) {
   const { header, description, cards = [] } = props;
@@ -18,26 +19,30 @@ export default function JoinLyca(props) {
         {/* Image Cards */}
         <div className="join-image-section">
           {cards.map((card, index) => (
-            <div className="join-card" key={index}>
-              <div
-                id={card.cardTitle.toLowerCase().replace(/\s+/g, "-")}
-                className="lyca-card"
-              >
-                <a href={card.cardLink}>
-                  <img
-                    loading="lazy"
-                    src={card.cardImage}
-                    alt={card.cardTitle}
-                  />
-                </a>
-                <p>
-                  <a href={card.cardLink}>{card.cardTitle}</a>
-                </p>
+            <Link to="/content/lyca-mobile/us/en/home/buy-sim---plan.html" onClick={() => window.scrollTo(0, 0)}>
+              <div className="join-card" key={index}>
+                <div
+                  id={card.cardTitle.toLowerCase().replace(/\s+/g, "-")}
+                  className="lyca-card"
+                >
+                  <Link to="/content/lyca-mobile/us/en/home/buy-sim---plan.html" onClick={() => window.scrollTo(0, 0)}>
+                    <img
+                      loading="lazy"
+                      src={card.cardImage}
+                      alt={card.cardTitle}
+                    />
+                  </Link>
+                  <p>
+                    <Link to="/content/lyca-mobile/us/en/home/buy-sim---plan.html" onClick={() => window.scrollTo(0, 0)}>
+                      {card.cardTitle}
+                    </Link>
+                  </p>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
-    </section>
+    </section >
   );
 }

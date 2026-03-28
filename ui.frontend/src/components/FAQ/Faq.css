@@ -1,0 +1,125 @@
+.faq-container {
+    background: #fbfbfd;
+    padding-top: 50px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.faq-main {
+    gap: 30px;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 0 64px;
+    background: #fbfbfd;
+    display: flex;
+    width: 1234px;
+}
+
+.faq-heading {
+    font-family: GTEestiLCDisplayBold;
+    font-size: 38px;
+    line-height: 0px;
+    text-align: center;
+    color: #384c72;
+}
+
+.faq-list {
+    width: 77%;
+    border-top: 2px solid rgb(226, 226, 226);
+}
+
+.faq-list-container {
+    background: #fbfbfd;
+    border-bottom: 2px solid #e2e2e2;
+}
+
+.faq-list-que {
+    padding: 0 36px;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.faq-list-que-container p {
+    font-family: GTEestiLCDisplayRegular;
+    font-size: 20px;
+    color: #344054;
+    margin: 0;
+}
+
+.faq-list-symbol img {
+    height: 30px;
+    width: 30px;
+}
+
+/* ANSWER SECTION */
+.faq-answer {
+    padding: 0 50px 25px 50px;
+    background: #fbfbfd;
+        color: #667085;
+}
+
+.faq-answer p {
+    font-family: GTEestiLCDisplayRegular;
+    font-size: 18px;
+    color: #475467;
+    line-height: 28px;
+    margin-top: 10px;
+}
+
+.faq-answer a{
+    color:blue !important;
+}
+@media only screen and (max-width: 768px) {
+    .faq-list {
+    width: 85%;
+}
+    .faq-container {
+        padding-top: 0;
+    }
+    .faq-list-que{
+        padding: 4px 16px;
+        height: auto;
+        min-height: 54px;
+    }
+    .faq-list-que-container p{
+margin: 0;
+        padding: 0 5px 0 0;
+    }
+    .faq-answer{
+                padding: 10px 15px 15px 0;
+                font-size: 14px;
+        line-height: 18px;
+    }
+}
+@media (max-width: 870px) {
+    .faq-main {
+        gap: 18px;
+        margin-top: 0;
+        padding-top: 0;
+    }
+    .faq-heading{
+                font-size: 24px;
+        line-height: 32.48px;
+    }
+    .faq-list-que-container p{
+      color: #344054;
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0;
+        padding: 0 5px 0 0;
+    }
+    .faq-list-que-container{
+        display: flex;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    margin: 12px 0px;
+    transition: margin 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+}

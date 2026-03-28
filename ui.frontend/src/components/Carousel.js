@@ -1,43 +1,32 @@
+import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Carousel from "react-bootstrap/Carousel";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
-import { useState } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-
-
-function ControlledCarousel() {
-  const [index, setIndex] = useState(0);
-
-  const handleSelect = (selectedIndex) => {
-    setIndex(selectedIndex);
-  };
-
+const ControlledCarousel = ({ carouselImages = [] }) => {
   return (
-    <Carousel
-     activeIndex={index} onSelect={handleSelect}
-     indicators={true}   
+    
+    <Carousel 
+      indicators={true} 
       controls={true} 
-     >
-
-      <Carousel.Item>
-       <img
-            src="/content/dam/lyca-mobile/assets/WhatsApp%20Image%202025-08-23%20at%203.49.07%20PM.jpeg"
-            alt=""
-          />
-      </Carousel.Item>
-      <Carousel.Item>
+      interval={3000}
+      pause={false} 
+    >
+      
+      {carouselImages.map((img, index) => (
+        <Carousel.Item key={index}>
+          <Link to="/content/lyca-mobile/us/en/home/buy-sim---plan.html" onClick={() => window.scrollTo(0, 0)}>
           <img
-            src="/content/dam/lyca-mobile/assets/WhatsApp%20Image%202025-08-23%20at%203.49.07%20PM.jpeg"
-            alt=""
+            src={img}
+            className="d-block w-100"
+            alt={`slide-${index}`}
           />
-      </Carousel.Item>
-      <Carousel.Item>
-          <img
-            src="/content/dam/lyca-mobile/assets/WhatsApp%20Image%202025-08-23%20at%203.49.07%20PM.jpeg"
-            alt=""
-          />
-      </Carousel.Item>
+          </Link>
+        </Carousel.Item>
+      ))}
+   
     </Carousel>
   );
-}
+};
 
 export default ControlledCarousel;

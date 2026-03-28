@@ -1,0 +1,618 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.recharge-container {
+  background-color: #f5f5f7;
+  padding-bottom: 75px;
+
+}
+
+
+.recharge-card {
+  max-width: 448px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.recharge-header {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 100%;
+  padding-top: 30px;
+}
+
+.recharge-header h1 {
+  font-family: "GTEestiLCDisplayBold" !important;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 49px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #344054;
+  margin: 0;
+}
+
+.recharge-header p {
+  margin: 0;
+  font-family: "GTEestiLCDisplayLight" !important;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #667085;
+}
+
+.recharge-section {
+  padding: 24px;
+  background-color: #fff;
+  padding: 32px 70px;
+  width: 680px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  box-sizing: border-box;
+  margin-right: auto;
+  display: block;
+}
+
+.recharge-section-title {
+  font-family: "GTEestiLCDisplayMedium" !important;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: left;
+  color: #344054;
+}
+
+.recharge-phone-input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-top: 16px;
+  height: 3.125rem;
+}
+
+.recharge-phone-prefix {
+  font-family: GTEestiLCDisplayRegular;
+  background: #f9f9ff;
+  padding: 15px 12px;
+  margin-left: -11px;
+  color: #667085;
+  border-top: 1px solid #dfe0f8;
+  border-right: 1px solid #dfe0f8;
+  border-bottom: 1px solid #dfe0f8;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.recharge-phone-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #1f2937;
+  padding-left: 10px;
+}
+
+.recharge-phone-input::placeholder {
+  color: #9ca3af;
+}
+
+.recharge-verify-text {
+  font-size: 12px;
+
+  margin-top: 8px;
+  font-family: GTEestiLCDisplayRegular;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: left;
+  color: #667085;
+}
+
+.recharge-verify-text a {
+  color: blue;
+}
+
+.recharge-verify-link {
+  color: #2c68d8;
+  cursor: pointer;
+}
+
+.recharge-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.recharge-price-display {
+  display: flex;
+  align-items: center;
+  color: #9ca3af;
+}
+
+.recharge-price-amount {
+  font-size: 24px;
+  font-weight: 300;
+  margin-right: 4px;
+}
+
+.recharge-info-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.recharge-tabs {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  font-size: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  opacity: 0.3;
+}
+
+.recharge-tab {
+  padding-bottom: 8px;
+  color: #6b7280;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  background: #eff8ff;
+
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  outline: 0px;
+  border: 0px;
+  margin: 0px;
+  border-radius: 0px;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  text-decoration: none;
+  font-family: "GTEestiLCDisplayMedium";
+  font-weight: 500;
+  font-size: 0.875rem;
+  max-width: 360px;
+  min-width: 90px;
+  position: relative;
+  min-height: 48px;
+  flex-shrink: 0;
+  padding: 12px 16px;
+  overflow: hidden;
+  white-space: normal;
+  text-align: center;
+  flex-direction: column;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.recharge-tab.recharge-active {
+  font-weight: 500;
+}
+
+.recharge-tab.recharge-active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  background: rgb(70, 40, 110);
+  height: 5px;
+}
+
+.recharge-plans-wrapper {
+  position: relative;
+  opacity: 0.3;
+}
+
+.recharge-plans-container {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.recharge-plans-container::-webkit-scrollbar {
+  display: none;
+}
+
+.recharge-plan-card {
+  flex-shrink: 0;
+  min-width: 112px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding-right: 5px;
+  padding-top: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: white;
+  min-height: 100px;
+}
+
+.recharge-plan-card.recharge-selected {
+  border-color: #2563eb;
+  background-color: #eff6ff;
+}
+
+.recharge-plan-label {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+.recharge-plan-data {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 4px;
+  border-left: 2px solid #08dc7d;
+  font-family: 'GTEestiLCDisplayBold';
+  line-height: 30px;
+  letter-spacing: 0;
+  text-align: left;
+  font-size: 26px;
+  padding-left: 10px;
+}
+
+.recharge-plan-price {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+  padding-left: 10px;
+  padding-top: 8px;
+}
+
+.recharge-plan-validity {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 4px;
+  padding-left: 10px;
+  margin-bottom: 8px;
+}
+
+.recharge-nav-button {
+  position: absolute;
+  top: 104%;
+  transform: translateY(-50%);
+  background-color: white;
+  border-radius: 50%;
+  padding: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border: none;
+  cursor: pointer;
+  opacity: 0.4;
+}
+
+.recharge-icon-img {
+  height: 20px;
+  width: 20px;
+}
+
+.recharge-nav-button-left {
+  right: 0;
+}
+
+.recharge-nav-button-right {
+  right: 32px;
+}
+
+.recharge-nav-button svg {
+  width: 16px;
+  height: 16px;
+  color: #9ca3af;
+}
+
+.recharge-amount-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  opacity: 0.3;
+}
+
+.recharge-amount-button {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  transition: all 0.2s;
+  background-color: white;
+  cursor: pointer;
+}
+
+.recharge-amount-button.recharge-selected {
+  border-color: #2563eb;
+  background-color: #eff6ff;
+}
+
+.recharge-amount-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.recharge-amount-label {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.recharge-payment-description {
+  color: #878787;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 17px;
+  margin-bottom: 12px;
+  font-family: "GTEestiLCDisplayRegular" !important;
+}
+
+.recharge-summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.recharge-summary-label {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #667085;
+  line-height: 18.56px;
+  font-family: GTEestiLCDisplayRegular;
+  margin-bottom: 0;
+  margin-top: 2.5px;
+}
+
+.recharge-summary-value {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.recharge-total-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  padding-top: 8px;
+}
+
+.recharge-total-row span {
+  color: #1f2937;
+}
+
+.recharge-terms-text {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 17.4px;
+  color: #667085;
+  cursor: default;
+  margin-left: 10px;
+  font-family: GTEestiLCDisplayRegular;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.recharge-terms-link {
+  color: #2c68d8;
+  cursor: pointer;
+}
+
+.recharge-confirm-button {
+  width: 100%;
+  background-color: #93c5fd;
+  color: white;
+  padding: 12px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.recharge-amount-validity {
+  text-align: left;
+}
+
+.recharge-order-summary h2 {
+  padding-bottom: 14px;
+  margin-bottom: 9.5px;
+  font-size: 20px;
+  line-height: 17px;
+  color: #344054;
+  font-family: "GTEestiLCDisplayRegular" !important;
+  border-bottom: 2px solid #f2f2f2;
+}
+
+
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.recharge-container {
+  background-color: #f5f5f7;
+  padding-bottom: 75px;
+  width: 100%;
+}
+
+/* Center Card-Like Sections */
+.recharge-section {
+  background-color: #fff;
+  padding: 32px 70px;
+  width: 680px;
+  margin: 0 auto 10px auto;
+  display: block;
+  box-sizing: border-box;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+/* Tablets (≤ 991px) */
+@media (max-width: 991px) {
+  .recharge-section {
+    width: 90%;
+    padding: 28px 40px;
+  }
+
+  .recharge-tabs {
+    gap: 10px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .recharge-plan-card {
+    min-width: 140px;
+  }
+
+  .recharge-amount-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .recharge-container {
+    padding-bottom: 50px;
+  }
+}
+
+/* Mobile (≤ 768px) */
+@media (max-width: 768px) {
+
+  .recharge-header {
+    gap: 0px;
+    grid-gap: 0px;
+  }
+
+  .recharge-header h1 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+
+  .recharge-section {
+    width: 90%;
+    padding: 24px 20px;
+    margin-bottom: 12px;
+    border-radius: 0;
+  }
+
+  .recharge-tabs {
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+
+  .recharge-tab {
+    min-width: 120px;
+    font-size: 14px;
+  }
+
+  .recharge-plans-container {
+    gap: 10px;
+  }
+
+  .recharge-plan-card {
+    min-width: 120px;
+  }
+
+  .recharge-nav-button {
+    display: none;
+    /* hide scroll arrows on small devices */
+  }
+
+  .recharge-amount-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .recharge-summary-row,
+  .recharge-total-row {
+    font-size: 14px;
+  }
+
+  .recharge-confirm-button {
+    font-size: 16px;
+  }
+}
+
+/* Small Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .recharge-header {
+    gap: 0px;
+    grid-gap: 0px;
+  }
+
+  .recharge-header h1 {
+    font-size: 26px;
+  }
+
+  .recharge-header p {
+    font-size: 15px;
+  }
+
+  .recharge-section-title {
+    font-size: 18px;
+  }
+
+  .recharge-phone-input-wrapper {
+    flex-direction: row;
+    height: 50px;
+  }
+
+  .recharge-plan-card {
+    min-width: 100px;
+    padding: 10px;
+  }
+
+  .recharge-plan-data {
+    font-size: 20px;
+  }
+
+  .recharge-plan-price {
+    font-size: 12px;
+  }
+
+  .recharge-plan-validity {
+    font-size: 11px;
+  }
+
+  .recharge-amount-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .recharge-confirm-button {
+    padding: 16px;
+    font-size: 16px;
+  }
+}
